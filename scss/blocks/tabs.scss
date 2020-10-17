@@ -1,0 +1,58 @@
+.tabs {
+  padding: 75px 0 100px;
+  .title {
+    margin-bottom: 30px;
+  }
+  &_menu {
+    padding: 23px 0;
+    background-color: $gray;
+    font-size: 15px;
+    margin-bottom: 48px;
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+      font-weight: 500;
+      &:not(:last-child) {
+        @include line-slide-center();
+        &:after {
+          transition: $trans;
+          background-color: #000;
+        }
+
+        &.active {
+          text-shadow: 1px 1px 0 #000;
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      &:last-child {
+        margin-right: 30px;
+        border-bottom: 1px dashed #000;
+        position: relative;
+        svg {
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          top: 60%;
+          right: -30px;
+          transform: translate(0,-50%);
+        }
+      }
+    }
+  }
+  &_triggers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &_content {
+
+  }
+  &_col {
+    @include col(3);
+  }
+}

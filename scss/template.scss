@@ -9,11 +9,11 @@ a {
 	text-decoration: none;
 }
 button {
-	font-family: Arial;
+	font-family: 'Montserrat', sans-serif;
 	outline: none;
 }
 input {
-	font-family: Arial;
+	font-family: 'Montserrat', sans-serif;
 	outline: none;
 }
 .row {
@@ -24,14 +24,9 @@ input {
 }
 body {
 	background-color: #fff;
-	font-family: Arial;
-	font-size: 16px;
-}
-h1 {
-	font-size: 45px;
-}
-h2 {
-	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: #000;
 }
 .mobile-hide {
 	@media (max-width: $break_sm) {
@@ -44,13 +39,18 @@ h2 {
 	}
 }
 .img-responsive {
+	display: block;
 	position: relative;
 	overflow: hidden;
-	img {
+	img, svg {
+		display: block;
 		width: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+	svg {
+		height: 100%;
 	}
 	&:after {
 		content: '';
@@ -58,49 +58,53 @@ h2 {
 		padding-top: 56.25%;
 	}
 }
-// /settings
-
-.header {
-	&_container {
-		padding: 20px 0;
-		background-color: #666;
-		transition: .3s;
+.btn-red {
+	display: inline-block;
+	padding: 15px 30px;
+	border-radius: 3px;
+	background-color: $red;
+	font-size: 15px;
+	color: #fff;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+	text-transform: uppercase;
+	user-select: none;
+	@media (max-width: $break_sm) {
+		font-size: 12px;
 	}
 }
-
-.content {
-	padding: 20px 0;
+.btn-transparent {
+	display: inline-block;
+	padding: 15px 30px;
+	border-radius: 3px;
+	background-color: transparent;
+	border: 1px solid $red;
+	font-size: 15px;
+	letter-spacing: 0.2em;
+	color:$red;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: $trans;
+	user-select: none;
+	&:hover {
+		background-color: $red;
+		color: #fff;
+		box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
+	}
+	@media (max-width: $break_sm) {
+		font-size: 12px;
+	}
 }
-
-.wrapper {
-	@include wrapper();
-}
-.row {
-	@include row-flex();
-}
-.col {
-	@include col(4);
-	@include col-sm(6);
-	@include col-xs(12);
-	padding-bottom: $gutter;
-}
-.card3d_item {
-	height: 300px;
-	background-color: grey;
-}
-
-.licence {
-	background-color: #666;
-}
-
-.count-number {
-	height: 30px;
-}
-.parallax-move {
-	width: 300px;
-	height: 300px;
+.page {
+	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
-	background-color: #000;
 }
+.title {
+	font-size: 35px;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+// /settings

@@ -6,33 +6,39 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1480px; // Максимальная ширина контейнера
+$gutter: 20px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
-$break_xl: 1400px;
+$break_xl: 1440px;
 $break_lg: 1200px;
-$break_md: 1050px;
+$break_md: 1024px;
 $break_sm: 769px;
 $break_xs: 500px;
 
-// Переменные для кастомизации Bootstrap 4
-// $grid-gutter-width: 15px; // Отступы между колонками
-// $grid-columns: 12; // Колличество колонок
-// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1410px); // Брэйкпоинты
-// $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px); // Максимальная ширина контейнера
-// $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
-
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Light", 300, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Regular", normal, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Italic", normal, italic);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Bold", bold, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Black", 900, normal);
+
 
 // Цвета
-// $black: #000;
+$red: #e12025;
+$gray: #F8F8F8;
+
+$trans: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 
 // Блоки стилей
 @import 'template';
-// @import 'blocks/menu';
+@import 'blocks/menu';
+@import 'blocks/header';
+@import 'blocks/banner';
+@import 'blocks/tabs';
+@import 'blocks/card';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

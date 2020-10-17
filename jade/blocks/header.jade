@@ -1,32 +1,80 @@
 // header
 header.header#header
 	.wrapper
-		.header_container
 
-			// menu
-			//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
-			.js-menu.menu.menu--right
-				#menu-btn.menu_btn
-				nav#mmenu.menu_nav
-					ul.menu_list
-						li.menu_item
-							a(href="#").menu_link Меню 1
-						li.menu_item
-							a(href="#").menu_link Меню 2
-						li.menu_item
-							a(href="#").menu_link Меню 3
-						li.menu_item
-							a(href="#").menu_link Меню 4
-						li.menu_item
-							a(href="#").menu_link Меню 5
-						li.menu_item
-							a(href="#").menu_link Меню 6
-						li.menu_item
-							a(href="#").menu_link Меню 7
-						li.menu_item
-							a(href="#").menu_link Меню 8
-					#menu-close.menu_close
-				#menu-over.menu_over
-			// /menu
+		.header_item
+			
+			.js-headerMenuBtn.menu_btn.hamburger.hamburger--elastic
+				.hamburger-box
+					.hamburger-inner
+
+			.js-CityMenuBtn.city
+				span Санкт Петербург
+				.city_icon.img-responsive
+					img(src="img/arrow.svg", alt="arrow")
+
+		.header_item
+			.logo
+				a(href="home.html")
+					img(src="img/logo.png", alt="logo")
+
+		.header_item
+		
+			a(href="tel:+79173261262").tel +7 (917) 326-12-62
+
+			.social
+				a(href="#").social_link.img-responsive
+					span.social_img.img-responsive
+						img(src="img/messenger.svg", alt="messenger")
+				a(href="#").social_link.img-responsive
+					span.social_img.img-responsive
+						img(src="img/insta.svg", alt="instagram")
+
+			.cart
+				.cart_price 5 329₽
+				.cart_icon.img-responsive
+					.cart_img.img-responsive
+						img(src="img/cart.svg", alt="cart")
+					.cart_num 3
+// menu
+//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
+.js-headerMenu.menu.menu--top
+	nav.menu_nav
+		ul.menu_list
+			li
+				a(href="#") Каталог
+			li
+				a(href="#") О нас
+			li
+				a(href="#") Отзывы
+			li
+				a(href="#") Доставка
+			li
+				a(href="#") Статьи
+			li
+				a(href="#") Контакты
+		.social
+			a(href="#").social_link.img-responsive
+				span.social_img.img-responsive
+					img(src="img/messenger.svg", alt="messenger")
+			a(href="#").social_link.img-responsive
+				span.social_img.img-responsive
+					img(src="img/insta.svg", alt="instagram")
+		//- #menu-close.menu_close
+	//- #menu-over.menu_over
+// /menu
+
+// menuCity
+//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
+.js-CityMenu.menu.menu--top
+	nav.menu_nav
+		ul.menu_list
+			li
+				a(href="#") Санкт-Петербург
+			li
+				a(href="#") Саратов
+		//- #menu-close.menu_close
+	//- #menu-over.menu_over
+// /menuCity
 
 // /header

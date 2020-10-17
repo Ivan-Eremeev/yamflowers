@@ -1,0 +1,182 @@
+.card {
+  padding: 25px 10px 15px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: $trans;
+  position: relative;
+  &_img {
+    max-width: 250px;
+    &:after {
+      padding-top: 107%;
+    }
+  }
+  &_content {
+    padding: 18px 0 10px;
+  }
+  &_name {
+    display: inline-block;
+    color: #000;
+    margin-bottom: 32px;
+  }
+  &_sizes {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &_sizes-in {
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #000;
+    overflow: hidden;
+  }
+  &_input {
+    display: none;
+    &:checked {
+      + .card_label {
+        background-color: #000;
+        color: #fff;
+        &--line {
+          background-color: #fff;
+          color: $red;
+          &:before {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+  &_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transition: $trans;
+    margin: 0 2px;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    }
+    &--together {
+      border: none;
+      margin: 0;
+      border-radius: 0;
+      &:hover {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+      }
+    }
+    &--circle {
+      border-radius: 50%;
+    }
+    &--line {
+      border: none;
+      border-bottom: 1px solid #000;
+      border-radius: 0;
+      margin: 0;
+      &:before {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: -2px;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &_prices {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  &_price {
+    margin: 0 10px;
+  }
+  &_old-price {
+    color: #8a8a8a;
+    text-decoration: line-through;
+  }
+  &_discount-price {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: $red;
+    font-size: 12px;
+    color: #fff;
+  }
+  &_btn {
+    margin-bottom: 18px;
+  }
+  &_more {
+    font-size: 14px;
+    a {
+      border-bottom: 1px solid #000;
+      color: #000;
+    }
+  }
+  &_chip {
+    width: 57px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    &--best {
+      background-color: #FC8281;
+      top: 32px;
+      font-size: 15px;
+    }
+    &--discount {
+      background-color: $red;
+      top: 100px;
+      font-size: 24px;
+    }
+  }
+  &_slider {
+    position: relative;
+  }
+  &_arrow {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    transition: $trans;
+    &--prev {
+      transform: rotate(90deg);
+      left: 10px;
+    }
+    &--next {
+      transform: rotate(-90deg);
+      right: 10px;
+    }
+  }
+  &:hover {
+    border-color: #E2E2E2;
+    .card_arrow {
+      opacity: 1;
+    }
+  }
+}

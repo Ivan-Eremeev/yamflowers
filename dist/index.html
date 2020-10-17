@@ -6,46 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="css/libs/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- header-->
-    <header class="header" id="header">
-      <div class="wrapper">
-        <div class="header_container">
-          <!-- menu-->
-          <div class="js-menu menu menu--right">
-            <div class="menu_btn" id="menu-btn"></div>
-            <nav class="menu_nav" id="mmenu">
-              <ul class="menu_list">
-                <li class="menu_item"><a class="menu_link" href="#">Меню 1</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 2</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 3</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 4</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 5</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 6</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 7</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Меню 8</a></li>
-              </ul>
-              <div class="menu_close" id="menu-close"></div>
-            </nav>
-            <div class="menu_over" id="menu-over"></div>
+    <div class="page">
+      <!-- header-->
+      <header class="header" id="header">
+        <div class="wrapper">
+          <div class="header_item">
+            <div class="js-headerMenuBtn menu_btn hamburger hamburger--elastic">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+            <div class="js-CityMenuBtn city"><span>Санкт Петербург</span>
+              <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
+            </div>
           </div>
-          <!-- /menu-->
+          <div class="header_item">
+            <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
+          </div>
+          <div class="header_item"><a class="tel" href="tel:+79173261262">+7 (917) 326-12-62</a>
+            <div class="social"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+            <div class="cart">
+              <div class="cart_price">5 329₽</div>
+              <div class="cart_icon img-responsive">
+                <div class="cart_img img-responsive"><img src="img/cart.svg" alt="cart"></div>
+                <div class="cart_num">3</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </header>
+      <!-- menu-->
+      <div class="js-headerMenu menu menu--top">
+        <nav class="menu_nav">
+          <ul class="menu_list">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="social"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+        </nav>
       </div>
-    </header>
-    <!-- /header-->
-    <div class="content">
-      <div class="wrapper"><a href="home.html">Главная</a></div>
+      <!-- /menu-->
+      <!-- menuCity-->
+      <div class="js-CityMenu menu menu--top">
+        <nav class="menu_nav">
+          <ul class="menu_list">
+            <li><a href="#">Санкт-Петербург</a></li>
+            <li><a href="#">Саратов</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /menuCity-->
+      <!-- /header-->
+      <div class="content">
+        <div class="wrapper"><a href="home.html">Главная</a></div>
+      </div>
+      <!-- footer-->
+      <footer class="footer"> 
+        <div class="wrapper"> </div>
+      </footer>
+      <!-- /footer-->
     </div>
-    <!-- footer-->
-    <footer class="footer"> 
-      <div class="wrapper"> 
-        <div class="licence">Футер</div>
-      </div>
-    </footer>
-    <!-- /footer-->
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

@@ -7,18 +7,6 @@
  *
  */
 
-// Подключение файлов. При использовании gulp поменять "// @prepros-append" на "//="
-// libs-settings/fancybox_settings.js
-// libs-settings/mmenu_settings.js
-// libs-settings/slick_settings.js
-// libs-settings/wow_js_settings.js
-// libs-settings/fullpage_settings.js
-// libs-settings/tinyscrollbar-settings.js
-// libs-settings/tooltipster-settings.js
-// libs-settings/yandex-map-settings.js
-// libs-settings/google-map-settings.js
-// mailto-ajax.js
-
 // Брэйкпоинты js
 var	breakXl = 1400,
 		breakLg = 1200,
@@ -34,7 +22,13 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	// myMenu($('.js-menu'));
+	myMenu($('.js-headerMenu'), $('.js-headerMenuBtn'));
+	myMenu($('.js-CityMenu'), $('.js-CityMenuBtn'));
+
+	// Слайдер в банере утп
+	slider($('.js-banner-slider'));
+	// Слайдер в карточках
+	sliderCard($('.js-card-slider'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -49,13 +43,13 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	// tabs($('#tabs'));
+	tabs($('.js-tabs'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
 
 	// matchHeight // Задание елементам одинаковой высоты
-	// $('.match-height').matchHeight();
+	$('.card_name').matchHeight();
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -156,34 +150,46 @@ $(document).ready(function () {
 });
 
 // Мобильное меню
-// function myMenu(menu) {
-// 	var menuBtn = menu.find('#menu-btn'),
-// 			over = menu.find('#menu-over'),
-// 			close = menu.find('#menu-close'),
-// 			html = $('html'),
-// 			scrollbarWidth;
-// 	menuBtn.on('click', menuOpen);
-// 	over.on('click', menuClose);
-// 	close.on('click', menuClose);
-// 	function menuOpen() {
-// 		html.addClass('lock').css('padding-right',scrollbarWidth);
-// 		menu.addClass('open');
-// 		menuBtn.addClass('active');
-// 	}
-// 	function menuClose() {
-// 		html.removeClass('lock').css('padding-right',0);
-// 		menu.removeClass('open');
-// 		menuBtn.removeClass('active');
-// 	}
-// 	function scrollbarWidthCalc() {
-// 		var documentWidth = parseInt(document.documentElement.clientWidth),
-// 				windowsWidth = parseInt(window.innerWidth);
-// 		scrollbarWidth = windowsWidth - documentWidth;
-// 		console.log(scrollbarWidth);
-// 	}
-// 	scrollbarWidthCalc();
-// 	$(window).resize(scrollbarWidthCalc);
-// };
+function myMenu(menu, menuBtn) {
+	var	over = menu.find('#menu-over'),
+			close = menu.find('#menu-close'),
+			html = $('html'),
+			scrollbarWidth;
+	menuBtn.on('click', function () {
+		if (menu.hasClass('open')) {
+			menuClose();
+		}else {
+			menuOpen();
+		}
+	});
+	over.on('click', menuClose);
+	close.on('click', menuClose);
+	function menuOpen() {
+		html.addClass('lock').css('padding-right',scrollbarWidth);
+		menu.addClass('open');
+		menuBtn.addClass('is-active');
+	}
+	function menuClose() {
+		html.removeClass('lock').css('padding-right',0);
+		menu.removeClass('open');
+		menuBtn.removeClass('is-active');
+	}
+	function scrollbarWidthCalc() {
+		var documentWidth = parseInt(document.documentElement.clientWidth),
+				windowsWidth = parseInt(window.innerWidth);
+		scrollbarWidth = windowsWidth - documentWidth;
+	}
+	function headerHeightCalc() {
+		var headerHeight = parseInt($('#header').outerHeight());
+		menu.find('.menu_nav').css('padding-top',headerHeight + 80 + 'px')
+	}
+	scrollbarWidthCalc();
+	headerHeightCalc();
+	$(window).resize(function () {
+		scrollbarWidthCalc();
+		headerHeightCalc();
+	});
+};
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {
@@ -231,24 +237,26 @@ $(document).ready(function () {
 // 	$('body').css('fontSize', fontSize + '%');
 // };
 
-// // Табы
-// function tabs(tabs) {
-// 	var trigger = tabs.find('#tabs_triggers').children(),
-// 			content = tabs.find('#tabs_content').children(),
-// 			time = 300;
-// 	content.filter('.hide').css({
-// 		display: 'none'});
-// 	trigger.click(function() {
-// 		var $this = $(this),
-// 				index = $this.index();
-// 		if (!$this.hasClass('active')) {
-// 			trigger.removeClass('active');
-// 			$this.addClass('active');
-// 			content.hide();
-// 			content.eq(index).fadeIn(time);
-// 		}
-// 	});
-// };
+// Табы
+function tabs(tabs) {
+	var trigger = tabs.find('#tabs_triggers').children(),
+			content = tabs.find('#tabs_content').children(),
+			time = 300;
+	content.filter('.hide').css({
+		display: 'none'});
+	trigger.click(function() {
+		var $this = $(this),
+				index = $this.index();
+		if (!$this.hasClass('active')) {
+			trigger.removeClass('active');
+			$this.addClass('active');
+			content.hide();
+			content.eq(index).fadeIn(time);
+		}
+		$('.js-card-slider').slick('unslick');
+		sliderCard($('.js-card-slider'));
+	});
+};
 
 // Аккордеон
 // function accordeon(accordeon, mobile) {
@@ -592,19 +600,119 @@ $(document).ready(function () {
 // };
 
 // Вставляет svg в html, позволяет управлять цветом через css 
-// $('img[src$=".svg"]').each(function(){
-//   var $img = $(this);
-//   var imgClass = $img.attr('class');
-//   var imgURL = $img.attr('src');
-//   $.get(imgURL, function(data) {
-//     var $svg = $(data).find('svg');
-//     if(typeof imgClass !== 'undefined') {
-//       $svg = $svg.attr('class', imgClass+' replaced-svg');
-//     }
-//     $svg = $svg.removeAttr('xmlns:a');
-//     if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-//       $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-//     }
-//     $img.replaceWith($svg);
-//   }, 'xml');
-// });
+$('img[src$=".svg"]').each(function(){
+  var $img = $(this);
+  var imgClass = $img.attr('class');
+  var imgURL = $img.attr('src');
+  $.get(imgURL, function(data) {
+    var $svg = $(data).find('svg');
+    if(typeof imgClass !== 'undefined') {
+      $svg = $svg.attr('class', imgClass+' replaced-svg');
+    }
+    $svg = $svg.removeAttr('xmlns:a');
+    if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+      $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+    }
+    $img.replaceWith($svg);
+  }, 'xml');
+});
+
+// Слайдер в банере утп
+function slider(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    // asNavFor: sliderFor, // Связь со слайдерами
+    dots: true, // Пагинация
+    arrows: false, // Стрелки
+    // speed: 500, // Скорость перехода слайдов
+    // autoplay: false, // Автопрокрутка
+    // autoplaySpeed: 2000, // Скорость автопрокрутки
+    // centerMode: false, // Задает класс .slick-center слайду в центре
+    // focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    // vertical: false, // Вертикальный слайдер
+    // rtl: false, // Слайды листаются справа налево
+    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+    // swipe: true, // Перелистывание пальцем
+		// draggable: true, // Перелистывание мышью
+		appendDots: $('.banner_dots'),
+    // responsive: [ // Адаптация
+    //   {
+    //   breakpoint: 992,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   },
+    //   {
+    //   breakpoint: 720,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   }
+    // ]
+    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+  });
+  
+  // sliderFor.slick({
+  //   slidesToShow: 1, // Сколько слайдов показывать на экране
+  //   slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+  //   dots: false, // Пагинация
+  //   arrows: false, // Стрелки
+  //   fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+  //   asNavFor: slider // Связь со слайдерами
+  // });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.banner_arrow--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.banner_arrow--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+// Добавляем кастомную пагинацию в слайдер
+// function addDotsInPagination(sliderB, sliderPagination) {
+//   var sliderCount = sliderB.find('.js-slider-slide');
+//   for (var i = 1; i < sliderCount.length + 1; i++) {
+//     var dot = $('<div class="slider-pagination_dot"></div>');
+//     dot.text(i);
+//     sliderPagination.append(dot);
+//   };
+//   // Вызов слайдера нужно делать после добавления пагинации
+//   slider();
+// };
+
+// Инициализация слайдеров на десктопе и мобилке
+// function sliderReinstall() {
+//   if (window.matchMedia("(max-width: 769px)").matches) {
+//     $('.slick-initialized').slick('unslick');
+//   }
+//   else {
+//     $('.slick-initialized').slick('unslick');
+//     sliderInit($('.slider'), $('.slider-for'));
+//   }
+// }
+
+// $('.your-slider').slick('unslick'); // Уничтожить слайдер
+
+// Слайдер в карточках
+function sliderCard(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+	});
+	// Кастомные кнопки "вперед" "назад"
+  $('.card_arrow--prev').click(function() {
+    $(this).siblings('.js-card-slider').slick('slickPrev');
+  });
+  $('.card_arrow--next').click(function() {
+    $(this).siblings('.js-card-slider').slick('slickNext');
+  });
+};
