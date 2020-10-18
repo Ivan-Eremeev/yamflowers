@@ -779,10 +779,11 @@ function sliderSlider(slider) {
 
 // Запуск видео
 function videoPlay(videoImg) {
-	videoImg.click(function() { 
-		$(this).css('display','none');
+	videoImg.click(videoStart);
+	function videoStart() {
+		videoImg.css('display','none');
 		videoImg.siblings('#video_play').css('display','none');
 		videoImg.siblings('video').css('display','block')[0].play();
-	});
+	}
 }
 //# sourceMappingURL=scripts.js.map
