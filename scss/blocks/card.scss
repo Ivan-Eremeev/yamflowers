@@ -1,4 +1,7 @@
 .card {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 25px 10px 15px;
   text-align: center;
   border: 1px solid transparent;
@@ -90,6 +93,7 @@
       }
       &:hover {
         box-shadow: none;
+        color: $red;
       }
     }
     &:after {
@@ -148,7 +152,7 @@
     }
     &--discount {
       background-color: $red;
-      top: 100px;
+      top: 95px;
       font-size: 24px;
     }
   }
@@ -156,27 +160,51 @@
     position: relative;
   }
   &_arrow {
-    width: 14px;
-    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,0);
+    transform: translate(0,-50%);
     opacity: 0;
     transition: $trans;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
     &--prev {
-      transform: rotate(90deg);
-      left: 10px;
+      left: 30px;
+      svg {
+        transform: rotate(90deg);
+      }
     }
     &--next {
-      transform: rotate(-90deg);
-      right: 10px;
+      right: 30px;
+      svg {
+        transform: rotate(-90deg);
+      }
     }
   }
   &:hover {
     border-color: #E2E2E2;
     .card_arrow {
       opacity: 1;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &_arrow {
+      width: 40px;
+      height: 100px;
+      opacity: 1;
+      &--prev {
+        left: 10px;
+      }
+      &--next {
+        right: 10px;
+      }
     }
   }
 }

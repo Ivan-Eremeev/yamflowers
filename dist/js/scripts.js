@@ -8,11 +8,11 @@
  */
 
 // Брэйкпоинты js
-var	breakXl = 1400,
+var	breakXl = 1441,
 		breakLg = 1200,
 		breakMd = 1025,
 		breakSm = 769,
-		breakXs = 500;
+		breakXs = 426;
 
 $(document).ready(function () {			
 
@@ -29,6 +29,8 @@ $(document).ready(function () {
 	slider($('.js-banner-slider'));
 	// Слайдер в карточках
 	sliderCard($('.js-card-slider'));
+	// Слайдер в slider
+	sliderSlider($('.js-slider'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -50,6 +52,9 @@ $(document).ready(function () {
 
 	// matchHeight // Задание елементам одинаковой высоты
 	$('.card_name').matchHeight();
+
+	// Запуск видео
+	videoPlay($('.js-video_img'))
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -716,4 +721,68 @@ function sliderCard(slider) {
     $(this).siblings('.js-card-slider').slick('slickNext');
   });
 };
+
+// Слайдер в slider
+function sliderSlider(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+		infinite: true, // Зацикленное пролистывание
+    centerMode: true, // Задает класс .slick-center слайду в центре
+		centerPadding: '450px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+		adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
+		variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+		appendDots: $('.banner_dots'),
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakXl,
+        settings: {
+					centerPadding: '200px',
+        }
+      },
+      {
+      breakpoint: breakLg,
+        settings: {
+					centerPadding: '200px',
+        }
+			},
+			{
+			breakpoint: breakMd,
+        settings: {
+					centerPadding: '100px',
+        }
+			},
+			{
+			breakpoint: breakSm,
+        settings: {
+					centerMode: false,
+        }
+			},
+			{
+			breakpoint: breakXs,
+        settings: {
+					centerMode: false,
+        }
+      },
+    ]
+	});
+	// Кастомные кнопки "вперед" "назад"
+  $('.slider_arrow--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.slider_arrow--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+// Запуск видео
+function videoPlay(videoImg) {
+	videoImg.click(function() { 
+		$(this).css('display','none');
+		videoImg.siblings('#video_play').css('display','none');
+		videoImg.siblings('video').css('display','block')[0].play();
+	});
+}
 //# sourceMappingURL=scripts.js.map

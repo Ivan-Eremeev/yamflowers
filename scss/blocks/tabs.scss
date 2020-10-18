@@ -1,5 +1,5 @@
 .tabs {
-  padding: 75px 0 100px;
+  padding: 75px 0 50px;
   .title {
     margin-bottom: 30px;
   }
@@ -52,7 +52,16 @@
   &_content {
 
   }
+  .row {
+    margin-bottom: 40px;
+  }
   &_col {
     @include col(3);
+    @include col-lg(4);
+    @include col-md(6);
+    @include col-sm(12);
+  }
+  &_btn {
+    text-align: center;
   }
 }
