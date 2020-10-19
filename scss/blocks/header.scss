@@ -100,7 +100,17 @@
     &--md-hide {
       display: none;
     }
-    &--footer {
+    &--md-small {
+      .social_link {
+        width: 30px;
+      }
+      .social_img {
+        width: 12px;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &--sm-small {
       .social_link {
         width: 30px;
       }

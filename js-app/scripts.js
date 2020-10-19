@@ -22,8 +22,8 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	myMenu($('.js-headerMenu'), $('.js-headerMenuBtn'));
-	myMenu($('.js-CityMenu'), $('.js-CityMenuBtn'));
+	popups($('.js-headerMenu'), $('.js-headerMenuBtn'));
+	popups($('.js-CityMenu'), $('.js-CityMenuBtn'));
 
 	// Слайдер в банере утп
 	slider($('.js-banner-slider'));
@@ -155,12 +155,12 @@ $(document).ready(function () {
 	
 });
 
-// Мобильное меню
-function myMenu(menu, menuBtn) {
-	var	over = menu.find('#menu-over'),
-			close = menu.find('#menu-close');
-	menuBtn.on('click', function () {
-		if (menu.hasClass('open')) {
+// Всплывающие окна
+function popups(popup, popupBtn) {
+	var	over = popup.find('#menu-over'),
+			close = popup.find('#menu-close');
+	popupBtn.on('click', function () {
+		if (popup.hasClass('open')) {
 			menuClose();
 		}else {
 			menuOpen();
@@ -169,12 +169,12 @@ function myMenu(menu, menuBtn) {
 	over.on('click', menuClose);
 	close.on('click', menuClose);
 	function menuOpen() {
-		menuBtn.addClass('is-active');
-		menu.fadeIn()
+		popupBtn.addClass('is-active');
+		popup.fadeIn()
 	}
 	function menuClose() {
-		menuBtn.removeClass('is-active');
-		menu.fadeOut()
+		popupBtn.removeClass('is-active');
+		popup.fadeOut()
 	}
 };
 
