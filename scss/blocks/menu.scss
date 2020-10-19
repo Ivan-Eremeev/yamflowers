@@ -1,17 +1,23 @@
 .menu {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	font-size: 30px;
+	display: none;
+	z-index: 10;
+	overflow-y: auto;
 	&_nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 100%;
 		padding-bottom: 30px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-		height: 100%;
-		background-color: #fff;
+		background-color: rgba(0, 0, 0, 0.85);
 		z-index: 10;
-		position: fixed;
 		transition: .5s;
-		overflow-y: auto;
 	}
 	&_list {
 		text-align: center;
@@ -26,10 +32,10 @@
 			padding: 10px 0;
 			margin: 0 10px;
 			text-decoration: none;
-			color: #000;
+			color: #fff;
 			@include line-slide-center();
 			&:after {
-				background-color: $red;
+				background-color: #fff;
 				transition: $trans;
 			}
 		}
@@ -45,80 +51,33 @@
 		z-index: 9;
 	}
 	&_close {
-		width: 10px;
-		height: 10px;
+		width: 44px;
+		height: 44px;
 		position: absolute;
 		top: 20px;
 		right: 20px;
+		background-color: #fff;
+		border-radius: 50%;
+		cursor: pointer;
+		&:after,&:before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 1px;
+			background-color: #000;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&:after {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:before {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
 	}
 	&.open {
-		.menu_over {
-			display: block;
-		}
-	}
-
-	&--left {
-		.menu_nav {
-			left: -1000px;
-		}
-		&.open {
-			.menu_nav {
-				left: 0;
-			}
-		}
-	}
-
-	&--right {
-		.menu_nav {
-			right: -1000px;
-		}
-
-		&.open {
-			.menu_nav {
-				right: 0;
-			}
-		}
-	}
-
-	&--top {
-		.menu_nav {
-			top: -1500px;
-		}
-
-		&.open {
-			.menu_nav {
-				top: 0;
-			}
-		}
-	}
-
-	&--bottom {
-		.menu_nav {
-			bottom: -1000px;
-		}
-
-		&.open {
-			.menu_nav {
-				bottom: 0;
-			}
-		}
-	}
-
-	&--drop {
-		&.open {
-			.menu_nav {
-				max-height: 2000px;
-				transition: 2s;
-			}
-		}
-
-		.menu_nav {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			max-height: 0;
-			transition: .8s;
-		}
+		
 	}
 	@media (max-width: $break_md) {
 		font-size: 22px;

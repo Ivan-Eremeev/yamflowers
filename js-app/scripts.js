@@ -158,9 +158,7 @@ $(document).ready(function () {
 // Мобильное меню
 function myMenu(menu, menuBtn) {
 	var	over = menu.find('#menu-over'),
-			close = menu.find('#menu-close'),
-			html = $('html'),
-			scrollbarWidth;
+			close = menu.find('#menu-close');
 	menuBtn.on('click', function () {
 		if (menu.hasClass('open')) {
 			menuClose();
@@ -171,30 +169,13 @@ function myMenu(menu, menuBtn) {
 	over.on('click', menuClose);
 	close.on('click', menuClose);
 	function menuOpen() {
-		html.addClass('lock').css('padding-right',scrollbarWidth);
-		menu.addClass('open');
 		menuBtn.addClass('is-active');
+		menu.fadeIn()
 	}
 	function menuClose() {
-		html.removeClass('lock').css('padding-right',0);
-		menu.removeClass('open');
 		menuBtn.removeClass('is-active');
+		menu.fadeOut()
 	}
-	function scrollbarWidthCalc() {
-		var documentWidth = parseInt(document.documentElement.clientWidth),
-				windowsWidth = parseInt(window.innerWidth);
-		scrollbarWidth = windowsWidth - documentWidth;
-	}
-	function headerHeightCalc() {
-		var headerHeight = parseInt($('#header').outerHeight());
-		menu.find('.menu_nav').css('padding-top',headerHeight + 80 + 'px')
-	}
-	scrollbarWidthCalc();
-	headerHeightCalc();
-	$(window).resize(function () {
-		scrollbarWidthCalc();
-		headerHeightCalc();
-	});
 };
 
 // // Блок с высотой окна браузера

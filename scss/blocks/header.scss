@@ -2,15 +2,13 @@
   padding: 10px 0;
   font-size: 15px;
   font-weight: 500;
-  position: relative;
+  background-color: #fff;
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  background-color: #fff;
-  position: relative;
-  z-index: 11;
+  
   &_item {
     display: flex;
     justify-content: space-between;
@@ -28,11 +26,6 @@
     transition: $trans;
     &:after {
       padding-top: 100%;
-    }
-  }
-  &.is-active {
-    .city_icon {
-      transform: rotate(-180deg);
     }
   }
   @media (max-width: $break_md) {
