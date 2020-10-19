@@ -1,0 +1,31 @@
+.gallery {
+  .title {
+    margin-bottom: 56px;
+  }
+  .row {
+    margin-left: 0;
+  }
+  &_col {
+    @include col(2.4);
+    @include no-gutter();
+  }
+  &_img {
+    &:after {
+      padding-top: 97%;
+    }
+    img {
+      transition: .5s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &_title {
+      margin-bottom: 30px;
+    }
+    .row {
+      margin-left: 0;
+    }
+  }
+}

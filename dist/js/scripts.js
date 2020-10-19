@@ -36,7 +36,7 @@ $(document).ready(function () {
 	// screenHeight($('#full-height'));
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
-	// menuScroll($('#menu'));
+	menuScroll($('#toUp'));
 
 	// Stiky menu // Липкое меню. При прокрутке добавляем класс stiky.
 	// stikyMenu($('#header'));
@@ -45,7 +45,8 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	tabs($('.js-tabs'));
+	tabs($('.js-tabs-1'));
+	tabs($('.js-tabs-2'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
@@ -203,18 +204,18 @@ function myMenu(menu, menuBtn) {
 //   });
 // };
 
-// // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
-// function menuScroll(menuItem) {
-// 	menuItem.find('a[href^="#"]').click( function(){
-// 		var scroll_el = $(this).attr('href'),
-// 				time = 500;
-// 		if ($(scroll_el).length != 0) {
-// 		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, time);
-// 			$(this).addClass('active');
-// 		}
-// 		return false;
-// 	});
-// };
+// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
+function menuScroll(menuItem) {
+	menuItem.find('a[href^="#"]').click( function(){
+		var scroll_el = $(this).attr('href'),
+				time = 500;
+		if ($(scroll_el).length != 0) {
+		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, time);
+			$(this).addClass('active');
+		}
+		return false;
+	});
+};
 
 // // Stiky menu // Липкое меню.
 // function stikyMenu(header) {

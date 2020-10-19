@@ -2,9 +2,9 @@
 .callback
   .wrapper
     form(action="").callback_form
-      .callback_title Подобрать букет
+      h2.callback_title Подобрать букет
       .callback_text Флорист подберет лучший букет под ваши пожелания.
-      .callback_row
+      .row
         .callback_block
           .callback_name Ваше имя:
           .callback_input
@@ -13,10 +13,8 @@
           .callback_name Ваш e-mail:
           .callback_input
             input(type="text")
-      .callback_row
-        input(type="checkbox")#callbackCheckbox
-        label(for="callbackCheckbox") Даю согласие на обработку персональных данных
+      .callback_consent
+        input(type="checkbox")#callbackCheckbox.callback_checkbox
+        label(for="callbackCheckbox").callback_label Даю согласие на обработку персональных данных
       button(type="submit").btn-red Оставить заявку
-    .callback_img
-      img(src="img/woomans.png", alt="woomans")
 //	/callback

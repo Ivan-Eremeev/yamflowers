@@ -27,6 +27,9 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	color: #000;
+	@media (max-width: $break_sm) {
+		font-size: 16px;
+	}
 }
 .mobile-hide {
 	@media (max-width: $break_sm) {
@@ -109,8 +112,14 @@ body {
 	font-size: 35px;
 	font-weight: normal;
 	letter-spacing: 0.2em;
+	line-height: 1.8;
 	text-transform: uppercase;
 	text-align: center;
+	a {
+		color: #000;
+		font-weight: 500;
+		border-bottom: 1px solid #000;
+	}
 	@media (max-width: $break_sm) {
 		font-size: 20px;
 	}

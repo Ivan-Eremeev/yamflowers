@@ -24,15 +24,19 @@ block content
 			include blocks/banner.jade
 
 			include blocks/tabs.jade
+			+tabs('js-tabs-1 tabs', 'Популярное')
 
 			include blocks/slider.jade
 
-			include blocks/tabs.jade
+			+tabs('js-tabs-2 tabs', 'Подборки букетов')
 
 			include blocks/video.jade
 
 			include blocks/steps.jade
+
 			include blocks/callback.jade
+
+			include blocks/gallery.jade
 			
 		include blocks/footer.jade
 
