@@ -113,13 +113,17 @@
                   <h2 class="title">Популярное</h2>
                   <div class="tabs_menu">
                     <div class="wrapper">
-                      <ul class="tabs_triggers">
-                        <li class="js-tabs-trigger active" data-trigger="0">Все категории</li>
-                        <li class="js-tabs-trigger" data-trigger="1">Клубничные букеты</li>
-                        <li class="js-tabs-trigger" data-trigger="2">Клубничные боксы</li>
-                        <li class="js-tabs-trigger" data-trigger="3">Воздушные боксы</li>
-                        <li class="js-tabs-trigger" data-trigger="4">Хит Букеты</li>
-                        <li class="js-tabs-trigger" data-trigger="5">Показать еще<img src="img/arrow.svg" alt="arrow"></li>
+                      <ul class="tabs_triggers" id="tabs_triggers">
+                        <li class="js-tabs-trigger active" data-trigger="0"><span>Все категории</span></li>
+                        <li class="js-tabs-trigger" data-trigger="1"><span>Клубничные букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="2"><span>Клубничные боксы</span></li>
+                        <li class="js-tabs-trigger" data-trigger="3"><span>Воздушные боксы</span></li>
+                        <li class="js-tabs-trigger" data-trigger="4"><span>Хит Букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="5"><span>Букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="6"><span>Букеты клубничные</span></li>
+                        <li class="tabsDrop"><span class="tabsDrop_span mobile-hide">Показать еще</span><span class="tabsDrop_span mobile-visible">Показать все категории</span><img src="img/arrow.svg" alt="arrow">
+                          <ul class="tabsDrop_list" id="tabsDrop_list"></ul>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -1618,13 +1622,17 @@
                   <h2 class="title">Подборки букетов</h2>
                   <div class="tabs_menu">
                     <div class="wrapper">
-                      <ul class="tabs_triggers">
-                        <li class="js-tabs-trigger active" data-trigger="0">Все категории</li>
-                        <li class="js-tabs-trigger" data-trigger="1">Клубничные букеты</li>
-                        <li class="js-tabs-trigger" data-trigger="2">Клубничные боксы</li>
-                        <li class="js-tabs-trigger" data-trigger="3">Воздушные боксы</li>
-                        <li class="js-tabs-trigger" data-trigger="4">Хит Букеты</li>
-                        <li class="js-tabs-trigger" data-trigger="5">Показать еще<img src="img/arrow.svg" alt="arrow"></li>
+                      <ul class="tabs_triggers" id="tabs_triggers">
+                        <li class="js-tabs-trigger active" data-trigger="0"><span>Все категории</span></li>
+                        <li class="js-tabs-trigger" data-trigger="1"><span>Клубничные букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="2"><span>Клубничные боксы</span></li>
+                        <li class="js-tabs-trigger" data-trigger="3"><span>Воздушные боксы</span></li>
+                        <li class="js-tabs-trigger" data-trigger="4"><span>Хит Букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="5"><span>Букеты</span></li>
+                        <li class="js-tabs-trigger" data-trigger="6"><span>Букеты клубничные</span></li>
+                        <li class="tabsDrop"><span class="tabsDrop_span mobile-hide">Показать еще</span><span class="tabsDrop_span mobile-visible">Показать все категории</span><img src="img/arrow.svg" alt="arrow">
+                          <ul class="tabsDrop_list" id="tabsDrop_list"></ul>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -3099,13 +3107,13 @@
                 <div class="callback_block">
                   <div class="callback_name">Ваше имя:</div>
                   <div class="callback_input">
-                    <input type="text">
+                    <input type="text" name="name">
                   </div>
                 </div>
                 <div class="callback_block">
                   <div class="callback_name">Ваш e-mail:</div>
                   <div class="callback_input">
-                    <input type="text">
+                    <input type="text" name="tel">
                   </div>
                 </div>
               </div>
@@ -3194,6 +3202,7 @@
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/slick.min.js"></script>
     <script src="js/libs/jquery.matchHeight-min.js"></script>
+    <script src="js/libs/jquery.inputmask.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

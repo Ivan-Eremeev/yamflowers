@@ -770,10 +770,10 @@ body {
 	cursor: pointer;
 	font-weight: 500;
 }
-.tabs_menu li:not(:last-child) {
+.tabs_menu li span {
 	position: relative;
 }
-.tabs_menu li:not(:last-child):after {
+.tabs_menu li span:after {
 	content: "";
 	display: block;
 	width: 0;
@@ -785,31 +785,18 @@ body {
 	transform: translate(-50%);
 	transition: 0.5s;
 }
-.tabs_menu li:not(:last-child):hover:after {
+.tabs_menu li span:hover:after {
 	width: 100%;
 }
-.tabs_menu li:not(:last-child):after {
+.tabs_menu li span:after {
 	transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 	background-color: #000;
 }
-.tabs_menu li:not(:last-child).active {
+.tabs_menu li.active {
 	text-shadow: 1px 1px 0 #000;
 }
-.tabs_menu li:not(:last-child).active:after {
+.tabs_menu li.active span:after {
 	width: 100%;
-}
-.tabs_menu li:last-child {
-	margin-right: 30px;
-	border-bottom: 1px dashed #000;
-	position: relative;
-}
-.tabs_menu li:last-child svg {
-	width: 14px;
-	height: 14px;
-	position: absolute;
-	top: 60%;
-	right: -30px;
-	transform: translate(0, -50%);
 }
 .tabs_triggers {
 	display: flex;
@@ -846,6 +833,52 @@ body {
 }
 .tabs_btn {
 	text-align: center;
+}
+
+.tabsDrop {
+	padding-right: 30px;
+	position: relative;
+	display: none;
+}
+.tabsDrop_span {
+	border-bottom: 1px dashed #000;
+}
+.tabsDrop_span:after {
+	display: none !important;
+}
+.tabsDrop svg {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top: 60%;
+	right: 0;
+	transform: translate(0, -50%);
+}
+.tabsDrop_list {
+	min-width: 100%;
+	padding: 20px 10px;
+	margin-top: 20px;
+	background-color: #F8F8F8;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	white-space: nowrap;
+}
+.tabsDrop_list li {
+	margin-left: 0;
+	padding: 10px 0;
+}
+.tabsDrop_list li:last-child {
+	border-bottom: none;
+}
+@media (max-width: 769px) {
+	.tabsDrop {
+		width: 100%;
+	}
+	.tabsDrop_list {
+		left: 0;
+	}
 }
 
 .card {

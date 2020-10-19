@@ -42,7 +42,11 @@ $(document).ready(function () {
 	// stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
-	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
+	$('[name=tel]').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
+
+	// Выводить лишние пункты меню табов в выпающий список
+	tabsMenu($('.js-tabs-1'));
+	tabsMenu($('.js-tabs-2'));
 
 	// Табы
 	tabs($('.js-tabs-1'));
@@ -763,6 +767,45 @@ function videoPlay(videoImg) {
 		videoImg.css('display','none');
 		videoImg.siblings('#video_play').css('display','none');
 		videoImg.siblings('video').css('display','block')[0].play();
+	}
+}
+
+// Выводить лишние пункты меню табов в выпающий список
+function tabsMenu(tabs) {
+	var numItem = 5, // сколько пунктов выводить
+			tabsMenu = tabs.find('#tabs_triggers'), // меню
+			tabsDropBtn = tabs.find('.tabsDrop'), // кнопка выпадайки
+			tabsDropList = tabs.find('#tabsDrop_list'), // выпадайка
+			items = tabs.find('.js-tabs-trigger'), // все пункты
+			countItems = items.length; // общее колличество пунктов
+	windowResizeInitFunc();
+	itemsSlice();
+	dropMenu();
+	$(window).resize(function () {
+		windowResizeInitFunc();
+		itemsSlice();
+		dropMenu();
+	})
+	function dropMenu() { // появление выпадайки при клике на кнопку
+		tabsDropBtn.on('click', function () {
+			tabsDropList.stop().slideToggle(300);
+		})
+	}
+	function itemsSlice() { // распределение пунктов по менюшкам
+		if (countItems > numItem) {
+			tabsMenu.html(items.slice(0,numItem)).append(tabsDropBtn);
+			tabsDropBtn.css('display','block');
+			tabsDropList.html(items.slice(numItem));
+		}
+	}
+	function windowResizeInitFunc() { // условия для разных размеров экрана
+		if ($(window).width() > breakMd) {
+			numItem = 5;
+		}else if ($(window).width() <= breakMd && $(window).width() > breakSm) {
+			numItem = 3;
+		}else if ($(window).width() <= breakSm) {
+			numItem = 0;
+		}
 	}
 }
 
