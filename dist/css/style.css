@@ -121,6 +121,9 @@ h1, h2, h3 {
 	src: url("../fonts/Montserrat/Montserrat-Black.eot");
 	src: url("../fonts/Montserrat/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Black.svg") format("svg");
 }
+html {
+	min-height: 100%;
+}
 html.lock {
 	overflow: hidden;
 }
@@ -170,6 +173,7 @@ input {
 }
 
 body {
+	min-height: 100%;
 	background-color: #fff;
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
@@ -265,6 +269,9 @@ body {
 }
 
 .page {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
@@ -287,6 +294,10 @@ body {
 	.title {
 		font-size: 20px;
 	}
+}
+
+.content {
+	flex-grow: 1;
 }
 
 .menu {
