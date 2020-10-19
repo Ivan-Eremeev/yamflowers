@@ -1,6 +1,6 @@
 // settings
 html {
-	min-height: 100%;
+	height: 100%;
 	&.lock {
 		overflow: hidden;
 	}
@@ -24,7 +24,7 @@ input {
 	@include wrapper();
 }
 body {
-	min-height: 100%;
+	height: 100%;
 	background-color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
