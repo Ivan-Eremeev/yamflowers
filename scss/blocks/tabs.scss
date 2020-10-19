@@ -51,7 +51,9 @@
     margin-right: auto;
   }
   &_content {
-
+    >div:not(.show) {
+      display: none;
+    }
   }
   .row {
     margin-bottom: 40px;

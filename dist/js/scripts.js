@@ -226,22 +226,19 @@ function menuScroll(menuItem) {
 
 // Табы
 function tabs(tabs) {
-	var trigger = tabs.find('#tabs_triggers').children(),
-			content = tabs.find('#tabs_content').children(),
-			time = 300;
-	content.filter('.hide').css({
-		display: 'none'});
+	var trigger = tabs.find('.js-tabs-trigger'),
+			content = tabs.find('#tabs_content').children();
 	trigger.click(function() {
 		var $this = $(this),
-				index = $this.index();
+				index = $this.data('trigger');
 		if (!$this.hasClass('active')) {
 			trigger.removeClass('active');
 			$this.addClass('active');
-			content.hide();
-			content.eq(index).fadeIn(time);
+			content.removeClass('show');
+			content.eq(index).addClass('show').find('.js-card-slider').slick('setPosition');
+		}else {
+			return false
 		}
-		$('.js-card-slider.slick-initialized').slick('unslick');
-		sliderCard($('.js-card-slider'));
 	});
 };
 

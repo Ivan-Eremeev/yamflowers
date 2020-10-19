@@ -820,6 +820,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.tabs_content > div:not(.show) {
+	display: none;
+}
 .tabs .row {
 	margin-bottom: 40px;
 }
