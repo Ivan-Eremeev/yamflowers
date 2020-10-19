@@ -259,7 +259,7 @@ function tabs(tabs) {
 			content.hide();
 			content.eq(index).fadeIn(time);
 		}
-		$('.js-card-slider').slick('unslick');
+		$('.js-card-slider.slick-initialized').slick('unslick');
 		sliderCard($('.js-card-slider'));
 	});
 };
@@ -786,4 +786,17 @@ function videoPlay(videoImg) {
 		videoImg.siblings('#video_play').css('display','none');
 		videoImg.siblings('video').css('display','block')[0].play();
 	}
+}
+
+// Показать больше характеристик
+if( window.innerWidth <= 768 ){
+  var items = $('.cart__harakt .cart__param li'),
+  per = 12,
+  i = 1,
+  total = 0;
+  $('.more--harakt').on('click', function(){
+    total = per * (i++);
+    items.slice(0, total).slideDown(300);
+    $(this)[total >= items.length ? 'hide' : 'show']();
+  }).click();
 }
