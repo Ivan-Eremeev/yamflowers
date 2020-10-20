@@ -40,6 +40,7 @@
           </div>
         </div>
       </header>
+      <!-- /header-->
       <!-- menu-->
       <div class="js-headerMenu menu">
         <nav class="menu_nav">
@@ -52,7 +53,6 @@
             <li><a href="#">Контакты</a></li>
           </ul>
           <div class="social social--sm-small"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
-          <div class="menu_close" id="menu-close"></div>
         </nav>
       </div>
       <!-- /menu-->
@@ -63,11 +63,9 @@
             <li><a href="#">Санкт-Петербург</a></li>
             <li><a href="#">Саратов</a></li>
           </ul>
-          <div class="menu_close" id="menu-close"></div>
         </nav>
       </div>
       <!-- /menuCity-->
-      <!-- /header-->
       <div class="content">
         <!-- banner-->
         <div class="banner">
@@ -119,8 +117,6 @@
                         <li class="js-tabs-trigger" data-trigger="2"><span>Клубничные боксы</span></li>
                         <li class="js-tabs-trigger" data-trigger="3"><span>Воздушные боксы</span></li>
                         <li class="js-tabs-trigger" data-trigger="4"><span>Хит Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="5"><span>Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="6"><span>Букеты клубничные</span></li>
                         <li class="tabsDrop"><span class="tabsDrop_span mobile-hide">Показать еще</span><span class="tabsDrop_span mobile-visible">Показать все категории</span><img src="img/arrow.svg" alt="arrow">
                           <ul class="tabsDrop_list" id="tabsDrop_list"></ul>
                         </li>
@@ -1628,8 +1624,6 @@
                         <li class="js-tabs-trigger" data-trigger="2"><span>Клубничные боксы</span></li>
                         <li class="js-tabs-trigger" data-trigger="3"><span>Воздушные боксы</span></li>
                         <li class="js-tabs-trigger" data-trigger="4"><span>Хит Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="5"><span>Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="6"><span>Букеты клубничные</span></li>
                         <li class="tabsDrop"><span class="tabsDrop_span mobile-hide">Показать еще</span><span class="tabsDrop_span mobile-visible">Показать все категории</span><img src="img/arrow.svg" alt="arrow">
                           <ul class="tabsDrop_list" id="tabsDrop_list"></ul>
                         </li>
@@ -3118,7 +3112,8 @@
                 </div>
               </div>
               <div class="callback_consent">
-                <input class="callback_checkbox" type="checkbox" id="callbackCheckbox">
+                <input type="checkbox" id="callbackCheckbox">
+                <label class="callback_checkbox" for="callbackCheckbox"></label>
                 <label class="callback_label" for="callbackCheckbox">Даю согласие на обработку персональных данных</label>
               </div>
               <button class="btn-red" type="submit">Оставить заявку</button>

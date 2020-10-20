@@ -3,6 +3,8 @@
   font-size: 15px;
   font-weight: 500;
   background-color: #fff;
+  position: relative;
+  z-index: 10;
   .wrapper {
     display: flex;
     justify-content: space-between;
