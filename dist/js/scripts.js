@@ -167,8 +167,10 @@ function myMenu(menu, menuBtn) {
 			close = menu.find('#menu-close'),
 			headerHeight = $('#header').outerHeight();	
 	menuBtn.on('click', function () {
-		if (menu.hasClass('open') && toggleOpenMenu) {
+		if (menu.hasClass('open')) {
 			menuClose();
+		}else if (toggleOpenMenu) {
+			return false
 		}else {
 			menuOpen();
 		}
