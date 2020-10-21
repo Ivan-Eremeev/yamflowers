@@ -42,6 +42,9 @@
     }
   }
   @media (max-width: $break_sm) {
+    .row {
+      max-width: 600px;
+    }
     margin-bottom: 50px;
     .wrapper {
       padding: 50px $gutter 50px $gutter;

@@ -1,22 +1,25 @@
 // modal
 .modal#modal-1
-  .modal_body
-    .modal_title Оставить заявку
-    .modal_text Заполните форму и мы вам перезвоним
-    .row
-      .modal_col
-        .form_field
-          .form_name Ваше имя:
-          .form_input
-            input(type="text" name="name")
-      .modal_col
-        .form_field
-          .form_name Ваш e-mail:
-          .form_input
-            input(type="text" name="tel")
-    .form_consent
-      input(type="checkbox")#callbackCheckbox
-      label(for="callbackCheckbox").form_checkbox
-      label(for="callbackCheckbox").form_label Даю согласие на обработку персональных данных
+  form(action="").modal_body
+    .modal_content
+      .modal_title Оставить заявку
+      .modal_text Заполните форму и мы вам перезвоним
+      .row
+        .modal_col
+          .form_field
+            .form_name Ваше имя:
+            .form_input
+              input(type="text" name="name")
+        .modal_col
+          .form_field
+            .form_name Ваш e-mail:
+            .form_input
+              input(type="text" name="tel")
+      .form_consent
+        input(type="checkbox")#modalCheckbox
+        label(for="modalCheckbox").form_checkbox
+        label(for="modalCheckbox").form_label Даю согласие на обработку персональных данных
+      .modal_btn  
+        button(type="submit").btn-red Оставить заявку
     .modal_close
 // /modal

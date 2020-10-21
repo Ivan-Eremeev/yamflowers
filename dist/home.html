@@ -52,7 +52,7 @@
             <li><a href="#">Статьи</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <div class="social social--sm-small"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+          <div class="social"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
         </nav>
       </div>
       <!-- /menu-->
@@ -4315,34 +4315,39 @@
         <!--	/gallery-->
         <!-- modal-->
         <div class="modal" id="modal-1">
-          <div class="modal_body">
-            <div class="modal_title">Оставить заявку</div>
-            <div class="modal_text">Заполните форму и мы вам перезвоним</div>
-            <div class="row">
-              <div class="modal_col">
-                <div class="form_field">
-                  <div class="form_name">Ваше имя:</div>
-                  <div class="form_input">
-                    <input type="text" name="name">
+          <form class="modal_body" action="">
+            <div class="modal_content">
+              <div class="modal_title">Оставить заявку</div>
+              <div class="modal_text">Заполните форму и мы вам перезвоним</div>
+              <div class="row">
+                <div class="modal_col">
+                  <div class="form_field">
+                    <div class="form_name">Ваше имя:</div>
+                    <div class="form_input">
+                      <input type="text" name="name">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_col">
+                  <div class="form_field">
+                    <div class="form_name">Ваш e-mail:</div>
+                    <div class="form_input">
+                      <input type="text" name="tel">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="modal_col">
-                <div class="form_field">
-                  <div class="form_name">Ваш e-mail:</div>
-                  <div class="form_input">
-                    <input type="text" name="tel">
-                  </div>
-                </div>
+              <div class="form_consent">
+                <input type="checkbox" id="modalCheckbox">
+                <label class="form_checkbox" for="modalCheckbox"></label>
+                <label class="form_label" for="modalCheckbox">Даю согласие на обработку персональных данных</label>
               </div>
-            </div>
-            <div class="form_consent">
-              <input type="checkbox" id="callbackCheckbox">
-              <label class="form_checkbox" for="callbackCheckbox"></label>
-              <label class="form_label" for="callbackCheckbox">Даю согласие на обработку персональных данных</label>
+              <div class="modal_btn"> 
+                <button class="btn-red" type="submit">Оставить заявку</button>
+              </div>
             </div>
             <div class="modal_close"></div>
-          </div>
+          </form>
         </div>
         <!-- /modal-->
       </div>
