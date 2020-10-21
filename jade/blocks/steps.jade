@@ -4,8 +4,11 @@
     .steps_content
       .steps_bg
       h2.steps_title Контроль заказа перед доставкой
-      .steps_img
-        img(src="img/phone.png", alt="phone")
+      .steps_phone
+        .steps_imgBg
+        img(src="img/phone-img.png", alt="phone").js-video_phone
+        video(controls)
+          source(src="video/video.mp4" type="video/mp4")
       ul.steps_list
         li.steps_item
           span.steps_icon

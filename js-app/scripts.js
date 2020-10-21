@@ -10,7 +10,7 @@
 // Брэйкпоинты js
 var	breakXl = 1441,
 		breakLg = 1200,
-		breakMd = 1025,
+		breakMd = 1024,
 		breakSm = 769,
 		breakXs = 426;
 
@@ -62,6 +62,7 @@ $(document).ready(function () {
 
 	// Запуск видео
 	videoPlay($('.js-video_img'))
+	videoPlay($('.js-video_phone'))
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -158,14 +159,22 @@ $(document).ready(function () {
 	// 	// tooltipDisable(); // Отключение всплывающей подсказки
 	// 	// sliderReinstall(); // Реинициализация слайдеров
 	// });
+
+	// Калькулятор скидки
+	discountCounter();
+
+	// разбивка суммы на тысячные
+	rank();
 	
 });
 
 // Меню
 function myMenu(menu, menuBtn) {
-	var	over = menu.find('#menu-over'),
-			close = menu.find('#menu-close'),
-			headerHeight = $('#header').outerHeight();	
+	var	headerHeight = $('#header').outerHeight(),
+			html = $('html'),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth;
 	menuBtn.on('click', function () {
 		if (menu.hasClass('open')) {
 			menuClose();
@@ -176,15 +185,18 @@ function myMenu(menu, menuBtn) {
 		}
 	});
 	menu.css('padding-top',headerHeight + 20 + 'px');
-	// close.on('click', menuClose);
 	function menuOpen() {
 		menuBtn.addClass('is-active');
 		menu.fadeIn().addClass('open');
+		html.addClass('lock');
+		html.addClass('lock').css('padding-right',scrollbarWidth);
 		toggleOpenMenu = true;
 	}
 	function menuClose() {
 		menuBtn.removeClass('is-active');
 		menu.fadeOut().removeClass('open');
+		html.removeClass('lock');
+		html.removeClass('lock').css('padding-right',0);
 		toggleOpenMenu = false;
 	}
 };
@@ -725,35 +737,40 @@ function sliderSlider(slider) {
 		adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
 		variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
 		appendDots: $('.banner_dots'),
+		variableWidth: true,
     responsive: [ // Адаптация
-      {
-      breakpoint: breakXl,
-        settings: {
-					centerPadding: '200px',
-        }
-      },
-      {
-      breakpoint: breakLg,
-        settings: {
-					centerPadding: '200px',
-        }
-			},
+      // {
+      // breakpoint: breakXl,
+      //   settings: {
+			// 		centerPadding: '200px',
+      //   }
+      // },
+      // {
+      // breakpoint: breakLg,
+      //   settings: {
+			// 		centerPadding: '200px',
+      //   }
+			// },
 			{
 			breakpoint: breakMd,
         settings: {
-					centerPadding: '100px',
+					centerMode: false,
+					// centerPadding: '100px',
+					variableWidth: false,
         }
 			},
 			{
 			breakpoint: breakSm,
         settings: {
 					centerMode: false,
+					variableWidth: false,
         }
 			},
 			{
 			breakpoint: breakXs,
         settings: {
 					centerMode: false,
+					variableWidth: false,
         }
       },
     ]
@@ -820,15 +837,23 @@ function tabsMenu(tabs) {
 	}
 }
 
-// Показать больше характеристик
-if( window.innerWidth <= 768 ){
-  var items = $('.cart__harakt .cart__param li'),
-  per = 12,
-  i = 1,
-  total = 0;
-  $('.more--harakt').on('click', function(){
-    total = per * (i++);
-    items.slice(0, total).slideDown(300);
-    $(this)[total >= items.length ? 'hide' : 'show']();
-  }).click();
+// разбивка суммы на тысячные
+function rank(){
+  $('.rank').each(function(){
+    var rank = $(this).text();
+    var rank_val = $(this).val();
+    $(this).text(rank.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    $(this).val(rank_val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+  });
+};
+
+// Калькулятор скидки
+function discountCounter() {
+	$('.card_prices').each(function(){
+		var price = parseInt($(this).find('.card_price').text());
+		var price_old = parseInt($(this).find('.card_old-price').text());
+		var discont = price_old - price;
+		$(this).find('.card_discount-price').text('-' + discont + ' ₽');
+		console.log(price,price_old,discont);
+	});	
 }

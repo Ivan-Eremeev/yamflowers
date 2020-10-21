@@ -55,12 +55,13 @@ mixin tabs(className, titleName)
                   label(for="flower_1_3").card_label l
                   input(type="radio" name="flower_1").card_input#flower_1_4
                   label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
+                .card_prices
+                  .card_price.rank 5329₽
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
 
           .tabs_col
             .card
@@ -77,21 +78,22 @@ mixin tabs(className, titleName)
               form(action="").card_content
                 a(href="#").card_name Клубничная мечта М
                 .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
+                  input(type="radio" name="flower_2").card_input#flower_2_0
+                  label(for="flower_2_0").card_label.card_labe xs
+                  input(type="radio" name="flower_2" checked).card_input#flower_2_1
+                  label(for="flower_2_1").card_label.card_labe s
+                  input(type="radio" name="flower_2").card_input#flower_2_2
+                  label(for="flower_2_2").card_label.card_labe m
                 .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
+                  .card_old-price.rank 5329₽
+                  .card_price.rank 4329₽
+                  .card_discount-price.rank
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -109,21 +111,22 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Рапунцель S
                 .card_sizes
                   input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
+                  label(for="flower_3_0").card_label.card_label xs
                   input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
+                  label(for="flower_3_1").card_label.card_label s
                   input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
+                  label(for="flower_3_2").card_label.card_label m
                   input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
+                  label(for="flower_3_3").card_label.card_label l
                   input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
+                  label(for="flower_3_4").card_label.card_label xl
                 .card_prices
-                  .card_price 5 329₽
+                  .card_price.rank 5329₽
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
+              .card_chips
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -141,20 +144,21 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Шанель M
                 .card_sizes
                   input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
+                  label(for="flower_4_0").card_label.card_labe xs
                   input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
+                  label(for="flower_4_1").card_label.card_labe s
                   input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
+                  label(for="flower_4_2").card_label.card_labe m
                 .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
+                  .card_old-price.rank 3329₽
+                  .card_price.rank 3129₽
+                  .card_discount-price.rank
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -172,20 +176,21 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Клубничная мечта M<br>в шоколаде
                 .card_sizes
                   input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
+                  label(for="flower_5_0").card_label.card_labe xs
                   input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
+                  label(for="flower_5_1").card_label.card_labe s
                   input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
+                  label(for="flower_5_2").card_label.card_labe m
                 .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
+                  .card_old-price.rank 4529₽
+                  .card_price.rank 4029₽
+                  .card_discount-price.rank
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -203,22 +208,23 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Розовые сны
                 .card_sizes
                   input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
+                  label(for="flower_6_0").card_label.card_labe xs
                   input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
+                  label(for="flower_6_1").card_label.card_labe s
                   input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
+                  label(for="flower_6_2").card_label.card_labe m
                   input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
+                  label(for="flower_6_3").card_label.card_labe l
                   input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
+                  label(for="flower_6_4").card_label.card_labe xl
                 .card_prices
-                  .card_price 5 329₽
+                  .card_price.rank 5329₽
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -236,20 +242,21 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Шанель M
                 .card_sizes
                   input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
+                  label(for="flower_7_0").card_label.card_labe xs
                   input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
+                  label(for="flower_7_1").card_label.card_labe s
                   input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
+                  label(for="flower_7_2").card_label.card_labe m
                 .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
+                  .card_old-price.rank 5329₽
+                  .card_price.rank 3329₽
+                  .card_discount-price.rank
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
 
           .tabs_col
             .card
@@ -267,1337 +274,25 @@ mixin tabs(className, titleName)
                 a(href="#").card_name Тиффани M
                 .card_sizes
                   input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
+                  label(for="flower_8_0").card_label.card_labe xs
                   input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
+                  label(for="flower_8_1").card_label.card_labe s
                   input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
+                  label(for="flower_8_2").card_label.card_labe m
                   input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
+                  label(for="flower_8_3").card_label.card_labe l
                   input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
+                  label(for="flower_8_4").card_label.card_labe xl
                 .card_prices
-                  .card_price 5 329₽
+                  .card_price.rank 5329₽
                 button(type="submit").card_btn.btn-transparent в корзину
                 .card_more
                   a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
+              .card_chips
+                .card_chip.card_chip--best ХИТ
+                .card_chip.card_chip--discount %
         .tabs_btn
           a(href="#").btn-transparent Перейти в каталог
 
-      .wrapper
-        .row
 
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M 1
-                .card_sizes
-                  input(type="radio" name="flower_1").card_input#flower_1_0
-                  label(for="flower_1_0").card_label xs
-                  input(type="radio" name="flower_1").card_input#flower_1_1
-                  label(for="flower_1_1").card_label s
-                  input(type="radio" name="flower_1" checked).card_input#flower_1_2
-                  label(for="flower_1_2").card_label m
-                  input(type="radio" name="flower_1").card_input#flower_1_3
-                  label(for="flower_1_3").card_label l
-                  input(type="radio" name="flower_1").card_input#flower_1_4
-                  label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта М
-                .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Рапунцель S
-                .card_sizes
-                  input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
-                  input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
-                  input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
-                  input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
-                  input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
-                .card_prices
-                  .card_price 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта M<br>в шоколаде
-                .card_sizes
-                  input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Розовые сны
-                .card_sizes
-                  input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M
-                .card_sizes
-                  input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-        .tabs_btn
-          a(href="#").btn-transparent Перейти в каталог
-
-      .wrapper
-        .row
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M 2
-                .card_sizes
-                  input(type="radio" name="flower_1").card_input#flower_1_0
-                  label(for="flower_1_0").card_label xs
-                  input(type="radio" name="flower_1").card_input#flower_1_1
-                  label(for="flower_1_1").card_label s
-                  input(type="radio" name="flower_1" checked).card_input#flower_1_2
-                  label(for="flower_1_2").card_label m
-                  input(type="radio" name="flower_1").card_input#flower_1_3
-                  label(for="flower_1_3").card_label l
-                  input(type="radio" name="flower_1").card_input#flower_1_4
-                  label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта М
-                .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Рапунцель S
-                .card_sizes
-                  input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
-                  input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
-                  input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
-                  input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
-                  input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
-                .card_prices
-                  .card_price 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта M<br>в шоколаде
-                .card_sizes
-                  input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Розовые сны
-                .card_sizes
-                  input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M
-                .card_sizes
-                  input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-        .tabs_btn
-          a(href="#").btn-transparent Перейти в каталог
-
-      .wrapper
-        .row
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M 3
-                .card_sizes
-                  input(type="radio" name="flower_1").card_input#flower_1_0
-                  label(for="flower_1_0").card_label xs
-                  input(type="radio" name="flower_1").card_input#flower_1_1
-                  label(for="flower_1_1").card_label s
-                  input(type="radio" name="flower_1" checked).card_input#flower_1_2
-                  label(for="flower_1_2").card_label m
-                  input(type="radio" name="flower_1").card_input#flower_1_3
-                  label(for="flower_1_3").card_label l
-                  input(type="radio" name="flower_1").card_input#flower_1_4
-                  label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта М
-                .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Рапунцель S
-                .card_sizes
-                  input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
-                  input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
-                  input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
-                  input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
-                  input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
-                .card_prices
-                  .card_price 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта M<br>в шоколаде
-                .card_sizes
-                  input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Розовые сны
-                .card_sizes
-                  input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M
-                .card_sizes
-                  input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-        .tabs_btn
-          a(href="#").btn-transparent Перейти в каталог
-
-      .wrapper
-        .row
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M 4
-                .card_sizes
-                  input(type="radio" name="flower_1").card_input#flower_1_0
-                  label(for="flower_1_0").card_label xs
-                  input(type="radio" name="flower_1").card_input#flower_1_1
-                  label(for="flower_1_1").card_label s
-                  input(type="radio" name="flower_1" checked).card_input#flower_1_2
-                  label(for="flower_1_2").card_label m
-                  input(type="radio" name="flower_1").card_input#flower_1_3
-                  label(for="flower_1_3").card_label l
-                  input(type="radio" name="flower_1").card_input#flower_1_4
-                  label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта М
-                .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Рапунцель S
-                .card_sizes
-                  input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
-                  input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
-                  input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
-                  input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
-                  input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
-                .card_prices
-                  .card_price 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта M<br>в шоколаде
-                .card_sizes
-                  input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Розовые сны
-                .card_sizes
-                  input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M
-                .card_sizes
-                  input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-        .tabs_btn
-          a(href="#").btn-transparent Перейти в каталог
-
-      .wrapper
-        .row
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_1.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M 5
-                .card_sizes
-                  input(type="radio" name="flower_1").card_input#flower_1_0
-                  label(for="flower_1_0").card_label xs
-                  input(type="radio" name="flower_1").card_input#flower_1_1
-                  label(for="flower_1_1").card_label s
-                  input(type="radio" name="flower_1" checked).card_input#flower_1_2
-                  label(for="flower_1_2").card_label m
-                  input(type="radio" name="flower_1").card_input#flower_1_3
-                  label(for="flower_1_3").card_label l
-                  input(type="radio" name="flower_1").card_input#flower_1_4
-                  label(for="flower_1_4").card_label xl
-                .card_prices 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_2.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта М
-                .card_sizes
-                  .card_sizes-in
-                    input(type="radio" name="flower_2").card_input#flower_2_0
-                    label(for="flower_2_0").card_label.card_label--together xs
-                    input(type="radio" name="flower_2" checked).card_input#flower_2_1
-                    label(for="flower_2_1").card_label.card_label--together s
-                    input(type="radio" name="flower_2").card_input#flower_2_2
-                    label(for="flower_2_2").card_label.card_label--together m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_3.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Рапунцель S
-                .card_sizes
-                  input(type="radio" name="flower_3").card_input#flower_3_0
-                  label(for="flower_3_0").card_label.card_label--line xs
-                  input(type="radio" name="flower_3").card_input#flower_3_1
-                  label(for="flower_3_1").card_label.card_label--line s
-                  input(type="radio" name="flower_3" checked).card_input#flower_3_2
-                  label(for="flower_3_2").card_label.card_label--line m
-                  input(type="radio" name="flower_3").card_input#flower_3_3
-                  label(for="flower_3_3").card_label.card_label--line l
-                  input(type="radio" name="flower_3").card_input#flower_3_4
-                  label(for="flower_3_4").card_label.card_label--line xl
-                .card_prices
-                  .card_price 5 329₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_4.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_4").card_input#flower_4_0
-                  label(for="flower_4_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_4").card_input#flower_4_1
-                  label(for="flower_4_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_4" checked).card_input#flower_4_2
-                  label(for="flower_4_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_5.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Клубничная мечта M<br>в шоколаде
-                .card_sizes
-                  input(type="radio" name="flower_5").card_input#flower_5_0
-                  label(for="flower_5_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_5").card_input#flower_5_1
-                  label(for="flower_5_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_5" checked).card_input#flower_5_2
-                  label(for="flower_5_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_6.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Розовые сны
-                .card_sizes
-                  input(type="radio" name="flower_6").card_input#flower_6_0
-                  label(for="flower_6_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_6").card_input#flower_6_1
-                  label(for="flower_6_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_6" checked).card_input#flower_6_2
-                  label(for="flower_6_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_6").card_input#flower_6_3
-                  label(for="flower_6_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_6").card_input#flower_6_4
-                  label(for="flower_6_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_7.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Шанель M
-                .card_sizes
-                  input(type="radio" name="flower_7").card_input#flower_7_0
-                  label(for="flower_7_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_7").card_input#flower_7_1
-                  label(for="flower_7_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_7" checked).card_input#flower_7_2
-                  label(for="flower_7_2").card_label.card_label--circle m
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-
-          .tabs_col
-            .card
-              .card_slider
-                .js-card-slider
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                  a(href="#").card_img.img-responsive
-                    img(src="img/flower_8.jpg", alt="flower")
-                .card_arrow.card_arrow--prev
-                  img(src="img/arrow.svg", alt="")
-                .card_arrow.card_arrow--next
-                  img(src="img/arrow.svg", alt="")
-              form(action="").card_content
-                a(href="#").card_name Тиффани M
-                .card_sizes
-                  input(type="radio" name="flower_8").card_input#flower_8_0
-                  label(for="flower_8_0").card_label.card_label--circle xs
-                  input(type="radio" name="flower_8").card_input#flower_8_1
-                  label(for="flower_8_1").card_label.card_label--circle s
-                  input(type="radio" name="flower_8" checked).card_input#flower_8_2
-                  label(for="flower_8_2").card_label.card_label--circle m
-                  input(type="radio" name="flower_8").card_input#flower_8_3
-                  label(for="flower_8_3").card_label.card_label--circle l
-                  input(type="radio" name="flower_8").card_input#flower_8_4
-                  label(for="flower_8_4").card_label.card_label--circle xl
-                .card_prices
-                  .card_old-price 5 329₽
-                  .card_price 5 329₽
-                  .card_discount-price -1 200₽
-                button(type="submit").card_btn.btn-transparent в корзину
-                .card_more
-                  a(href="#") Подробнее
-              .card_chip.card_chip--best ХИТ
-              .card_chip.card_chip--discount %
-        .tabs_btn
-          a(href="#").btn-transparent Перейти в каталог
   //	/tabs

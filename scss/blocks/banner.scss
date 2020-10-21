@@ -1,5 +1,9 @@
 .banner {
   background-color: $gray;
+  min-height: 767px;
+  padding-bottom:40px;
+  position: relative;
+  margin-bottom: 73px;
   &_slider {
     position: relative;
   }
@@ -9,20 +13,19 @@
   &_block {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 50px;
   }
   &_content {
     max-width: 600px;
-    padding: 50px 0;
+    padding: 187px 0 20px;
   }
   &_title {
     font-size: 48px;
-    line-height: 1.4;
-    margin-bottom: 45px;
+    line-height: 1.27;
+    margin-bottom: 30px;
   }
   p {
     font-size: 19px;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     line-height: 2.4;
   }
   &_btn {
@@ -34,7 +37,7 @@
     display: flex;
     position: absolute;
     right: 0;
-    bottom: 200px;
+    bottom: 130px;
     button {
       font-size: 0;
     }
@@ -82,7 +85,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
@@ -128,6 +131,7 @@
     }
   }
   @media (max-width: $break_sm) {
+    margin-bottom: 50px;
     &_block {
       flex-wrap: wrap;
     }

@@ -1,7 +1,5 @@
 .header {
   padding: 10px 0;
-  font-size: 15px;
-  font-weight: 500;
   background-color: #fff;
   position: relative;
   z-index: 10;
@@ -13,15 +11,25 @@
   
   &_item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
+    &--left {
+      width: 100%;
+      max-width: 400px;
+    }
+    &--right {
+      width: 100%;
+      max-width: 420px;
+      justify-content: flex-end;
+    }
+  } 
 }
 .city {
   display: flex;
   align-items: center;
   margin-left: 40px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
   &_icon {
     width: 14px;
     margin-left: 5px;
@@ -35,17 +43,24 @@
   }
 }
 .logo {
-  max-width: 215px;
+  width: 215px;
   margin-left: 10px;
   margin-right: 10px;
+  flex-shrink: 0;
   @media (max-width: $break_md) {
-    max-width: 150px;
+    width: 150px;
+  }
+  @media (max-width: $break_xs) {
+    width: 100px;
   }
 }
 .tel {
   color: #000;
   border-bottom: 1px dashed #000;
   margin-right: 20px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
   @media (max-width: $break_sm) {
     display: none;
   }
@@ -127,6 +142,8 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 40px;
+  font-size: 15px;
+  font-weight: 700;
   &_price {
     white-space: nowrap;
   }
@@ -191,8 +208,12 @@
     right: 1px;
     background-color: $red;
     font-size: 12px;
+    font-weight: normal;
     color: #fff;
     transition: $trans;
     border-radius: 50%;
+  }
+  @media (max-width: $break_sm) {
+    margin-left: 0;
   }
 }

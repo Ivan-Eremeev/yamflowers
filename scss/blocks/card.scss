@@ -134,25 +134,27 @@
       color: #000;
     }
   }
+  &_chips {
+    position: absolute;
+    top: 26px;
+    right: 44px;
+  }
   &_chip {
     width: 57px;
     height: 57px;
+    margin: 5px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    position: absolute;
-    right: 20px;
     text-transform: uppercase;
     color: #fff;
     &--best {
       background-color: #FC8281;
-      top: 32px;
       font-size: 15px;
     }
     &--discount {
       background-color: $red;
-      top: 95px;
       font-size: 24px;
     }
   }
