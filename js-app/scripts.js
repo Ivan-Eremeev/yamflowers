@@ -70,13 +70,13 @@ $(document).ready(function () {
 	// Модальное окно
 	// Задать кнопке, по которой открывается окно класс ".modal-trigger" и атрибут "data-modal", с id окна.
 	// Пример <button>(class="modal-trigger" data-modal="#modal-1")</button>
-	// modal();
+	modal();
 
 	// Открыть модальное окно
-	// modalShow($('#modal-1'));
+	modalShow($('#modal-1'));
 
 	// Закрыть модальное окно
-	// modalHide($('#modal-1'));
+	modalHide($('#modal-1'));
 
 	// Текст печатная машинка
 	// textPrint($('#text-print'));
@@ -172,6 +172,7 @@ $(document).ready(function () {
 function myMenu(menu, menuBtn) {
 	var	headerHeight = $('#header').outerHeight(),
 			html = $('html'),
+			link = menu.find('a'),
 			documentWidth = parseInt(document.documentElement.clientWidth),
 			windowsWidth = parseInt(window.innerWidth),
 			scrollbarWidth = windowsWidth - documentWidth;
@@ -184,6 +185,12 @@ function myMenu(menu, menuBtn) {
 			menuOpen();
 		}
 	});
+	link.on('click', function () {
+		if ($(this).closest('.menu').hasClass('js-CityMenu')) {
+			menuBtn.text($(this).text());
+			menuClose();
+		}
+	})
 	menu.css('padding-top',headerHeight + 20 + 'px');
 	function menuOpen() {
 		menuBtn.addClass('is-active');
@@ -315,42 +322,42 @@ function tabs(tabs) {
 // 	});
 // };
 
-// // Модальное окно
-// function modal(modal) {
-// 	$('.modal-trigger').on('click', function() {
-// 		var $this = $(this),
-// 				data = $this.data('modal'),
-// 				thisModal = $(data);
-// 		modalShow(thisModal);
-// 	});
-// };
-// // Открытие модального окна
-// function modalShow(thisModal) {
-// 	var html = $('html'),
-// 			modalClose = thisModal.find($('.modal_close')),
-// 			documentWidth = parseInt(document.documentElement.clientWidth),
-// 			windowsWidth = parseInt(window.innerWidth),
-// 			scrollbarWidth = windowsWidth - documentWidth;
-// 	thisModal.show(0, function() {
-// 		setTimeout(thisModal.addClass('open'),500);
-// 	});
-// 	html.addClass('lock').css('padding-right',scrollbarWidth);
-// 	modalClose.on('click', function() {
-// 		modalHide(thisModal);
-// 	});
-// 	thisModal.on('click', function(e) {
-// 		if (thisModal.has(e.target).length === 0) {
-// 			modalHide(thisModal);
-// 		}
-// 	});
-// };
-// // Закрытие модального окна
-// function modalHide(thisModal) {
-// 	var html = $('html');
-// 	thisModal.removeClass('open');
-// 	thisModal.hide();
-// 	html.removeClass('lock').css('padding-right',0);
-// };
+// Модальное окно
+function modal() {
+	$('.modal-trigger').on('click', function() {
+		var $this = $(this),
+				data = $this.data('modal'),
+				thisModal = $(data);
+		modalShow(thisModal);
+	});
+};
+// Открытие модального окна
+function modalShow(thisModal) {
+	var html = $('html'),
+			modalClose = thisModal.find($('.modal_close')),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth;
+	thisModal.show(0, function() {
+		setTimeout(thisModal.addClass('open'),500);
+	});
+	html.addClass('lock').css('padding-right',scrollbarWidth);
+	modalClose.on('click', function() {
+		modalHide(thisModal);
+	});
+	thisModal.on('click', function(e) {
+		if (thisModal.has(e.target).length === 0) {
+			modalHide(thisModal);
+		}
+	});
+};
+// Закрытие модального окна
+function modalHide(thisModal) {
+	var html = $('html');
+	thisModal.removeClass('open');
+	thisModal.hide();
+	html.removeClass('lock').css('padding-right',0);
+};
 
 // Текст печатная машинка
 // function textPrint(block) {
@@ -854,6 +861,5 @@ function discountCounter() {
 		var price_old = parseInt($(this).find('.card_old-price').text());
 		var discont = price_old - price;
 		$(this).find('.card_discount-price').text('-' + discont + ' ₽');
-		console.log(price,price_old,discont);
 	});	
 }
