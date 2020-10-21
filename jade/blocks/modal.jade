@@ -5,7 +5,18 @@
     .modal_text Заполните форму и мы вам перезвоним
     .row
       .modal_col
-        
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 2
+        .form_field
+          .form_name Ваше имя:
+          .form_input
+            input(type="text" name="name")
+      .modal_col
+        .form_field
+          .form_name Ваш e-mail:
+          .form_input
+            input(type="text" name="tel")
+    .form_consent
+      input(type="checkbox")#callbackCheckbox
+      label(for="callbackCheckbox").form_checkbox
+      label(for="callbackCheckbox").form_label Даю согласие на обработку персональных данных
     .modal_close
 // /modal

@@ -5,17 +5,19 @@
       h2.callback_title Подобрать букет
       .callback_text Флорист подберет лучший букет под ваши пожелания.
       .row
-        .callback_block
-          .callback_name Ваше имя:
-          .callback_input
-            input(type="text" name="name")
-        .callback_block
-          .callback_name Ваш e-mail:
-          .callback_input
-            input(type="text" name="tel")
-      .callback_consent
+        .callback_col
+          .form_field
+            .form_name Ваше имя:
+            .form_input
+              input(type="text" name="name")
+        .callback_col
+          .form_field
+            .form_name Ваш e-mail:
+            .form_input
+              input(type="text" name="tel")
+      .form_consent
         input(type="checkbox")#callbackCheckbox
-        label(for="callbackCheckbox").callback_checkbox
-        label(for="callbackCheckbox").callback_label Даю согласие на обработку персональных данных
+        label(for="callbackCheckbox").form_checkbox
+        label(for="callbackCheckbox").form_label Даю согласие на обработку персональных данных
       button(type="submit").btn-red Оставить заявку
 //	/callback

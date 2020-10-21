@@ -1,6 +1,6 @@
 .modal {
 	display: none;
-	background: #FFFFFF;
+	background:	rgba(255,255,255,.8);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -22,9 +22,8 @@
 		opacity: 0;
 		transition: .5s;
 	}
-	&_content {
-		position: relative;
-		background-color: #fff;
+	&_col {
+		@include col(4);
 	}
 	&_close {
 		width: 20px;
