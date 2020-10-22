@@ -112,7 +112,7 @@ body {
 }
 .title {
 	font-size: 35px;
-	font-weight: normal;
+	font-weight: 300;
 	letter-spacing: 0.2em;
 	line-height: 1.8;
 	text-transform: uppercase;
@@ -128,5 +128,23 @@ body {
 }
 .content {
 	flex-grow: 1;
+}
+.nav-pages {
+	font-size: 24px;
+	text-align: center;
+	li {
+		margin: 10px 0;
+	}
+	a {
+		color: #000;
+		@include line-slide-center();
+		&:after {
+			background-color: #000;
+			transition: $trans;
+		}
+	}
+	@media (max-width: $break_sm) {
+		font-size: 16px;
+	}
 }
 // /settings

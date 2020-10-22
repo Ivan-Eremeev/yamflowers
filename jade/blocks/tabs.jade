@@ -1,29 +1,59 @@
-mixin tabs(className, titleName)
+mixin tabs(className, titleName, filter=false, classMenu='tabs_menu')
   // tabs
   div(class= className)
-    h2.title= titleName
-    .tabs_menu
-      .wrapper
-        ul#tabs_triggers.tabs_triggers
-          li(data-trigger="0").js-tabs-trigger.active
-            span Все категории
-          li(data-trigger="1").js-tabs-trigger
-            span Клубничные букеты
-          li(data-trigger="2").js-tabs-trigger
-            span Клубничные боксы
-          li(data-trigger="3").js-tabs-trigger
-            span Воздушные боксы
-          li(data-trigger="4").js-tabs-trigger
-            span Хит Букеты
-          li(data-trigger="5").js-tabs-trigger
-            span Букеты
-          li(data-trigger="6").js-tabs-trigger
-            span Букеты клубничные
-          li.tabsDrop
-            span.tabsDrop_span.mobile-hide Показать еще
-            span.tabsDrop_span.mobile-visible Показать все категории
-            img(src="img/arrow.svg", alt="arrow")
-            ul#tabsDrop_list.tabsDrop_list
+    if titleName
+      h2.title= titleName
+
+      div(class= classMenu)
+        .wrapper
+          ul#tabs_triggers.tabs_triggers
+            li(data-trigger="0").js-tabs-trigger.active
+              span Все категории
+            li(data-trigger="1").js-tabs-trigger
+              span Клубничные букеты
+            li(data-trigger="2").js-tabs-trigger
+              span Клубничные боксы
+            li(data-trigger="3").js-tabs-trigger
+              span Воздушные боксы
+            li(data-trigger="4").js-tabs-trigger
+              span Хит Букеты
+            li(data-trigger="5").js-tabs-trigger
+              span Букеты
+            li(data-trigger="6").js-tabs-trigger
+              span Букеты клубничные
+            li.tabsDrop
+              span.tabsDrop_span.mobile-hide Показать еще
+              span.tabsDrop_span.mobile-visible Показать все категории
+              img(src="img/arrow.svg", alt="arrow")
+              ul#tabsDrop_list.tabsDrop_list
+
+    if filter == true
+
+      // filter
+      form(action="").filter
+        .wrapper
+          .filter_option
+            .filter_title.filter_title--option Сортировать
+            .filter_list
+              .filter_field
+                input#radioFilter_0(type="radio" name="radioFilter" checked).filter_radio
+                label(for="radioFilter_0").filter_label По новинкам
+              .filter_field
+                input#radioFilter_1(type="radio" name="radioFilter").filter_radio
+                label(for="radioFilter_1").filter_label Цена по возрастанию
+              .filter_field
+                input#radioFilter_2(type="radio" name="radioFilter").filter_radio
+                label(for="radioFilter_2").filter_label Цена по убыванию
+          .filter_price
+            .filter_title Фильтр по цене:
+            .filter_slider
+              .filter_values
+                .js-inputWidth.filter_input
+                  input(type="text" value="0")#rangeMin
+                .js-inputWidth.filter_input
+                  input(type="text" value="10000")#rangeMax
+              .filter_range
+      // /filter
               
     #tabs_content.tabs_content
 

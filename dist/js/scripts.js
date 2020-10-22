@@ -67,6 +67,9 @@ $(document).ready(function () {
 	videoPlay($('.js-video_img'))
 	videoPlay($('.js-video_phone'))
 
+	// Фильтр по цене
+	filterPrice();
+
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
 	
@@ -80,6 +83,35 @@ $(document).ready(function () {
 
 	// Закрыть модальное окно
 	modalHide($('#modal-1'));
+
+	// Выпадайка в фильтре
+	function drop() {
+		var btn = $('.filter_title'),
+				list = $('.filter_list'),
+				label = $('.filter_label');
+		btn.on('click', function() {
+			if ($(window).width() <= breakLg) {
+				list.stop().slideToggle();
+			}
+		});
+		label.on('click', function() {
+			if ($(window).width() <= breakLg) {
+				list.slideUp();
+			}
+		});
+		function widthCheck() {
+			if ($(window).width() <= breakLg) {
+				list.css('display','none');
+			}else if ($(window).width() > breakLg) {
+				list.css('display','flex');
+			}
+		}
+		widthCheck();
+		$(window).resize(function () {
+			widthCheck();
+		})
+	}
+	drop();
 
 	// Текст печатная машинка
 	// textPrint($('#text-print'));
@@ -875,7 +907,6 @@ function selectStyled() {
         selectOptionLength = selectOption.length,
         selectedOption = selectOption.filter(':selected'),
 				duration = 300; // длительность анимации 
-		console.log(selectOption);
 
     _this.hide();
     _this.wrap('<div class="select"></div>');
@@ -924,5 +955,32 @@ function selectStyled() {
         }
     });
 	});	
+}
+
+// Фильтр по цене
+function filterPrice() {
+	var filter = $('.filter_slider'),
+			range = filter.find('.filter_range'),
+			fieldMin = filter.find('#rangeMin'),
+			fieldMax = filter.find('#rangeMax');
+	range.slider({
+		animate: "slow",
+		range: true,
+		min: 0,
+		max: 10000, 
+		values: [0,10000],
+		slide: function(event, ui) {
+			fieldMin.val(ui.values[ 0 ]);
+			fieldMax.val(ui.values[ 1 ]);
+		},
+	});
+	fieldMin.on('input', function () {
+		var val = $(this).val();
+		range.slider( "values",0, val);
+	});
+	fieldMax.on('input', function () {
+		var val = $(this).val();
+		range.slider( "values",1, val);
+	});
 }
 //# sourceMappingURL=scripts.js.map
