@@ -992,6 +992,7 @@ function filterPrice() {
 			var val = $(this).val();
 			range.slider( "values",1, val);
 		});
+		$('.ui-slider-handle').html('<span class="handle-inner"></span>');
 	}
 }
 

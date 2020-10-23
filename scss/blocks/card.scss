@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     width: 44px;
     position: relative;
     background-color: #fff;
@@ -110,10 +111,12 @@
   }
   &_price {
     margin: 0 10px;
+    white-space: nowrap;
   }
   &_old-price {
     color: #8a8a8a;
     text-decoration: line-through;
+    white-space: nowrap;
   }
   &_discount-price {
     display: flex;
@@ -123,6 +126,7 @@
     background-color: $red;
     font-size: 12px;
     color: #fff;
+    white-space: nowrap;
   }
   &_btn {
     margin-bottom: 18px;
@@ -210,6 +214,12 @@
     }
     &_prices {
       font-size: 18px;
+    }
+    &_label {
+      width: 30px;
+    }
+    &_discount-price {
+      padding: 2px 10px;
     }
   }
 }

@@ -904,7 +904,7 @@ body {
 		width: 50%;
 	}
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 425px) {
 	.tabs_col {
 		width: 100%;
 	}
@@ -1014,6 +1014,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: 0;
 	width: 44px;
 	position: relative;
 	background-color: #fff;
@@ -1071,10 +1072,12 @@ body {
 }
 .card_price {
 	margin: 0 10px;
+	white-space: nowrap;
 }
 .card_old-price {
 	color: #8a8a8a;
 	text-decoration: line-through;
+	white-space: nowrap;
 }
 .card_discount-price {
 	display: flex;
@@ -1084,6 +1087,7 @@ body {
 	background-color: #e12025;
 	font-size: 12px;
 	color: #fff;
+	white-space: nowrap;
 }
 .card_btn {
 	margin-bottom: 18px;
@@ -1171,6 +1175,12 @@ body {
 	}
 	.card_prices {
 		font-size: 18px;
+	}
+	.card_label {
+		width: 30px;
+	}
+	.card_discount-price {
+		padding: 2px 10px;
 	}
 }
 
@@ -1846,18 +1856,27 @@ body {
 	margin-top: -1px;
 }
 .filter .ui-slider-handle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background: transparent;
+	top: -14px;
+}
+.filter .ui-slider-handle:focus {
+	outline: none;
+}
+.filter .handle-inner {
+	display: block;
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	background-color: #e12025;
 	border: none;
-	top: 1px;
-	transform: translate(0, -50%);
 }
-.filter .ui-slider-handle:focus {
-	outline: none;
-}
-.filter .ui-slider-handle:hover {
+.filter .handle-inner:hover {
 	box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
 }
 .filter .ui-slider-range {
@@ -2010,6 +2029,7 @@ body {
 .slider-product-nav_img {
 	padding: 20px;
 	border: 1px solid #e2e2e2;
+	cursor: pointer;
 }
 .slider-product-nav .slick-slide {
 	padding: 0 14px;
