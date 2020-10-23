@@ -25,6 +25,7 @@ input {
 }
 body {
 	height: 100%;
+	min-width: 320px;
 	background-color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
@@ -68,6 +69,7 @@ body {
 	padding: 15px 30px;
 	border-radius: 3px;
 	background-color: $red;
+	border: 1px solid $red;
 	font-size: 15px;
 	color: #fff;
 	letter-spacing: 0.2em;
@@ -75,7 +77,6 @@ body {
 	text-transform: uppercase;
 	user-select: none;
 	transition: $trans;
-	border: none;
 	&:hover {
 		box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
 	}

@@ -1,8 +1,8 @@
-function slider(slider) {
+function slider(slider,sliderFor) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    // asNavFor: sliderFor, // Связь со слайдерами
+    asNavFor: sliderFor, // Связь со слайдерами
     dots: true, // Пагинация
     arrows: true, // Стрелки
     speed: 500, // Скорость перехода слайдов
@@ -35,14 +35,14 @@ function slider(slider) {
     // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
   
-  // sliderFor.slick({
-  //   slidesToShow: 1, // Сколько слайдов показывать на экране
-  //   slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-  //   dots: false, // Пагинация
-  //   arrows: false, // Стрелки
-  //   fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-  //   asNavFor: slider // Связь со слайдерами
-  // });
+  sliderFor.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+    asNavFor: slider // Связь со слайдерами
+  });
 
   // Кастомные кнопки "вперед" "назад"
   $('.sliderButton_prev').click(function() {
@@ -54,26 +54,26 @@ function slider(slider) {
 };
 
 // Добавляем кастомную пагинацию в слайдер
-// function addDotsInPagination(sliderB, sliderPagination) {
-//   var sliderCount = sliderB.find('.js-slider-slide');
-//   for (var i = 1; i < sliderCount.length + 1; i++) {
-//     var dot = $('<div class="slider-pagination_dot"></div>');
-//     dot.text(i);
-//     sliderPagination.append(dot);
-//   };
-//   // Вызов слайдера нужно делать после добавления пагинации
-//   slider();
-// };
+function addDotsInPagination(sliderB, sliderPagination) {
+  var sliderCount = sliderB.find('.js-slider-slide');
+  for (var i = 1; i < sliderCount.length + 1; i++) {
+    var dot = $('<div class="slider-pagination_dot"></div>');
+    dot.text(i);
+    sliderPagination.append(dot);
+  };
+  // Вызов слайдера нужно делать после добавления пагинации
+  slider();
+};
 
 // Инициализация слайдеров на десктопе и мобилке
-// function sliderReinstall() {
-//   if (window.matchMedia("(max-width: 769px)").matches) {
-//     $('.slick-initialized').slick('unslick');
-//   }
-//   else {
-//     $('.slick-initialized').slick('unslick');
-//     sliderInit($('.slider'), $('.slider-for'));
-//   }
-// }
+function sliderReinstall() {
+  if (window.matchMedia("(max-width: 769px)").matches) {
+    $('.slick-initialized').slick('unslick');
+  }
+  else {
+    $('.slick-initialized').slick('unslick');
+    sliderInit($('.slider'), $('.slider-for'));
+  }
+}
 
 // $('.your-slider').slick('unslick'); // Уничтожить слайдер

@@ -7,7 +7,6 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="css/libs/slick.css">
-    <link rel="stylesheet" href="css/libs/jqueryui.css">
     <link rel="stylesheet" href="css/libs/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -78,10 +77,66 @@
           </div>
         </div>
         <!--	/breadcrumbs-->
+        <!-- productItem-->
+        <div class="productItem">
+          <div class="wrapper">
+            <h1 class="title">Рапунцель s</h1>
+            <div class="row">
+              <div class="productItem_col">
+                <div class="productItem_slider">
+                  <div class="slider-product-for">
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_1.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_2.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_3.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_4.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_5.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_6.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_7.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_8.jpg" alt="flower"></div>
+                  </div>
+                  <div class="slider-product-nav">
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_1.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_2.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_3.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_4.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_5.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_6.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_7.jpg" alt="flower"></div>
+                    <div class="slider-product-nav_img"><img data-lazy="img/flower_8.jpg" alt="flower"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="productItem_col">
+                <form class="productItem_form" action="">
+                  <div class="productItem_text">
+                    <div class="productItem_art">Артикул: 546874856</div>
+                    <p>Обращаем внимание, что состав букета может быть незначительно изменен (в связи с сезонностью и конкретной поставкой), при этом стилистика и цветовая гамма останутся неизменными.</p>
+                  </div>
+                  <div class="productItem_color">
+                    <div class="productItem_title">Выберите цвет:</div>
+                  </div>
+                  <div class="productItem_size">
+                    <div class="productItem_title">Выберите размер:</div>
+                  </div>
+                  <div class="card_prices">
+                    <div class="card_old-price rank">4529₽</div>
+                    <div class="card_price rank">4029₽</div>
+                    <div class="card_discount-price rank"></div>
+                  </div>
+                  <div class="productItem_btns">
+                    <button class="btn-red" type="submit">в корзину</button>
+                    <div class="btn-transparent modal-trigger" data-modal="#modal-2">купить в 1 клик</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--	/productItem-->
                 <!-- tabs-->
                 <div class="js-tabs-1 tabs">
-                  <h2 class="title">Каталог</h2>
-                  <div class="tabs_menu tabs_menu--mb">
+                  <h2 class="title">Похожие товары</h2>
+                  <div class="tabs_menu">
                     <div class="wrapper">
                       <ul class="tabs_triggers" id="tabs_triggers">
                         <li class="js-tabs-trigger active" data-trigger="0"><span>Все категории</span></li>
@@ -97,43 +152,6 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- filter-->
-                  <form class="filter" action="">
-                    <div class="wrapper">
-                      <div class="filter_option">
-                        <div class="filter_title filter_title--option">Сортировать</div>
-                        <div class="filter_list">
-                          <div class="filter_field">
-                            <input class="filter_radio" id="radioFilter_0" type="radio" name="radioFilter" checked>
-                            <label class="filter_label" for="radioFilter_0">По новинкам</label>
-                          </div>
-                          <div class="filter_field">
-                            <input class="filter_radio" id="radioFilter_1" type="radio" name="radioFilter">
-                            <label class="filter_label" for="radioFilter_1">Цена по возрастанию</label>
-                          </div>
-                          <div class="filter_field">
-                            <input class="filter_radio" id="radioFilter_2" type="radio" name="radioFilter">
-                            <label class="filter_label" for="radioFilter_2">Цена по убыванию</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter_price">
-                        <div class="filter_title">Фильтр по цене:</div>
-                        <div class="filter_slider">
-                          <div class="filter_values">
-                            <div class="js-inputWidth filter_input">
-                              <input type="text" value="0" id="rangeMin">
-                            </div>
-                            <div class="js-inputWidth filter_input">
-                              <input type="text" value="10000" id="rangeMax">
-                            </div>
-                          </div>
-                          <div class="filter_range"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <!-- /filter-->
                   <div class="tabs_content" id="tabs_content">
                     <div class="wrapper show">
                       <div class="row">
@@ -2166,10 +2184,10 @@
         </div>
         <!--	/gallery-->
                 <!-- modal-->
-                <div class="modal" id="modal-1">
+                <div class="modal" id="modal-2">
                   <form class="modal_body" action="">
                     <div class="modal_content">
-                      <div class="modal_title">Оставить заявку</div>
+                      <div class="modal_title">Купить в 1 клик</div>
                       <div class="modal_text">Заполните форму и мы вам перезвоним</div>
                       <div class="row">
                         <div class="modal_col">
@@ -2205,7 +2223,7 @@
                         <label class="form_label" for="modalCheckbox">Даю согласие на обработку персональных данных</label>
                       </div>
                       <div class="modal_btn"> 
-                        <button class="btn-red" type="submit">Оставить заявку</button>
+                        <button class="btn-red" type="submit">Купить в 1 клик</button>
                       </div>
                     </div>
                     <div class="modal_close">
@@ -2262,8 +2280,6 @@
     <script src="js/libs/slick.min.js"></script>
     <script src="js/libs/jquery.matchHeight-min.js"></script>
     <script src="js/libs/jquery.inputmask.min.js"></script>
-    <script src="js/libs/jqueryui.js"></script>
-    <script src="js/libs/jquery_ui_touch _punch.js"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

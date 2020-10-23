@@ -23,6 +23,9 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
+	// Отложенная загрузка
+	$('.lazy').Lazy();
+
 	// Меню
 	myMenu($('.js-headerMenu'), $('.js-headerMenuBtn'));
 	myMenu($('.js-CityMenu'), $('.js-CityMenuBtn'));
@@ -42,6 +45,9 @@ $(document).ready(function () {
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
 	menuScroll($('#toUp'));
+
+	// Загрузка SVG кодом в HTML
+	// svg4everybody();
 
 	// Stiky menu // Липкое меню. При прокрутке добавляем класс stiky.
 	// stikyMenu($('#header'));
@@ -112,6 +118,9 @@ $(document).ready(function () {
 		})
 	}
 	drop();
+
+	// Слайдер на странице товара
+	sliderProduct($('.slider-product-nav'),$('.slider-product-for'));
 
 	// Текст печатная машинка
 	// textPrint($('#text-print'));
@@ -963,23 +972,69 @@ function filterPrice() {
 			range = filter.find('.filter_range'),
 			fieldMin = filter.find('#rangeMin'),
 			fieldMax = filter.find('#rangeMax');
-	range.slider({
-		animate: "slow",
-		range: true,
-		min: 0,
-		max: 10000, 
-		values: [0,10000],
-		slide: function(event, ui) {
-			fieldMin.val(ui.values[ 0 ]);
-			fieldMax.val(ui.values[ 1 ]);
-		},
-	});
-	fieldMin.on('input', function () {
-		var val = $(this).val();
-		range.slider( "values",0, val);
-	});
-	fieldMax.on('input', function () {
-		var val = $(this).val();
-		range.slider( "values",1, val);
-	});
+	if (range.length > 0) {
+		range.slider({
+			animate: "slow",
+			range: true,
+			min: 0,
+			max: 10000, 
+			values: [0,10000],
+			slide: function(event, ui) {
+				fieldMin.val(ui.values[ 0 ]);
+				fieldMax.val(ui.values[ 1 ]);
+			},
+		});
+		fieldMin.on('input', function () {
+			var val = $(this).val();
+			range.slider( "values",0, val);
+		});
+		fieldMax.on('input', function () {
+			var val = $(this).val();
+			range.slider( "values",1, val);
+		});
+	}
 }
+
+// Слайдер на странице товара
+function sliderProduct(slider,sliderFor) {
+  slider.slick({
+    slidesToShow: 5, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    asNavFor: sliderFor, // Связь со слайдерами
+    arrows: false, // Стрелки
+    centerMode: true, // Задает класс .slick-center слайду в центре
+    focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    swipe: true, // Перелистывание пальцем
+    draggable: true, // Перелистывание мышью
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakXl,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+      breakpoint: breakMd,
+        settings: {
+          slidesToShow: 3,
+        }
+			},
+			{
+      breakpoint: breakXs,
+        settings: {
+					slidesToShow: 2,
+					centerMode: false,
+        }
+			},
+    ]
+  });
+  
+  sliderFor.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+    asNavFor: slider // Связь со слайдерами
+  });
+};
