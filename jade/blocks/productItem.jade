@@ -6,21 +6,21 @@
       .productItem_col
         .productItem_slider
           .slider-product-for
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_1.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_2.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_3.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_4.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_5.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_6.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_7.jpg" alt="flower")
-            .slider-product-for_img.img-responsive
+            .slider-product-for_img
               img(data-lazy="img/flower_8.jpg" alt="flower")
           .slider-product-nav
             .slider-product-nav_img
@@ -44,10 +44,32 @@
           .productItem_text
             .productItem_art Артикул: 546874856
             p Обращаем внимание, что состав букета может быть незначительно изменен (в связи с сезонностью и конкретной поставкой), при этом стилистика и цветовая гамма останутся неизменными.
-          .productItem_color
-            .productItem_title Выберите цвет:
-          .productItem_size
-            .productItem_title Выберите размер:
+          .productColor
+            .productColor_title Выберите цвет:
+            .productColor_row
+              input#color_0(type="radio", name="color").productColor_input
+              label(for="color_0").productColor_label.productColor_label--pink
+              input#color_1(type="radio", name="color").productColor_input
+              label(for="color_1").productColor_label.productColor_label--light-pink
+              input#color_2(type="radio", name="color" checked).productColor_input
+              label(for="color_2").productColor_label.productColor_label--purple
+              input#color_3(type="radio", name="color").productColor_input
+              label(for="color_3").productColor_label.productColor_label--gray
+              input#color_4(type="radio", name="color").productColor_input
+              label(for="color_4").productColor_label.productColor_label--red
+          .productSize
+            .productSize_title Выберите размер:
+            .productSize_row
+              input#size_0(type="radio", name="size").productSize_input 
+              label(for="size_0").productSize_label xs 
+              input#size_1(type="radio", name="size").productSize_input
+              label(for="size_1").productSize_label s
+              input#size_2(type="radio", name="size" checked).productSize_input
+              label(for="size_2").productSize_label m
+              input#size_3(type="radio", name="size").productSize_input
+              label(for="size_3").productSize_label l
+              input#size_4(type="radio", name="size").productSize_input
+              label(for="size_4").productSize_label xl
           .card_prices
             .card_old-price.rank 4529₽
             .card_price.rank 4029₽

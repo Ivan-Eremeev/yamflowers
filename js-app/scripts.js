@@ -53,7 +53,7 @@ $(document).ready(function () {
 	// stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
-	$('[name=tel]').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
+	$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
 
 	// Выводить лишние пункты меню табов в выпающий список
 	tabsMenu($('.js-tabs-1'));
@@ -90,34 +90,34 @@ $(document).ready(function () {
 	// Закрыть модальное окно
 	modalHide($('#modal-1'));
 
-	// Выпадайка в фильтре
-	function drop() {
-		var btn = $('.filter_title'),
-				list = $('.filter_list'),
-				label = $('.filter_label');
-		btn.on('click', function() {
-			if ($(window).width() <= breakLg) {
-				list.stop().slideToggle();
-			}
-		});
-		label.on('click', function() {
-			if ($(window).width() <= breakLg) {
-				list.slideUp();
-			}
-		});
-		function widthCheck() {
-			if ($(window).width() <= breakLg) {
-				list.css('display','none');
-			}else if ($(window).width() > breakLg) {
-				list.css('display','flex');
-			}
-		}
-		widthCheck();
-		$(window).resize(function () {
-			widthCheck();
-		})
-	}
-	drop();
+	// // Выпадайка в фильтре
+	// function drop() {
+	// 	var btn = $('.filter_title'),
+	// 			list = $('.filter_list'),
+	// 			label = $('.filter_label');
+	// 	btn.on('click', function() {
+	// 		if ($(window).width() <= breakLg) {
+	// 			list.stop().slideToggle();
+	// 		}
+	// 	});
+	// 	label.on('click', function() {
+	// 		if ($(window).width() <= breakLg) {
+	// 			list.slideUp();
+	// 		}
+	// 	});
+	// 	function widthCheck() {
+	// 		if ($(window).width() <= breakLg) {
+	// 			list.css('display','none');
+	// 		}else if ($(window).width() > breakLg) {
+	// 			list.css('display','flex');
+	// 		}
+	// 	}
+	// 	widthCheck();
+	// 	$(window).resize(function () {
+	// 		widthCheck();
+	// 	})
+	// }
+	// drop();
 
 	// Слайдер на странице товара
 	sliderProduct($('.slider-product-nav'),$('.slider-product-for'));
@@ -209,6 +209,24 @@ $(document).ready(function () {
 
 	// разбивка суммы на тысячные
 	rank();
+
+	// Вставляет svg в html, позволяет управлять цветом через css 
+	$('img[src$=".svg"]').each(function(){
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function(data) {
+			var $svg = $(data).find('svg');
+			if(typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass+' replaced-svg');
+			}
+			$svg = $svg.removeAttr('xmlns:a');
+			if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+			}
+			$img.replaceWith($svg);
+		}, 'xml');
+	});
 	
 });
 
@@ -657,24 +675,6 @@ function modalHide(thisModal) {
 //   });
 // };
 
-// Вставляет svg в html, позволяет управлять цветом через css 
-$('img[src$=".svg"]').each(function(){
-  var $img = $(this);
-  var imgClass = $img.attr('class');
-  var imgURL = $img.attr('src');
-  $.get(imgURL, function(data) {
-    var $svg = $(data).find('svg');
-    if(typeof imgClass !== 'undefined') {
-      $svg = $svg.attr('class', imgClass+' replaced-svg');
-    }
-    $svg = $svg.removeAttr('xmlns:a');
-    if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-      $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-    }
-    $img.replaceWith($svg);
-  }, 'xml');
-});
-
 // Слайдер в банере утп
 function slider(slider) {
   slider.slick({
@@ -1008,7 +1008,7 @@ function sliderProduct(slider,sliderFor) {
     infinite: true, // Зацикленное пролистывание
     centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
     swipe: true, // Перелистывание пальцем
-    draggable: true, // Перелистывание мышью
+		draggable: true, // Перелистывание мышью
     responsive: [ // Адаптация
       {
       breakpoint: breakXl,
@@ -1036,6 +1036,8 @@ function sliderProduct(slider,sliderFor) {
     slidesToShow: 1, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
     fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-    asNavFor: slider // Связь со слайдерами
+		asNavFor: slider, // Связь со слайдерами
+		prevArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--prev"><img src="img/arrow.svg"></div>',
+		nextArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--next"><img src="img/arrow.svg"></div>',
   });
 };

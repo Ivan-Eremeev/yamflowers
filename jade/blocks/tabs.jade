@@ -35,15 +35,12 @@ mixin tabs(className, titleName, filter=false, classMenu='tabs_menu')
           .filter_option
             .filter_title.filter_title--option Сортировать
             .filter_list
-              .filter_field
-                input#radioFilter_0(type="radio" name="radioFilter" checked).filter_radio
-                label(for="radioFilter_0").filter_label По новинкам
-              .filter_field
-                input#radioFilter_1(type="radio" name="radioFilter").filter_radio
-                label(for="radioFilter_1").filter_label Цена по возрастанию
-              .filter_field
-                input#radioFilter_2(type="radio" name="radioFilter").filter_radio
-                label(for="radioFilter_2").filter_label Цена по убыванию
+              input#radioFilter_0(type="radio" name="radioFilter" checked).filter_radio
+              label(for="radioFilter_0").filter_label По новинкам
+              input#radioFilter_1(type="radio" name="radioFilter").filter_radio
+              label(for="radioFilter_1").filter_label Цена по возрастанию
+              input#radioFilter_2(type="radio" name="radioFilter").filter_radio
+              label(for="radioFilter_2").filter_label Цена по убыванию
           .filter_price
             .filter_title Фильтр по цене:
             .filter_slider

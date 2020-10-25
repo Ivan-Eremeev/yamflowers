@@ -85,14 +85,14 @@
               <div class="productItem_col">
                 <div class="productItem_slider">
                   <div class="slider-product-for">
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_1.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_2.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_3.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_4.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_5.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_6.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_7.jpg" alt="flower"></div>
-                    <div class="slider-product-for_img img-responsive"><img data-lazy="img/flower_8.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_1.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_2.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_3.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_4.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_5.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_6.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_7.jpg" alt="flower"></div>
+                    <div class="slider-product-for_img"><img data-lazy="img/flower_8.jpg" alt="flower"></div>
                   </div>
                   <div class="slider-product-nav">
                     <div class="slider-product-nav_img"><img data-lazy="img/flower_1.jpg" alt="flower"></div>
@@ -112,11 +112,35 @@
                     <div class="productItem_art">Артикул: 546874856</div>
                     <p>Обращаем внимание, что состав букета может быть незначительно изменен (в связи с сезонностью и конкретной поставкой), при этом стилистика и цветовая гамма останутся неизменными.</p>
                   </div>
-                  <div class="productItem_color">
-                    <div class="productItem_title">Выберите цвет:</div>
+                  <div class="productColor">
+                    <div class="productColor_title">Выберите цвет:</div>
+                    <div class="productColor_row">
+                      <input class="productColor_input" id="color_0" type="radio" name="color">
+                      <label class="productColor_label productColor_label--pink" for="color_0"></label>
+                      <input class="productColor_input" id="color_1" type="radio" name="color">
+                      <label class="productColor_label productColor_label--light-pink" for="color_1"></label>
+                      <input class="productColor_input" id="color_2" type="radio" name="color" checked>
+                      <label class="productColor_label productColor_label--purple" for="color_2"></label>
+                      <input class="productColor_input" id="color_3" type="radio" name="color">
+                      <label class="productColor_label productColor_label--gray" for="color_3"></label>
+                      <input class="productColor_input" id="color_4" type="radio" name="color">
+                      <label class="productColor_label productColor_label--red" for="color_4"></label>
+                    </div>
                   </div>
-                  <div class="productItem_size">
-                    <div class="productItem_title">Выберите размер:</div>
+                  <div class="productSize">
+                    <div class="productSize_title">Выберите размер:</div>
+                    <div class="productSize_row">
+                      <input class="productSize_input" id="size_0" type="radio" name="size">
+                      <label class="productSize_label" for="size_0">xs </label>
+                      <input class="productSize_input" id="size_1" type="radio" name="size">
+                      <label class="productSize_label" for="size_1">s</label>
+                      <input class="productSize_input" id="size_2" type="radio" name="size" checked>
+                      <label class="productSize_label" for="size_2">m</label>
+                      <input class="productSize_input" id="size_3" type="radio" name="size">
+                      <label class="productSize_label" for="size_3">l</label>
+                      <input class="productSize_input" id="size_4" type="radio" name="size">
+                      <label class="productSize_label" for="size_4">xl</label>
+                    </div>
                   </div>
                   <div class="card_prices">
                     <div class="card_old-price rank">4529₽</div>
@@ -2202,7 +2226,7 @@
                           <div class="form_field">
                             <div class="form_name">Ваш e-mail:</div>
                             <div class="form_input">
-                              <input type="text" name="tel">
+                              <input class="phone-mask" type="text" name="tel">
                             </div>
                           </div>
                         </div>
