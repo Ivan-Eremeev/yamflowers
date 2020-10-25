@@ -15,26 +15,33 @@
       <!-- header-->
       <header class="header" id="header">
         <div class="wrapper">
-          <div class="header_item header_item--left">
-            <div class="js-headerMenuBtn menu_btn hamburger hamburger--elastic">
-              <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
-              </div>
-            </div>
+          <div class="header_top">
             <div class="js-CityMenuBtn city"><span>Санкт Петербург</span>
               <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
+            </div><a class="tel" href="tel:+79173261262">+7 (917) 326-12-62</a>
+          </div>
+          <div class="header_bottom">
+            <div class="header_item header_item--left">
+              <div class="js-headerMenuBtn menu_btn hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+              <div class="js-CityMenuBtn city mobile-hide"><span>Санкт Петербург</span>
+                <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
+              </div>
             </div>
-          </div>
-          <div class="header_item">
-            <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
-          </div>
-          <div class="header_item header_item--right"><a class="tel" href="tel:+79173261262">+7 (917) 326-12-62</a>
-            <div class="social social--md-hide"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
-            <div class="cart">
-              <div class="cart_price">5 329₽</div>
-              <div class="cart_icon img-responsive">
-                <div class="cart_img img-responsive"><img src="img/cart.svg" alt="cart"></div>
-                <div class="cart_num">3</div>
+            <div class="header_item">
+              <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
+            </div>
+            <div class="header_item header_item--right"><a class="tel mobile-hide" href="tel:+79173261262">+7 (917) 326-12-62</a>
+              <div class="social social--md-hide"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+              <div class="cart">
+                <div class="cart_price">5 329₽</div>
+                <div class="cart_icon img-responsive">
+                  <div class="cart_img img-responsive"><img src="img/cart.svg" alt="cart"></div>
+                  <div class="cart_num">3</div>
+                </div>
               </div>
             </div>
           </div>
@@ -112,6 +119,7 @@
                     <div class="productItem_art">Артикул: 546874856</div>
                     <p>Обращаем внимание, что состав букета может быть незначительно изменен (в связи с сезонностью и конкретной поставкой), при этом стилистика и цветовая гамма останутся неизменными.</p>
                   </div>
+                  <!-- productColor-->
                   <div class="productColor">
                     <div class="productColor_title">Выберите цвет:</div>
                     <div class="productColor_row">
@@ -127,6 +135,8 @@
                       <label class="productColor_label productColor_label--red" for="color_4"></label>
                     </div>
                   </div>
+                  <!-- /productColor-->
+                  <!-- productSize-->
                   <div class="productSize">
                     <div class="productSize_title">Выберите размер:</div>
                     <div class="productSize_row">
@@ -142,6 +152,7 @@
                       <label class="productSize_label" for="size_4">xl</label>
                     </div>
                   </div>
+                  <!-- /productSize-->
                   <div class="card_prices">
                     <div class="card_old-price rank">4529₽</div>
                     <div class="card_price rank">4029₽</div>
@@ -157,2037 +168,349 @@
           </div>
         </div>
         <!--	/productItem-->
-                <!-- tabs-->
-                <div class="js-tabs-1 tabs">
-                  <h2 class="title">Похожие товары</h2>
-                  <div class="tabs_menu">
-                    <div class="wrapper">
-                      <ul class="tabs_triggers" id="tabs_triggers">
-                        <li class="js-tabs-trigger active" data-trigger="0"><span>Все категории</span></li>
-                        <li class="js-tabs-trigger" data-trigger="1"><span>Клубничные букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="2"><span>Клубничные боксы</span></li>
-                        <li class="js-tabs-trigger" data-trigger="3"><span>Воздушные боксы</span></li>
-                        <li class="js-tabs-trigger" data-trigger="4"><span>Хит Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="5"><span>Букеты</span></li>
-                        <li class="js-tabs-trigger" data-trigger="6"><span>Букеты клубничные</span></li>
-                        <li class="tabsDrop"><span class="tabsDrop_span mobile-hide">Показать еще</span><span class="tabsDrop_span mobile-visible">Показать все категории</span><img src="img/arrow.svg" alt="arrow">
-                          <ul class="tabsDrop_list" id="tabsDrop_list"></ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="tabs_content" id="tabs_content">
-                    <div class="wrapper show">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M1</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M2</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M3</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M4</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M5</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M6</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
-                    <div class="wrapper">
-                      <div class="row">
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M7</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
-                                <label class="card_label" for="flower_1_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
-                                <label class="card_label" for="flower_1_1">s</label>
-                                <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
-                                <label class="card_label" for="flower_1_2">m</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
-                                <label class="card_label" for="flower_1_3">l</label>
-                                <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
-                                <label class="card_label" for="flower_1_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
-                                <label class="card_label card_labe" for="flower_2_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
-                                <label class="card_label card_labe" for="flower_2_1">s</label>
-                                <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
-                                <label class="card_label card_labe" for="flower_2_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">4329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
-                                <label class="card_label card_label" for="flower_3_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
-                                <label class="card_label card_label" for="flower_3_1">s</label>
-                                <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
-                                <label class="card_label card_label" for="flower_3_2">m</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
-                                <label class="card_label card_label" for="flower_3_3">l</label>
-                                <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
-                                <label class="card_label card_label" for="flower_3_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
-                                <label class="card_label card_labe" for="flower_4_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
-                                <label class="card_label card_labe" for="flower_4_1">s</label>
-                                <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
-                                <label class="card_label card_labe" for="flower_4_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">3329₽</div>
-                                <div class="card_price rank">3129₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
-                                <label class="card_label card_labe" for="flower_5_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
-                                <label class="card_label card_labe" for="flower_5_1">s</label>
-                                <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
-                                <label class="card_label card_labe" for="flower_5_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">4529₽</div>
-                                <div class="card_price rank">4029₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
-                                <label class="card_label card_labe" for="flower_6_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
-                                <label class="card_label card_labe" for="flower_6_1">s</label>
-                                <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
-                                <label class="card_label card_labe" for="flower_6_2">m</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
-                                <label class="card_label card_labe" for="flower_6_3">l</label>
-                                <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
-                                <label class="card_label card_labe" for="flower_6_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
-                                <label class="card_label card_labe" for="flower_7_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
-                                <label class="card_label card_labe" for="flower_7_1">s</label>
-                                <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
-                                <label class="card_label card_labe" for="flower_7_2">m</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_old-price rank">5329₽</div>
-                                <div class="card_price rank">3329₽</div>
-                                <div class="card_discount-price rank"></div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tabs_col">
-                          <div class="card">
-                            <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
-                              <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
-                              <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
-                            </div>
-                            <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
-                              <div class="card_sizes">
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
-                                <label class="card_label card_labe" for="flower_8_0">xs</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
-                                <label class="card_label card_labe" for="flower_8_1">s</label>
-                                <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
-                                <label class="card_label card_labe" for="flower_8_2">m</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
-                                <label class="card_label card_labe" for="flower_8_3">l</label>
-                                <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
-                                <label class="card_label card_labe" for="flower_8_4">xl</label>
-                              </div>
-                              <div class="card_prices">
-                                <div class="card_price rank">5329₽</div>
-                              </div>
-                              <button class="card_btn btn-transparent" type="submit">в корзину</button>
-                              <div class="card_more"><a href="#">Подробнее</a></div>
-                            </form>
-                            <div class="card_chips">
-                              <div class="card_chip card_chip--best">ХИТ</div>
-                              <div class="card_chip card_chip--discount">%</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
-                    </div>
+        <!-- bonuses-->
+        <div class="bonuses">
+          <div class="wrapper">
+            <div class="row">
+              <div class="bonuses_col">
+                <div class="bonuses_item">
+                  <div class="bonuses_icon"><img src="img/photo.svg" alt=""></div>
+                  <div class="bonuses_text">
+                    <div class="bonuses_title">Фото перед отправкой</div>
+                    <p>Можем прислать фото в whatsapp перед отправкой. Сообщите об этом менеджеру или укажите при заказе на сайте</p>
                   </div>
                 </div>
-                <!--	/tabs-->
+              </div>
+              <div class="bonuses_col">
+                <div class="bonuses_item">
+                  <div class="bonuses_icon"><img src="img/prize.svg" alt=""></div>
+                  <div class="bonuses_text">
+                    <div class="bonuses_title">Подарок к букету</div>
+                    <p>Клубничный комплимент в коробочке бесплатно к первому заказу</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bonuses_col">
+                <div class="bonuses_item">
+                  <div class="bonuses_icon"><img src="img/time.svg" alt=""></div>
+                  <div class="bonuses_text">
+                    <div class="bonuses_title">Экспресс заказ</div>
+                    <p>Доставим букет сегодня, но лучше заказывать заранее</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--	/bonuses-->
+        <!-- productDesc-->
+        <div class="productDesc js-productTabs">
+          <div class="wrapper">
+            <div class="productDesc_menu">
+              <ul class="productDesc_list">
+                <li class="js-tabs-trigger active" data-trigger="0"><span>Полное описание</span></li>
+                <li class="js-tabs-trigger" data-trigger="1"><span>Условия доставки</span></li>
+                <li class="js-tabs-trigger" data-trigger="2"><span>Способы оплаты</span></li>
+                <li class="js-tabs-trigger" data-trigger="3"><span>Срок хранения</span></li>
+              </ul>
+            </div>
+            <div class="productDesc_block tabs_content" id="tabs_content">
+              <div class="show">
+                <div class="productDesc_content">
+                  <p>Стоимость доставки до двери по Саратову 300₽ с 06:30 до 23:00 tab1</p>
+                  <p>Ночной тариф (23:00-06:30) - 500₽</p>
+                  <p>Стоимость доставки в отдаленные районы рассчитывается индивидуально менеджером.</p>
+                  <p>Доставка по Саратову и Энгельсу осуществляется в часовом интервале (кроме ночного времени суток, по ночному тарифу доставка осуществляется к точному времени).</p>
+                  <p>Самовывоз 08:00-20:45</p>
+                </div>
+              </div>
+              <div>
+                <div class="productDesc_content">
+                  <p>Стоимость доставки до двери по Саратову 300₽ с 06:30 до 23:00 tab2</p>
+                  <p>Ночной тариф (23:00-06:30) - 500₽</p>
+                  <p>Стоимость доставки в отдаленные районы рассчитывается индивидуально менеджером.</p>
+                  <p>Доставка по Саратову и Энгельсу осуществляется в часовом интервале (кроме ночного времени суток, по ночному тарифу доставка осуществляется к точному времени).</p>
+                  <p>Самовывоз 08:00-20:45</p>
+                </div>
+              </div>
+              <div>
+                <div class="productDesc_content">
+                  <p>Стоимость доставки до двери по Саратову 300₽ с 06:30 до 23:00 tab3</p>
+                  <p>Ночной тариф (23:00-06:30) - 500₽</p>
+                  <p>Стоимость доставки в отдаленные районы рассчитывается индивидуально менеджером.</p>
+                  <p>Доставка по Саратову и Энгельсу осуществляется в часовом интервале (кроме ночного времени суток, по ночному тарифу доставка осуществляется к точному времени).</p>
+                  <p>Самовывоз 08:00-20:45</p>
+                </div>
+              </div>
+              <div>
+                <div class="productDesc_content">
+                  <p>Стоимость доставки до двери по Саратову 300₽ с 06:30 до 23:00 tab4</p>
+                  <p>Ночной тариф (23:00-06:30) - 500₽</p>
+                  <p>Стоимость доставки в отдаленные районы рассчитывается индивидуально менеджером.</p>
+                  <p>Доставка по Саратову и Энгельсу осуществляется в часовом интервале (кроме ночного времени суток, по ночному тарифу доставка осуществляется к точному времени).</p>
+                  <p>Самовывоз 08:00-20:45</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /productDesc-->
+                <!-- cards-->
+                <div class="cards">
+                  <h2 class="title">Похожые товары</h2>
+                  <div class="wrapper show">
+                    <div class="row">
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_1" id="flower_1_0">
+                              <label class="card_label" for="flower_1_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_1" id="flower_1_1">
+                              <label class="card_label" for="flower_1_1">s</label>
+                              <input class="card_input" type="radio" name="flower_1" checked id="flower_1_2">
+                              <label class="card_label" for="flower_1_2">m</label>
+                              <input class="card_input" type="radio" name="flower_1" id="flower_1_3">
+                              <label class="card_label" for="flower_1_3">l</label>
+                              <input class="card_input" type="radio" name="flower_1" id="flower_1_4">
+                              <label class="card_label" for="flower_1_4">xl</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_price rank">5329₽</div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта М</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_2" id="flower_2_0">
+                              <label class="card_label card_labe" for="flower_2_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_2" checked id="flower_2_1">
+                              <label class="card_label card_labe" for="flower_2_1">s</label>
+                              <input class="card_input" type="radio" name="flower_2" id="flower_2_2">
+                              <label class="card_label card_labe" for="flower_2_2">m</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_old-price rank">5329₽</div>
+                              <div class="card_price rank">4329₽</div>
+                              <div class="card_discount-price rank"></div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Рапунцель S</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_3" id="flower_3_0">
+                              <label class="card_label card_label" for="flower_3_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_3" id="flower_3_1">
+                              <label class="card_label card_label" for="flower_3_1">s</label>
+                              <input class="card_input" type="radio" name="flower_3" checked id="flower_3_2">
+                              <label class="card_label card_label" for="flower_3_2">m</label>
+                              <input class="card_input" type="radio" name="flower_3" id="flower_3_3">
+                              <label class="card_label card_label" for="flower_3_3">l</label>
+                              <input class="card_input" type="radio" name="flower_3" id="flower_3_4">
+                              <label class="card_label card_label" for="flower_3_4">xl</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_price rank">5329₽</div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_4" id="flower_4_0">
+                              <label class="card_label card_labe" for="flower_4_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_4" id="flower_4_1">
+                              <label class="card_label card_labe" for="flower_4_1">s</label>
+                              <input class="card_input" type="radio" name="flower_4" checked id="flower_4_2">
+                              <label class="card_label card_labe" for="flower_4_2">m</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_old-price rank">3329₽</div>
+                              <div class="card_price rank">3129₽</div>
+                              <div class="card_discount-price rank"></div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Клубничная мечта M<br>в шоколаде</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_5" id="flower_5_0">
+                              <label class="card_label card_labe" for="flower_5_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_5" id="flower_5_1">
+                              <label class="card_label card_labe" for="flower_5_1">s</label>
+                              <input class="card_input" type="radio" name="flower_5" checked id="flower_5_2">
+                              <label class="card_label card_labe" for="flower_5_2">m</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_old-price rank">4529₽</div>
+                              <div class="card_price rank">4029₽</div>
+                              <div class="card_discount-price rank"></div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Розовые сны</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_6" id="flower_6_0">
+                              <label class="card_label card_labe" for="flower_6_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_6" id="flower_6_1">
+                              <label class="card_label card_labe" for="flower_6_1">s</label>
+                              <input class="card_input" type="radio" name="flower_6" checked id="flower_6_2">
+                              <label class="card_label card_labe" for="flower_6_2">m</label>
+                              <input class="card_input" type="radio" name="flower_6" id="flower_6_3">
+                              <label class="card_label card_labe" for="flower_6_3">l</label>
+                              <input class="card_input" type="radio" name="flower_6" id="flower_6_4">
+                              <label class="card_label card_labe" for="flower_6_4">xl</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_price rank">5329₽</div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Шанель M</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_7" id="flower_7_0">
+                              <label class="card_label card_labe" for="flower_7_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_7" id="flower_7_1">
+                              <label class="card_label card_labe" for="flower_7_1">s</label>
+                              <input class="card_input" type="radio" name="flower_7" checked id="flower_7_2">
+                              <label class="card_label card_labe" for="flower_7_2">m</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_old-price rank">5329₽</div>
+                              <div class="card_price rank">3329₽</div>
+                              <div class="card_discount-price rank"></div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs_col">
+                        <div class="card">
+                          <div class="card_slider">
+                            <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                            <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
+                            <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
+                          </div>
+                          <form class="card_content" action=""><a class="card_name" href="#">Тиффани M</a>
+                            <div class="card_sizes">
+                              <input class="card_input" type="radio" name="flower_8" id="flower_8_0">
+                              <label class="card_label card_labe" for="flower_8_0">xs</label>
+                              <input class="card_input" type="radio" name="flower_8" id="flower_8_1">
+                              <label class="card_label card_labe" for="flower_8_1">s</label>
+                              <input class="card_input" type="radio" name="flower_8" checked id="flower_8_2">
+                              <label class="card_label card_labe" for="flower_8_2">m</label>
+                              <input class="card_input" type="radio" name="flower_8" id="flower_8_3">
+                              <label class="card_label card_labe" for="flower_8_3">l</label>
+                              <input class="card_input" type="radio" name="flower_8" id="flower_8_4">
+                              <label class="card_label card_labe" for="flower_8_4">xl</label>
+                            </div>
+                            <div class="card_prices">
+                              <div class="card_price rank">5329₽</div>
+                            </div>
+                            <button class="card_btn btn-transparent" type="submit">в корзину</button>
+                            <div class="card_more"><a href="#">Подробнее</a></div>
+                          </form>
+                          <div class="card_chips">
+                            <div class="card_chip card_chip--best">ХИТ</div>
+                            <div class="card_chip card_chip--discount">%</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs_btn"><a class="btn-transparent" href="#">Перейти в каталог</a></div>
+                  </div>
+                </div>
+                <!-- /cards-->
         <!-- gallery-->
         <div class="gallery">
           <div class="wrapper">

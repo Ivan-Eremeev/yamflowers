@@ -1,0 +1,36 @@
+.productSize {
+  margin-bottom: 38px;
+  &_row {
+    display: flex;
+  }
+  &_title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  &_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    // transition: box-shadow .3s;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+  &_input {
+    display: none;
+    &:checked {
+      +.productSize_label {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}

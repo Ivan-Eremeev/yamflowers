@@ -1,0 +1,47 @@
+.productColor {
+  margin-bottom: 20px;
+  &_row {
+    display: flex;
+  }
+  &_title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  &_label {
+    display: block;
+    margin: 4px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: 0 solid #DDDDDD;
+    // transition: box-shadow .3s;
+    cursor: pointer;
+    &--pink {
+      background-color: #C4829B;
+    }
+    &--light-pink {
+      background-color: #E5B6C7;
+    }
+    &--purple {
+      background-color: #B12E68;
+    }
+    &--gray {
+      background-color: #E4EBE5;
+    }
+    &--red {
+      background-color: #F31C1C;
+    }
+    &:hover {
+      // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+  &_input {
+    display: none;
+    &:checked {
+      +.productColor_label {
+        border-width: 6px;
+      }
+    }
+  }
+}

@@ -3,7 +3,19 @@
   background-color: #fff;
   position: relative;
   z-index: 10;
-  .wrapper {
+  &_top {
+    display: none;
+    padding: 10px 0;
+    .city {
+      margin-left: 15px;
+      font-size: 12px;
+    }
+    .tel {
+      margin-right: 0;
+      font-size: 12px;
+    }
+  }
+  &_bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +34,13 @@
       justify-content: flex-end;
     }
   } 
+  @media (max-width: $break_sm) {
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 .city {
   display: flex;
@@ -37,9 +56,6 @@
     &:after {
       padding-top: 100%;
     }
-  }
-  @media (max-width: $break_md) {
-    display: none;
   }
 }
 .logo {
@@ -61,9 +77,6 @@
   white-space: nowrap;
   font-size: 15px;
   font-weight: 500;
-  @media (max-width: $break_sm) {
-    display: none;
-  }
 }
 .social {
   display: flex;

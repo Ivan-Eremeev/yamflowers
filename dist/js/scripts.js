@@ -63,6 +63,9 @@ $(document).ready(function () {
 	tabs($('.js-tabs-1'));
 	tabs($('.js-tabs-2'));
 
+	// Таб на странице товара
+	tabs($('.js-productTabs'));
+
 	// Аккордеон
 	// accordeon($('#accordeon'));
 
