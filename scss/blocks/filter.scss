@@ -32,6 +32,7 @@
   &_list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     flex-grow: 1;
     margin: 0 30px;
   }
@@ -99,6 +100,7 @@
     border-radius: 50%;
     background-color: $red;
     border: none;
+    margin-right: 10px;
     &:hover {
       box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
     }
@@ -151,7 +153,7 @@
     //   flex-wrap: wrap;
     // }
     &_option {
-      overflow-x: scroll;
+
     }
     &_price {
       width: 100%;
@@ -161,15 +163,25 @@
     }
     &_list {
       width: 100%;
-      margin-left: 0;
+      margin: 0;
     }
     &_field {
-      margin: 20px 0;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
   @media (max-width: $break_xs) {
+    &_option {
+      flex-wrap: wrap;
+    }
+    &_label {
+      margin: 0;
+    }
+    &_title {
+      width: 100%;
+      margin-bottom: 20px;
+    }
     &_list {
-      text-align: center;
     }
     &_title {
       // width: 100%;

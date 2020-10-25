@@ -236,6 +236,8 @@ $(document).ready(function () {
 // Меню
 function myMenu(menu, menuBtn) {
 	var	headerHeight = $('#header').outerHeight(),
+			allMenu = $('.js-menu'),
+			allMenuBtn = $('.js-menuBtn'),
 			html = $('html'),
 			link = menu.find('a'),
 			documentWidth = parseInt(document.documentElement.clientWidth),
@@ -245,7 +247,9 @@ function myMenu(menu, menuBtn) {
 		if (menu.hasClass('open')) {
 			menuClose();
 		}else if (toggleOpenMenu) {
-			return false
+			allMenu.fadeOut().removeClass('open');
+			allMenuBtn.removeClass('is-active');
+			menuOpen();
 		}else {
 			menuOpen();
 		}
@@ -260,15 +264,13 @@ function myMenu(menu, menuBtn) {
 	function menuOpen() {
 		menuBtn.addClass('is-active');
 		menu.fadeIn().addClass('open');
-		html.addClass('lock');
-		html.addClass('lock').css('padding-right',scrollbarWidth);
+		// html.addClass('lock').css('padding-right',scrollbarWidth);
 		toggleOpenMenu = true;
 	}
 	function menuClose() {
 		menuBtn.removeClass('is-active');
 		menu.fadeOut().removeClass('open');
-		html.removeClass('lock');
-		html.removeClass('lock').css('padding-right',0);
+		// html.removeClass('lock').css('padding-right',0);
 		toggleOpenMenu = false;
 	}
 };
@@ -406,7 +408,7 @@ function modalShow(thisModal) {
 	thisModal.show(0, function() {
 		setTimeout(thisModal.addClass('open'),500);
 	});
-	html.addClass('lock').css('padding-right',scrollbarWidth);
+	// html.addClass('lock').css('padding-right',scrollbarWidth);
 	modalClose.on('click', function() {
 		modalHide(thisModal);
 	});
@@ -421,7 +423,7 @@ function modalHide(thisModal) {
 	var html = $('html');
 	thisModal.removeClass('open');
 	thisModal.hide();
-	html.removeClass('lock').css('padding-right',0);
+	// html.removeClass('lock').css('padding-right',0);
 };
 
 // Текст печатная машинка

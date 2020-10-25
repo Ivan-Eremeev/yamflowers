@@ -17,18 +17,18 @@
       <header class="header" id="header">
         <div class="wrapper">
           <div class="header_top">
-            <div class="js-CityMenuBtn city"><span>Санкт Петербург</span>
+            <div class="js-CityMenuBtn js-menuBtn city"><span>Санкт Петербург</span>
               <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
             </div><a class="tel" href="tel:+79173261262">+7 (917) 326-12-62</a>
           </div>
           <div class="header_bottom">
             <div class="header_item header_item--left">
-              <div class="js-headerMenuBtn menu_btn hamburger hamburger--elastic">
+              <div class="js-headerMenuBtn js-menuBtn menu_btn hamburger hamburger--elastic">
                 <div class="hamburger-box">
                   <div class="hamburger-inner"></div>
                 </div>
               </div>
-              <div class="js-CityMenuBtn city mobile-hide"><span>Санкт Петербург</span>
+              <div class="js-CityMenuBtn js-menuBtn city mobile-hide"><span>Санкт Петербург</span>
                 <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
               </div>
             </div>
@@ -50,7 +50,7 @@
       </header>
       <!-- /header-->
       <!-- menu-->
-      <div class="js-headerMenu menu">
+      <div class="js-headerMenu js-menu menu">
         <nav class="menu_nav">
           <ul class="menu_list">
             <li><a href="#">Каталог</a></li>
@@ -65,7 +65,7 @@
       </div>
       <!-- /menu-->
       <!-- menuCity-->
-      <div class="js-CityMenu menu">
+      <div class="js-CityMenu js-menu menu">
         <nav class="menu_nav">
           <ul class="menu_list">
             <li><a href="#">Санкт-Петербург</a></li>
@@ -110,12 +110,18 @@
                       <div class="filter_option">
                         <div class="filter_title filter_title--option">Сортировать</div>
                         <div class="filter_list">
-                          <input class="filter_radio" id="radioFilter_0" type="radio" name="radioFilter" checked>
-                          <label class="filter_label" for="radioFilter_0">По новинкам</label>
-                          <input class="filter_radio" id="radioFilter_1" type="radio" name="radioFilter">
-                          <label class="filter_label" for="radioFilter_1">Цена по возрастанию</label>
-                          <input class="filter_radio" id="radioFilter_2" type="radio" name="radioFilter">
-                          <label class="filter_label" for="radioFilter_2">Цена по убыванию</label>
+                          <div class="filter_field">
+                            <input class="filter_radio" id="radioFilter_0" type="radio" name="radioFilter" checked>
+                            <label class="filter_label" for="radioFilter_0">По новинкам</label>
+                          </div>
+                          <div class="filter_field">
+                            <input class="filter_radio" id="radioFilter_1" type="radio" name="radioFilter">
+                            <label class="filter_label" for="radioFilter_1">Цена по возрастанию</label>
+                          </div>
+                          <div class="filter_field">
+                            <input class="filter_radio" id="radioFilter_2" type="radio" name="radioFilter">
+                            <label class="filter_label" for="radioFilter_2">Цена по убыванию</label>
+                          </div>
                         </div>
                       </div>
                       <div class="filter_price">
@@ -141,7 +147,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -172,7 +178,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -202,7 +208,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -233,7 +239,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -263,7 +269,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -293,7 +299,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -325,7 +331,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -355,7 +361,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -392,7 +398,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -423,7 +429,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -453,7 +459,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -484,7 +490,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -514,7 +520,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -544,7 +550,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -576,7 +582,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -606,7 +612,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -643,7 +649,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -674,7 +680,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -704,7 +710,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -735,7 +741,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -765,7 +771,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -795,7 +801,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -827,7 +833,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -857,7 +863,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -894,7 +900,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -925,7 +931,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -955,7 +961,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -986,7 +992,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1016,7 +1022,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1046,7 +1052,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1078,7 +1084,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1108,7 +1114,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1145,7 +1151,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1176,7 +1182,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1206,7 +1212,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1237,7 +1243,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1267,7 +1273,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1297,7 +1303,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1329,7 +1335,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1359,7 +1365,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1396,7 +1402,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1427,7 +1433,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1457,7 +1463,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1488,7 +1494,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1518,7 +1524,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1548,7 +1554,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1580,7 +1586,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1610,7 +1616,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1647,7 +1653,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1678,7 +1684,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1708,7 +1714,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1739,7 +1745,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1769,7 +1775,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1799,7 +1805,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1831,7 +1837,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1861,7 +1867,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1898,7 +1904,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_1.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1929,7 +1935,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_2.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1959,7 +1965,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_3.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -1990,7 +1996,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_4.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -2020,7 +2026,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_5.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -2050,7 +2056,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_6.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -2082,7 +2088,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_7.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>
@@ -2112,7 +2118,7 @@
                         <div class="tabs_col">
                           <div class="card">
                             <div class="card_slider">
-                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt="flower"></a></div>
+                              <div class="js-card-slider"><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a><a class="card_img img-responsive" href="#"><img data-lazy="img/flower_8.jpg" alt=""></a></div>
                               <div class="card_arrow card_arrow--prev"><img src="img/arrow.svg" alt=""></div>
                               <div class="card_arrow card_arrow--next"><img src="img/arrow.svg" alt=""></div>
                             </div>

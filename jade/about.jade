@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Товар
+	title О нас
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
@@ -24,11 +24,7 @@ block content
 
 			include blocks/breadcrumbs.jade
 
-			include blocks/productItem.jade
-
-			include blocks/bonuses.jade
-
-			include blocks/productDesc.jade
+      include blocks/aboutWelcome.jade
 
 			include blocks/cards.jade
 			+cards('Похожые товары')
