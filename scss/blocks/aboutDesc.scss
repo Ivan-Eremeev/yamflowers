@@ -1,0 +1,45 @@
+.aboutDesc {
+  margin-bottom: 65px;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .title {
+    text-align: left;
+    margin-bottom: 55px;
+  }
+  &_img {
+    width: 50%;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+    }
+  }
+  &_text {
+    width: 50%;
+    padding-left: 75px;
+    flex-shrink: 0;
+    p {
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+    .title {
+      margin-bottom: 30px;
+    }
+    &_img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &_text {
+      width: 100%;
+      padding-left: 0;
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
