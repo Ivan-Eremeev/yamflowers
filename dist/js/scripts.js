@@ -58,6 +58,7 @@ $(document).ready(function () {
 	// Выводить лишние пункты меню табов в выпающий список
 	tabsMenu($('.js-tabs-1'));
 	tabsMenu($('.js-tabs-2'));
+	tabsMenu($('.js-tabs-3'));
 
 	// Табы
 	tabs($('.js-tabs-1'));

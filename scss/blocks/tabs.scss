@@ -20,7 +20,8 @@
       margin: 0 10px 10px;
       cursor: pointer;
       font-weight: 500;
-      span {
+      span, a {
+        color: #000;
         @include line-slide-center();
         &:after {
           transition: $trans;

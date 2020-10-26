@@ -861,10 +861,11 @@ body {
 	cursor: pointer;
 	font-weight: 500;
 }
-.tabs_menu li span {
+.tabs_menu li span, .tabs_menu li a {
+	color: #000;
 	position: relative;
 }
-.tabs_menu li span:after {
+.tabs_menu li span:after, .tabs_menu li a:after {
 	content: "";
 	display: block;
 	width: 0;
@@ -876,10 +877,10 @@ body {
 	transform: translate(-50%);
 	transition: 0.5s;
 }
-.tabs_menu li span:hover:after {
+.tabs_menu li span:hover:after, .tabs_menu li a:hover:after {
 	width: 100%;
 }
-.tabs_menu li span:after {
+.tabs_menu li span:after, .tabs_menu li a:after {
 	transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 	background-color: #000;
 }

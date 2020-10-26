@@ -1,9 +1,34 @@
-mixin cards(titleName)
+mixin cards(titleName,menu=false,classMenu)
   // cards
   .cards
     h2.title= titleName
 
-    .wrapper.show
+    if menu == true
+
+      div(class= classMenu)
+        .wrapper
+          ul#tabs_triggers.tabs_triggers
+            li(data-trigger="0").js-tabs-trigger.active
+              a(href="#") Все категории
+            li(data-trigger="1").js-tabs-trigger
+              a(href="#") Клубничные букеты
+            li(data-trigger="2").js-tabs-trigger
+              a(href="#") Клубничные боксы
+            li(data-trigger="3").js-tabs-trigger
+              a(href="#") Воздушные боксы
+            li(data-trigger="4").js-tabs-trigger
+              a(href="#") Хит Букеты
+            li(data-trigger="5").js-tabs-trigger
+              a(href="#") Букеты
+            li(data-trigger="6").js-tabs-trigger
+              a(href="#") Букеты клубничные
+            li.tabsDrop
+              span.tabsDrop_span.mobile-hide Показать еще
+              span.tabsDrop_span.mobile-visible Показать все категории
+              img(src="img/arrow.svg", alt="arrow")
+              ul#tabsDrop_list.tabsDrop_list
+
+    .wrapper
       .row
 
         .tabs_col
