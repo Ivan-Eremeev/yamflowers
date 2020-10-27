@@ -2747,8 +2747,6 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 20px 0;
-}
-.cartItem:not(:last-child) {
 	border-bottom: 1px solid #e2e2e2;
 }
 .cartItem_img {

@@ -53,7 +53,13 @@ $(document).ready(function () {
 	// stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
-	$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
+	function inputMaskFunc() {
+		if ($('.phone-mask').length) {
+			$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
+		}
+	}
+	inputMaskFunc();
+
 
 	// Выводить лишние пункты меню табов в выпающий список
 	tabsMenu($('.js-tabs-1'));
@@ -71,7 +77,9 @@ $(document).ready(function () {
 	// accordeon($('#accordeon'));
 
 	// matchHeight // Задание елементам одинаковой высоты
-	$('.card_name').matchHeight();
+	if ($('.card_name').length) {
+		$('.card_name').matchHeight();
+	};
 
 	// Запуск видео
 	videoPlay($('.js-video_img'))
@@ -708,162 +716,93 @@ function modalHide(thisModal) {
 
 // Слайдер в банере утп
 function slider(slider) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    // asNavFor: sliderFor, // Связь со слайдерами
-    dots: true, // Пагинация
-    arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
-    infinite: true, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // swipe: true, // Перелистывание пальцем
-		// draggable: true, // Перелистывание мышью
-		appendDots: $('.banner_dots'),
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
-  });
-  
-  // sliderFor.slick({
-  //   slidesToShow: 1, // Сколько слайдов показывать на экране
-  //   slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-  //   dots: false, // Пагинация
-  //   arrows: false, // Стрелки
-  //   fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-  //   asNavFor: slider // Связь со слайдерами
-  // });
+	if (slider.length) {
+		slider.slick({
+    	slidesToShow: 1, // Сколько слайдов показывать на экране
+			slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+			dots: true, // Пагинация
+			arrows: false, // Стрелки
+			appendDots: $('.banner_dots'),
+		});
 
-  // Кастомные кнопки "вперед" "назад"
-  $('.banner_arrow--prev').click(function() {
-    slider.slick('slickPrev');
-  });
-  $('.banner_arrow--next').click(function() {
-    slider.slick('slickNext');
-  });
+		// Кастомные кнопки "вперед" "назад"
+		$('.banner_arrow--prev').click(function() {
+			slider.slick('slickPrev');
+		});
+		$('.banner_arrow--next').click(function() {
+			slider.slick('slickNext');
+		});
+	}
 };
-
-// Добавляем кастомную пагинацию в слайдер
-// function addDotsInPagination(sliderB, sliderPagination) {
-//   var sliderCount = sliderB.find('.js-slider-slide');
-//   for (var i = 1; i < sliderCount.length + 1; i++) {
-//     var dot = $('<div class="slider-pagination_dot"></div>');
-//     dot.text(i);
-//     sliderPagination.append(dot);
-//   };
-//   // Вызов слайдера нужно делать после добавления пагинации
-//   slider();
-// };
-
-// Инициализация слайдеров на десктопе и мобилке
-// function sliderReinstall() {
-//   if (window.matchMedia("(max-width: 769px)").matches) {
-//     $('.slick-initialized').slick('unslick');
-//   }
-//   else {
-//     $('.slick-initialized').slick('unslick');
-//     sliderInit($('.slider'), $('.slider-for'));
-//   }
-// }
-
-// $('.your-slider').slick('unslick'); // Уничтожить слайдер
 
 // Слайдер в карточках
 function sliderCard(slider) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    dots: false, // Пагинация
-    arrows: false, // Стрелки
-    infinite: true, // Зацикленное пролистывание
-	});
-	// Кастомные кнопки "вперед" "назад"
-  $('.card_arrow--prev').click(function() {
-    $(this).siblings('.js-card-slider').slick('slickPrev');
-  });
-  $('.card_arrow--next').click(function() {
-    $(this).siblings('.js-card-slider').slick('slickNext');
-  });
+	if (slider.length) {
+		slider.slick({
+			slidesToShow: 1, // Сколько слайдов показывать на экране
+			slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+			dots: false, // Пагинация
+			arrows: false, // Стрелки
+			infinite: true, // Зацикленное пролистывание
+		});
+		// Кастомные кнопки "вперед" "назад"
+		$('.card_arrow--prev').click(function() {
+			$(this).siblings('.js-card-slider').slick('slickPrev');
+		});
+		$('.card_arrow--next').click(function() {
+			$(this).siblings('.js-card-slider').slick('slickNext');
+		});
+	}
 };
 
 // Слайдер в slider
 function sliderSlider(slider) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    dots: false, // Пагинация
-    arrows: false, // Стрелки
-		infinite: true, // Зацикленное пролистывание
-    centerMode: true, // Задает класс .slick-center слайду в центре
-		centerPadding: '450px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-		adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
-		variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-		appendDots: $('.banner_dots'),
-		variableWidth: true,
-    responsive: [ // Адаптация
-      // {
-      // breakpoint: breakXl,
-      //   settings: {
-			// 		centerPadding: '200px',
-      //   }
-      // },
-      // {
-      // breakpoint: breakLg,
-      //   settings: {
-			// 		centerPadding: '200px',
-      //   }
-			// },
-			{
-			breakpoint: breakMd,
-        settings: {
-					centerMode: false,
-					// centerPadding: '100px',
-					variableWidth: false,
-        }
-			},
-			{
-			breakpoint: breakSm,
-        settings: {
-					centerMode: false,
-					variableWidth: false,
-        }
-			},
-			{
-			breakpoint: breakXs,
-        settings: {
-					centerMode: false,
-					variableWidth: false,
-        }
-      },
-    ]
-	});
-	// Кастомные кнопки "вперед" "назад"
-  $('.slider_arrow--prev').click(function() {
-    slider.slick('slickPrev');
-  });
-  $('.slider_arrow--next').click(function() {
-    slider.slick('slickNext');
-  });
+	if (slider.length) {
+		slider.slick({
+			slidesToShow: 1, // Сколько слайдов показывать на экране
+			slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+			dots: false, // Пагинация
+			arrows: false, // Стрелки
+			infinite: true, // Зацикленное пролистывание
+			centerMode: true, // Задает класс .slick-center слайду в центре
+			centerPadding: '450px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+			adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
+			variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+			appendDots: $('.banner_dots'),
+			variableWidth: true,
+			responsive: [ // Адаптация
+				{
+				breakpoint: breakMd,
+					settings: {
+						centerMode: false,
+						// centerPadding: '100px',
+						variableWidth: false,
+					}
+				},
+				{
+				breakpoint: breakSm,
+					settings: {
+						centerMode: false,
+						variableWidth: false,
+					}
+				},
+				{
+				breakpoint: breakXs,
+					settings: {
+						centerMode: false,
+						variableWidth: false,
+					}
+				},
+			]
+		});
+		// Кастомные кнопки "вперед" "назад"
+		$('.slider_arrow--prev').click(function() {
+			slider.slick('slickPrev');
+		});
+		$('.slider_arrow--next').click(function() {
+			slider.slick('slickNext');
+		});
+	}
 };
 
 // Запуск видео
@@ -1029,47 +968,51 @@ function filterPrice() {
 
 // Слайдер на странице товара
 function sliderProduct(slider,sliderFor) {
-  slider.slick({
-    slidesToShow: 5, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    asNavFor: sliderFor, // Связь со слайдерами
-    arrows: false, // Стрелки
-    centerMode: true, // Задает класс .slick-center слайду в центре
-    focusOnSelect: true, // Выбрать слайд кликом
-    infinite: true, // Зацикленное пролистывание
-    centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    swipe: true, // Перелистывание пальцем
-		draggable: true, // Перелистывание мышью
-    responsive: [ // Адаптация
-      {
-      breakpoint: breakXl,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
-      breakpoint: breakMd,
-        settings: {
-          slidesToShow: 3,
-        }
-			},
-			{
-      breakpoint: breakXs,
-        settings: {
-					slidesToShow: 2,
-					centerMode: false,
-        }
-			},
-    ]
-  });
-  
-  sliderFor.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-		asNavFor: slider, // Связь со слайдерами
-		prevArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--prev"><img src="img/arrow.svg"></div>',
-		nextArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--next"><img src="img/arrow.svg"></div>',
-  });
+	if (slider.length) {
+		slider.slick({
+			slidesToShow: 5, // Сколько слайдов показывать на экране
+			slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+			asNavFor: sliderFor, // Связь со слайдерами
+			arrows: false, // Стрелки
+			centerMode: true, // Задает класс .slick-center слайду в центре
+			focusOnSelect: true, // Выбрать слайд кликом
+			infinite: true, // Зацикленное пролистывание
+			centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+			swipe: true, // Перелистывание пальцем
+			draggable: true, // Перелистывание мышью
+			responsive: [ // Адаптация
+				{
+				breakpoint: breakXl,
+					settings: {
+						slidesToShow: 4,
+					}
+				},
+				{
+				breakpoint: breakMd,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+				breakpoint: breakXs,
+					settings: {
+						slidesToShow: 2,
+						centerMode: false,
+					}
+				},
+			]
+		});
+	}
+	
+	if (sliderFor.length) {
+		sliderFor.slick({
+			slidesToShow: 1, // Сколько слайдов показывать на экране
+			slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+			fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+			asNavFor: slider, // Связь со слайдерами
+			prevArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--prev"><img src="img/arrow.svg"></div>',
+			nextArrow: '<div class="slider-product-for_arrow slider-product-for_arrow--next"><img src="img/arrow.svg"></div>',
+		});
+	}
 };
 //# sourceMappingURL=scripts.js.map
