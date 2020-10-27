@@ -1,5 +1,6 @@
 .cartItem {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid $bd;
@@ -7,6 +8,73 @@
     max-width: 84px;
     img {
       display: block;
+    }
+  }
+  &_name {
+    
+  }
+  &_count {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid $bd;
+  }
+  &_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M3.88281 6.99967L4.22917 7.38249L9.47917 13.2158L10.3542 12.4502L5.45052 6.99967L10.3542 1.54915L9.47917 0.783528L4.22917 6.61686L3.88281 6.99967Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='14' height='14' fill='white' transform='translate(0 14) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+    &--minus {
+      
+    }
+    &--plus {
+      transform: rotate(180deg);
+    }
+  }
+  &_result {
+    input {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      text-align: center;
+      border: none;
+      background: transparent;
+      cursor: default;
+    }
+  }
+  &_price {
+    
+  }
+  &_remove {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    cursor: pointer;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }

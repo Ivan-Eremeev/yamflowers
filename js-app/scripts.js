@@ -264,6 +264,30 @@ $(document).ready(function () {
 		});
 	}
 	cartSteps();
+
+	// Добавить убрать количество товара
+	function inputCount() {
+		var count = $('.cartItem_count');
+		count.each(function () {
+			var minus = $(this).find('.cartItem_arrow--minus'),
+					input = $(this).find('.cartItem_result input'),
+					plus = $(this).find('.cartItem_arrow--plus'),
+					val = 0;
+			minus.click(function() {
+				if (val > 1) {
+					val --;
+					input.val(val);
+				}
+			});
+			plus.click(function() {
+				if (val < 999) {
+					val ++;
+					input.val(val);
+				}
+			});
+		})
+	};
+	inputCount();
 	
 });
 
