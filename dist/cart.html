@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/libs/slick.css">
+    <link rel="stylesheet" href="css/libs/hamburgers.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <!-- header-->
+      <header class="header" id="header">
+        <div class="wrapper">
+          <div class="header_top">
+            <div class="js-CityMenuBtn js-menuBtn city"><span>Санкт Петербург</span>
+              <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
+            </div><a class="tel" href="tel:+79173261262">+7 (917) 326-12-62</a>
+          </div>
+          <div class="header_bottom">
+            <div class="header_item header_item--left">
+              <div class="js-headerMenuBtn js-menuBtn menu_btn hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+              <div class="js-CityMenuBtn js-menuBtn city mobile-hide"><span>Санкт Петербург</span>
+                <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
+              </div>
+            </div>
+            <div class="header_item">
+              <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
+            </div>
+            <div class="header_item header_item--right"><a class="tel mobile-hide" href="tel:+79173261262">+7 (917) 326-12-62</a>
+              <div class="social social--md-hide"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+              <div class="cart">
+                <div class="cart_price">5 329₽</div>
+                <div class="cart_icon img-responsive">
+                  <div class="cart_img img-responsive"><img src="img/cart.svg" alt="cart"></div>
+                  <div class="cart_num">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- /header-->
+      <!-- menu-->
+      <div class="js-headerMenu js-menu menu">
+        <nav class="menu_nav">
+          <ul class="menu_list">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="social"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+        </nav>
+      </div>
+      <!-- /menu-->
+      <!-- menuCity-->
+      <div class="js-CityMenu js-menu menu">
+        <nav class="menu_nav">
+          <ul class="menu_list">
+            <li><a href="#">Санкт-Петербург</a></li>
+            <li><a href="#">Саратов</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /menuCity-->
+      <div class="content">
+                <!-- breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="wrapper">
+                    <ul class="breadcrumbs_list">
+                      <li><a href="#">Главная</a></li>
+                      <li><span>Корзина</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--	/breadcrumbs-->
+        <!-- cartWrap-->
+        <div class="cartWrap wrapper">
+          <h1 class="title">Оформление заказа</h1>
+          <div class="cartWrap_row">
+            <div class="cartWrap_col cartWrap_col--steps">
+              <!-- cartSteps-->
+              <div class="cartSteps">
+                <div class="cartSteps_menu">
+                  <div class="cartSteps_item active" data-id="#cartStepsForm_0">Ваши контакты<span class="cartSteps_num">1</span></div>
+                  <div class="cartSteps_item" data-id="#cartStepsForm_1">Данные получателя<span class="cartSteps_num">2</span></div>
+                  <div class="cartSteps_item" data-id="#cartStepsForm_2">Адрес<span class="cartSteps_num">3</span></div>
+                  <div class="cartSteps_item" data-id="#cartStepsForm_3">Дата и время<span class="cartSteps_num">4</span></div>
+                </div>
+                <form class="cartSteps_form show" id="cartStepsForm_0" action="">
+                  <div class="cartSteps_title">Укажите контакты для связи с вами</div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_input">
+                      <input type="text" name="name" placeholder="Ваше имя:">
+                    </div>
+                  </div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_input">
+                      <input type="tel" name="tel" placeholder="Телефон:">
+                    </div>
+                  </div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_text">Текст открытки можно написать далее</div>
+                  </div>
+                  <div class="cartSteps_btns">
+                    <div class="cartSteps_btn btn-red" data-id="#cartStepsForm_1">Далее</div>
+                  </div>
+                </form>
+                <form class="cartSteps_form" id="cartStepsForm_1" action="">
+                  <div class="cartSteps_title">Укажите данные получателя</div>
+                  <div class="cartSteps_row cartSteps_row--mb20">
+                    <div class="cartSteps_checkbox">
+                      <input id="checkbox_0" type="checkbox">
+                      <label for="checkbox_0"></label>
+                    </div>
+                    <label for="checkbox_0">Я получатель</label>
+                  </div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_input">
+                      <input type="text" name="name" placeholder="Ваше имя:">
+                    </div>
+                  </div>
+                  <div class="cartSteps_row cartSteps_row--mb20">
+                    <div class="cartSteps_checkbox">
+                      <input id="checkbox_2" type="checkbox">
+                      <label for="checkbox_1"></label>
+                    </div>
+                    <label for="checkbox_1">Я не знаю номера телефона</label>
+                  </div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_input">
+                      <input type="tel" name="tel" placeholder="Телефон:">
+                    </div>
+                  </div>
+                  <div class="cartSteps_row">
+                    <div class="cartSteps_textarea">
+                      <textarea placeholder="Текст открытки:"></textarea>
+                    </div>
+                  </div>
+                  <div class="cartSteps_btns">
+                    <div class="cartSteps_btn cartSteps_btn--prev btn-transparent" data-id="#cartStepsForm_0">Назад</div>
+                    <div class="cartSteps_btn btn-red" data-id="#cartStepsForm_2">Далее</div>
+                  </div>
+                </form>
+                <form class="cartSteps_form" id="cartStepsForm_2" action="">
+                  <div class="cartSteps_title">Укажите данные для доставки</div>
+                  <div class="cartSteps_row cartSteps_row--radio cartSteps_row--mb20">
+                    <div class="cartSteps_radioBlock">
+                      <div class="cartSteps_radio">
+                        <input id="delivery_0" type="radio" name="delivery">
+                        <label for="delivery_0"></label>
+                      </div>
+                      <label for="delivery_0">Доставка</label>
+                    </div>
+                    <div class="cartSteps_radioBlock">
+                      <div class="cartSteps_radio">
+                        <input id="delivery_1" type="radio" name="delivery">
+                        <label for="delivery_1"></label>
+                      </div>
+                      <label for="delivery_1">Самоовывоз</label>
+                    </div>
+                  </div>
+                  <div class="cartSteps_row cartSteps_row--mb20">
+                    <div class="cartSteps_input">
+                      <input type="text" name="address" placeholder="Улица:">
+                    </div>
+                  </div>
+                  <div class="cartSteps_row row">
+                    <div class="cartSteps_col">
+                      <div class="cartSteps_input">
+                        <input type="text" name="address" placeholder="Дом:">
+                      </div>
+                    </div>
+                    <div class="cartSteps_col">
+                      <div class="cartSteps_input">
+                        <input type="text" name="address" placeholder="Квартира:">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cartSteps_btns">
+                    <div class="cartSteps_btn cartSteps_btn--prev btn-transparent" data-id="#cartStepsForm_1">Назад</div>
+                    <div class="cartSteps_btn btn-red" data-id="#cartStepsForm_3">Далее</div>
+                  </div>
+                </form>
+                <form class="cartSteps_form" id="cartStepsForm_3" action="">
+                  <div class="cartSteps_title">Укажите дату и время доставки</div>
+                  <div class="cartSteps_row cartSteps_row--radio cartSteps_row--mb20"></div>
+                  <div class="cartSteps_row row">
+                    <div class="cartSteps_col">
+                      <div class="cartSteps_input cartSteps_input--calendar">
+                        <input type="text" name="address" placeholder="Дата:" id="calendar">
+                      </div>
+                    </div>
+                    <div class="cartSteps_col">
+                      <div class="cartSteps_input">
+                        <input type="text" name="address" placeholder="Время:">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cartSteps_btns">
+                    <button class="btn-red" type="submit">Заказать</button>
+                  </div>
+                </form>
+              </div>
+              <!--	/cartSteps-->
+            </div>
+            <div class="cartWrap_col cartWrap_col--cart">
+              <!-- cartIcons-->
+              <div class="cartIcons">
+                <div class="cartIcons_row">
+                  <div class="cartIcons_col">
+                    <div class="cartIcons_item">
+                      <div class="cartIcons_icon"><img src="img/carticon1.svg" alt=""></div>
+                      <div class="cartIcons_text">Добавить<br>открытку</div>
+                    </div>
+                  </div>
+                  <div class="cartIcons_col">
+                    <div class="cartIcons_item">
+                      <div class="cartIcons_icon"><img src="img/carticon2.svg" alt=""></div>
+                      <div class="cartIcons_text">Добавить<br>топпер</div>
+                    </div>
+                  </div>
+                  <div class="cartIcons_col">
+                    <div class="cartIcons_item">
+                      <div class="cartIcons_icon"><img src="img/carticon3.svg" alt=""></div>
+                      <div class="cartIcons_text">Добавить<br>шары</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--	/cartIcons-->
+              <!-- cartResult-->
+              <div class="cartResult">
+                <div class="cartResult_title">Ваш заказ: <span class="cartResult_countProduct">3 товара - </span><span class="cartResult_priceProduct">5 429₽</span></div>
+                <div class="cartResult_storefront">
+                  <div class="cartResult_storefront-in">
+                    <div class="cartItem">
+                      <div class="cartItem_img"><img src="img/flower_1.jpg" alt=""></div>
+                      <div class="cartItem_name">Рапунцель S</div>
+                      <div class="cartItem_count"></div>
+                      <div class="cartItem_price">2 129₽</div>
+                      <div class="cartItem_remove"></div>
+                    </div>
+                    <div class="cartItem">
+                      <div class="cartItem_img"><img src="img/flower_2.jpg" alt=""></div>
+                      <div class="cartItem_name">Тиффани M</div>
+                      <div class="cartItem_count"></div>
+                      <div class="cartItem_price">2 129₽</div>
+                      <div class="cartItem_remove"></div>
+                    </div>
+                    <div class="cartItem">
+                      <div class="cartItem_img"><img src="img/flower_3.jpg" alt=""></div>
+                      <div class="cartItem_name">Тиффани M</div>
+                      <div class="cartItem_count"></div>
+                      <div class="cartItem_price">2 129₽</div>
+                      <div class="cartItem_remove"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartResult_price">Стоимость:<span>4 129₽</span></div>
+                <div class="cartResult_price">Доставка:<span>300₽</span></div>
+              </div>
+              <!--	/cartResult-->
+            </div>
+          </div>
+        </div>
+        <!--	/cartWrap-->
+      </div>
+      <!-- footer-->
+      <footer class="footer">
+        <div class="footer_top">
+          <div class="wrapper">
+            <div class="footer_logo">
+              <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
+              <div class="social social--md-small"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
+            </div>
+            <div class="footer_lists">
+              <div class="footer_catalog">
+                <div class="footer_title">Каталог</div>
+                <div class="footer_row">
+                  <ul class="footer_list">
+                    <li><a href="#">Клубничные букеты</a></li>
+                    <li><a href="#">Хит Букеты</a></li>
+                    <li><a href="#">Воздушные боксы</a></li>
+                    <li><a href="#">Клубничные боксы</a></li>
+                    <li><a href="#">Цветочные букеты</a></li>
+                    <li><a href="#">Premium букеты</a></li>
+                    <li><a href="#">Детские букеты</a></li>
+                    <li><a href="#">Мужские букеты</a></li>
+                    <li><a href="#">Гелиевые шары</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer_company">
+                <div class="footer_title">Компания</div>
+                <ul class="footer_list">
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_up" id="toUp"><a class="btn-transparent" href="#header">наверх</a></div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="wrapper"><span>YamFlowers &copy; 2020.  Все права защищены</span><a href="#">Политика конфиденциальности</a></div>
+        </div>
+      </footer>
+      <!-- /footer-->
+    </div>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/libs/jquery.matchHeight-min.js"></script>
+    <script src="js/libs/jquery.inputmask.min.js"></script>
+    <script src="js/libs/jquery.lazy.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid $bd;
+  }
+  &_img {
+    max-width: 84px;
+    img {
+      display: block;
+    }
+  }
+}

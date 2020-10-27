@@ -1,0 +1,55 @@
+.cartIcons {
+  background-color: $gray;
+  margin-bottom: 34px;
+  &_row {
+    display: flex;
+  }
+  &_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    padding: 40px 20px;
+    position: relative;
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        display: block;
+        height: 75%;
+        width: 1px;
+        background-color: $bd;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+      }
+    }
+  }
+  &_item {
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      .cartIcons_icon {
+        svg {
+          fill: $red;
+        }
+      }
+      .cartIcons_text {
+        color: $red;
+      }
+    }
+  }
+  &_icon {
+    margin-bottom: 10px;
+    svg {
+      fill: #000;
+      transition: $trans;
+    }
+  }
+  &_text {
+    font-size: 14px;
+    color: #000;
+    transition: $trans;
+  }
+}

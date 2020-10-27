@@ -1,0 +1,20 @@
+.cartWrap {
+  margin-bottom: 70px;
+  .title {
+    margin-bottom: 45px;
+  }
+  &_row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_col {
+    &--steps {
+      width: 53%;
+    }
+    &--cart {
+      width: 47%;
+      max-width: 620px;
+      padding-left: 20px;
+    }
+  }
+}

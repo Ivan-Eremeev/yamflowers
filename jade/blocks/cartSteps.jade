@@ -1,0 +1,91 @@
+// cartSteps
+.cartSteps
+
+  .cartSteps_menu
+    .cartSteps_item.active(data-id="#cartStepsForm_0") Ваши контакты
+      span.cartSteps_num 1
+    .cartSteps_item(data-id="#cartStepsForm_1") Данные получателя
+      span.cartSteps_num 2
+    .cartSteps_item(data-id="#cartStepsForm_2") Адрес
+      span.cartSteps_num 3
+    .cartSteps_item(data-id="#cartStepsForm_3") Дата и время
+      span.cartSteps_num 4
+
+  form#cartStepsForm_0(action="").cartSteps_form.show
+    .cartSteps_title Укажите контакты для связи с вами
+    .cartSteps_row
+      .cartSteps_input
+        input(type="text" name="name" placeholder="Ваше имя:")
+    .cartSteps_row
+      .cartSteps_input
+        input(type="tel" name="tel" placeholder="Телефон:")
+    .cartSteps_row
+      .cartSteps_text Текст открытки можно написать далее
+    .cartSteps_btns
+      .cartSteps_btn.btn-red(data-id="#cartStepsForm_1") Далее
+
+  form#cartStepsForm_1(action="").cartSteps_form
+    .cartSteps_title Укажите данные получателя
+    .cartSteps_row.cartSteps_row--mb20
+      .cartSteps_checkbox
+        input#checkbox_0(type="checkbox")
+        label(for="checkbox_0")
+      label(for="checkbox_0") Я получатель
+    .cartSteps_row
+      .cartSteps_input
+        input(type="text" name="name" placeholder="Ваше имя:")
+    .cartSteps_row.cartSteps_row--mb20
+      .cartSteps_checkbox
+        input#checkbox_2(type="checkbox")
+        label(for="checkbox_1")
+      label(for="checkbox_1") Я не знаю номера телефона
+    .cartSteps_row
+      .cartSteps_input
+        input(type="tel" name="tel" placeholder="Телефон:")
+    .cartSteps_row
+      .cartSteps_textarea
+        textarea(placeholder="Текст открытки:")
+    .cartSteps_btns
+      .cartSteps_btn.cartSteps_btn--prev.btn-transparent(data-id="#cartStepsForm_0") Назад
+      .cartSteps_btn.btn-red(data-id="#cartStepsForm_2") Далее
+
+  form#cartStepsForm_2(action="").cartSteps_form
+    .cartSteps_title Укажите данные для доставки
+    .cartSteps_row.cartSteps_row--radio.cartSteps_row--mb20
+      .cartSteps_radioBlock
+        .cartSteps_radio
+          input#delivery_0(type="radio", name="delivery")
+          label(for="delivery_0")
+        label(for="delivery_0") Доставка
+      .cartSteps_radioBlock
+        .cartSteps_radio
+          input#delivery_1(type="radio", name="delivery")
+          label(for="delivery_1")
+        label(for="delivery_1") Самоовывоз
+    .cartSteps_row.cartSteps_row--mb20
+      .cartSteps_input
+        input(type="text" name="address" placeholder="Улица:")
+    .cartSteps_row.row
+      .cartSteps_col
+        .cartSteps_input
+          input(type="text" name="address" placeholder="Дом:")
+      .cartSteps_col
+        .cartSteps_input
+          input(type="text" name="address" placeholder="Квартира:")
+    .cartSteps_btns
+      .cartSteps_btn.cartSteps_btn--prev.btn-transparent(data-id="#cartStepsForm_1") Назад
+      .cartSteps_btn.btn-red(data-id="#cartStepsForm_3") Далее
+
+  form#cartStepsForm_3(action="").cartSteps_form
+    .cartSteps_title Укажите дату и время доставки
+    .cartSteps_row.cartSteps_row--radio.cartSteps_row--mb20
+    .cartSteps_row.row
+      .cartSteps_col
+        .cartSteps_input.cartSteps_input--calendar
+          input(type="text" name="address" placeholder="Дата:")#calendar
+      .cartSteps_col
+        .cartSteps_input
+          input(type="text" name="address" placeholder="Время:")
+    .cartSteps_btns
+      button(type="submit").btn-red Заказать
+//	/cartSteps

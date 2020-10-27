@@ -231,6 +231,31 @@ $(document).ready(function () {
 			$img.replaceWith($svg);
 		}, 'xml');
 	});
+
+	// Блок оформления заказа
+	function cartSteps() {
+		var items = $('.cartSteps_item'),
+				forms = $('.cartSteps_form'),
+				btn = $('.cartSteps_btn'),
+				time = 100;
+		btn.on('click', function () {
+			var data = $(this).data('id'),
+					form = $(data),
+					item = $('.cartSteps_item[data-id="' + data + '"]');
+			forms.fadeOut(time, function() {
+				forms.removeClass('show');
+			});
+			form.fadeIn(time, function () {
+				form.addClass('show');
+			});
+			if ($(this).hasClass('cartSteps_btn--prev')) {
+				item.next().removeClass('active');
+			}else {
+				item.addClass('active');
+			}
+		});
+	}
+	cartSteps();
 	
 });
 

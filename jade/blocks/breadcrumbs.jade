@@ -1,9 +1,11 @@
-// breadcrumbs
-.breadcrumbs
-  .wrapper
-    ul.breadcrumbs_list
-      li
-        a(href="#") Главная
-      li
-        span Каталог
-//	/breadcrumbs
+mixin breadcrumbs(text)
+  // breadcrumbs
+  .breadcrumbs
+    .wrapper
+      ul.breadcrumbs_list
+        li
+          a(href="#") Главная
+        if text
+          li
+            span= text
+  //	/breadcrumbs
