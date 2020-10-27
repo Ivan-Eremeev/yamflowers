@@ -2724,6 +2724,9 @@ body {
 .cartResult_priceProduct {
 	color: #e12025;
 }
+.cartResult_storefront_wrap {
+	padding-right: 13px;
+}
 .cartResult_storefront {
 	max-height: 270px;
 	overflow-y: scroll;
@@ -2741,6 +2744,19 @@ body {
 .cartResult_price span {
 	font-size: 20px;
 	color: #e12025;
+}
+.cartResult .scrollbar-inner > .scroll-element .scroll-element_track,
+.cartResult .scrollbar-inner > .scroll-element .scroll-bar {
+	opacity: 1;
+}
+.cartResult .scrollbar-inner > .scroll-element.scroll-y {
+	width: 3px;
+}
+.cartResult .scrollbar-inner > .scroll-element .scroll-element_track {
+	background-color: #d9d9d9;
+}
+.cartResult .scrollbar-inner > .scroll-element .scroll-bar {
+	background-color: #e12025;
 }
 
 .cartItem {

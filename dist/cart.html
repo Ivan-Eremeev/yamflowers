@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
     <link rel="stylesheet" href="css/libs/slick.css">
     <link rel="stylesheet" href="css/libs/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -106,7 +107,7 @@
                   </div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input type="tel" name="tel" placeholder="Телефон:">
+                      <input class="phone-mask" type="tel" name="tel" placeholder="Телефон:">
                     </div>
                   </div>
                   <div class="cartSteps_row">
@@ -139,7 +140,7 @@
                   </div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input type="tel" name="tel" placeholder="Телефон:">
+                      <input class="phone-mask" type="tel" name="tel" placeholder="Телефон:">
                     </div>
                   </div>
                   <div class="cartSteps_row">
@@ -242,28 +243,30 @@
               <!-- cartResult-->
               <div class="cartResult">
                 <div class="cartResult_title">Ваш заказ: <span class="cartResult_countProduct">3 товара - </span><span class="cartResult_priceProduct">5 429₽</span></div>
-                <div class="cartResult_storefront">
-                  <div class="cartResult_storefront-in">
-                    <div class="cartItem">
-                      <div class="cartItem_img"><img src="img/flower_1.jpg" alt=""></div>
-                      <div class="cartItem_name">Рапунцель S</div>
-                      <div class="cartItem_count"></div>
-                      <div class="cartItem_price">2 129₽</div>
-                      <div class="cartItem_remove"></div>
-                    </div>
-                    <div class="cartItem">
-                      <div class="cartItem_img"><img src="img/flower_2.jpg" alt=""></div>
-                      <div class="cartItem_name">Тиффани M</div>
-                      <div class="cartItem_count"></div>
-                      <div class="cartItem_price">2 129₽</div>
-                      <div class="cartItem_remove"></div>
-                    </div>
-                    <div class="cartItem">
-                      <div class="cartItem_img"><img src="img/flower_3.jpg" alt=""></div>
-                      <div class="cartItem_name">Тиффани M</div>
-                      <div class="cartItem_count"></div>
-                      <div class="cartItem_price">2 129₽</div>
-                      <div class="cartItem_remove"></div>
+                <div class="cartResult_storefront_wrap">
+                  <div class="cartResult_storefront scrollbar-inner js-scrollbar">
+                    <div class="cartResult_storefront-in">
+                      <div class="cartItem">
+                        <div class="cartItem_img"><img src="img/flower_1.jpg" alt=""></div>
+                        <div class="cartItem_name">Рапунцель S</div>
+                        <div class="cartItem_count"></div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
+                      <div class="cartItem">
+                        <div class="cartItem_img"><img src="img/flower_2.jpg" alt=""></div>
+                        <div class="cartItem_name">Тиффани M</div>
+                        <div class="cartItem_count"></div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
+                      <div class="cartItem">
+                        <div class="cartItem_img"><img src="img/flower_3.jpg" alt=""></div>
+                        <div class="cartItem_name">Тиффани M</div>
+                        <div class="cartItem_count"></div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -320,6 +323,8 @@
       <!-- /footer-->
     </div>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery.inputmask.min.js"></script>
+    <script src="js/libs/jquery.scrollbar.min.js"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

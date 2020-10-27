@@ -12,6 +12,9 @@
   &_priceProduct {
     color: $red;
   }
+  &_storefront_wrap {
+    padding-right: 13px;
+  }
   &_storefront {
     max-height: 270px;
     overflow-y: scroll;
@@ -29,5 +32,18 @@
       font-size: 20px;
       color: $red;
     }
+  }
+  .scrollbar-inner>.scroll-element .scroll-element_track,
+  .scrollbar-inner>.scroll-element .scroll-bar {
+    opacity: 1;
+  }
+  .scrollbar-inner>.scroll-element.scroll-y {
+    width: 3px;
+  }
+  .scrollbar-inner>.scroll-element .scroll-element_track {
+    background-color: #d9d9d9;
+  }
+  .scrollbar-inner>.scroll-element .scroll-bar {
+    background-color: $red;
   }
 }

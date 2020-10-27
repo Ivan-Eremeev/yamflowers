@@ -53,13 +53,9 @@ $(document).ready(function () {
 	// stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
-	function inputMaskFunc() {
-		if ($('.phone-mask').length) {
-			$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
-		}
+	if ($('.phone-mask').length) {
+		$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
 	}
-	inputMaskFunc();
-
 
 	// Выводить лишние пункты меню табов в выпающий список
 	tabsMenu($('.js-tabs-1'));
@@ -168,7 +164,9 @@ $(document).ready(function () {
 	// slider($('.slider'),$('.slider-for'));
 
 	// Инициализация tinyscrollbar
-	// tinyscrollbar($('#scrollbar1'));
+	// if ($('#scrollbar1').length) {
+	// 	tinyscrollbar($('#scrollbar1'));
+	// }
 
 	// Инициализация tooltipster
 	// tooltipster($('.tooltip'));
@@ -180,7 +178,9 @@ $(document).ready(function () {
 	// initGoogleMap();
 
 	// Инициализация стилизуемого скроллбара
-	// $('#scrollbar').scrollbar();
+	if ($('.js-scrollbar').length) {
+		$('.js-scrollbar').scrollbar();
+	}
 
 	// 3d эффект вращения элемента при наведении
 	// rotate($('.card3d'));
