@@ -288,6 +288,78 @@ $(document).ready(function () {
 		})
 	};
 	inputCount();
+
+	// яндекс карта	
+	ymaps.ready(init_contact);
+	function init_contact(){
+		$('.maps-block').each(function(){
+			var coords = JSON.parse('[' + $(this).data('coords-center') + ']'),
+				name_dom = $(this).data('name'),
+				link_json = $(this).data('link');
+				zoom = $(this).data('zoom');
+			var myMap = new ymaps.Map('raionMaps', {
+				center: coords,
+				zoom: zoom,
+				controls: []
+			}, {
+				geolocationControlFloat: 'right',
+				zoomControlSize: 'small',
+				searchControlProvider: 'yandex#map',
+			});
+			myMap.controls.add(
+				new ymaps.control.ZoomControl({
+					options: { position: { right: 10, top: 200 }}
+				}),
+				new ymaps.control.SearchControl({
+					noPlacemark: true
+				})
+			);
+			myMap.behaviors.disable('scrollZoom'); 
+			
+			objectManager = new ymaps.ObjectManager({
+				clusterize: false,
+				gridSize: 35,
+				clusterDisableClickZoom: false, // не увеличивать при клике
+				clusterBalloonContentLayout: "cluster#balloonAccordion", // акардион в балуне
+				clusterBalloonCycling: false,
+				clusterOpenBalloonOnClick: true, // не открывать балун
+				clusterBalloonAccordionShowIcons: false,  // не открывать иконку в балуне
+				clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="clusterIcon">{{ properties.geoObjects.length }}</div>'),
+				clusterIconShape: {
+					type: 'Rectangle',
+					coordinates: [[40, 40], [-20, -20]]
+				},
+			});
+			objectManager.objects.options.set('preset', {
+				iconImageHref: "/upload/map/house.png",
+				iconLayout: "default#image", 
+					iconImageSize: [50, 50],
+					iconImageOffset: [-25, -50]
+			});
+			
+			if (link_json !== ''){
+				myMap.geoObjects.add(objectManager);
+				$.ajax({
+					url: link_json
+				}).done(function(data) {
+					objectManager.add(data);
+				});
+			}
+			
+			if (name_dom !== ''){
+				myMap.geoObjects.add(new ymaps.Placemark(myMap.getCenter(), {
+					balloonContent: '<div class="maps-wrap"><div class="mapsItem__name">' + name_dom + '</div></div>',
+					//hintContent: 'Собственный значок метки',
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: '/upload/map/house.png',
+					iconImageSize: [50, 50],
+					iconImageOffset: [-25, -50]
+				}));
+			}
+			
+		});
+	};
 	
 });
 

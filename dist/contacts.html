@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Навигация</title>
+    <title>Корзина</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -73,18 +73,92 @@
       </div>
       <!-- /menuCity-->
       <div class="content">
-        <div class="wrapper">
-          <div class="title">Навигация</div>
-          <ul class="nav-pages">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="catalog_v2.html">Каталог без табов</a></li>
-            <li><a href="product.html">Карточка товара</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="cart.html">Корзина</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
+                <!-- breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="wrapper">
+                    <ul class="breadcrumbs_list">
+                      <li><a href="#">Главная</a></li>
+                      <li><span>Контакты</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--	/breadcrumbs-->
+        <!-- contacts-->
+        <div class="contacts">
+          <div class="wrapper">
+            <div class="title">Контакты</div>
+            <div class="contacts_row">
+              <div class="contacts_block contacts_block--form">
+                <ul class="contacts_list">
+                  <li class="contacts_item"><span class="contacts_icon contacts_icon--tel"></span><a href="tel:89173261262">8 (917) 326-12-62</a><a href="tel:89173261262">8 (917) 326-12-62</a></li>
+                  <li class="contacts_item"><span class="contacts_icon contacts_icon--location"></span><span>Митрофаньевское шоссе, 2к2</span></li>
+                  <li class="contacts_item"><span class="contacts_icon contacts_icon--email"></span><a href="mailto:info@mail.ru">info@mail.ru</a></li>
+                  <li class="contacts_item"><span class="contacts_icon contacts_icon--clock"></span><span>Время работы на этом месте</span></li>
+                </ul>
+                <div class="contacts_title">Если у вас остались вопросы, заполните форму и мы свяжемся с вами</div>
+                <form class="contacts_form" action="">
+                  <div class="row">
+                    <div class="contacts_col">
+                      <div class="form_field">
+                        <div class="form_name">Ваше имя:</div>
+                        <div class="form_input form_input--icon-user">
+                          <input type="text" name="name">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contacts_col">
+                      <div class="form_field">
+                        <div class="form_name">Ваш e-mail:</div>
+                        <div class="form_input form_input--icon-email">
+                          <input type="text" name="email">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_field">
+                    <div class="form_name">Ваш вопрос:</div>
+                    <div class="form_input form_input--textarea">
+                      <textarea></textarea>
+                    </div>
+                  </div>
+                  <div class="form_consent">
+                    <input type="checkbox" id="modalCheckbox">
+                    <label class="form_checkbox" for="modalCheckbox"></label>
+                    <label class="form_label" for="modalCheckbox">Даю согласие на обработку персональных данных</label>
+                  </div>
+                  <div class="modal_btn"> 
+                    <button class="btn-red" type="submit">Отправить</button>
+                  </div>
+                </form>
+              </div>
+              <div class="contacts_block contacts_block--map"><div class="contact__maps maps-block" data-name="196066, г. Санкт-Петербург,<br> Московский проспект, 212,<br> офис 3053" data-zoom="14" data-coords-center="59.852118, 30.327250" data-link="">
+<div id="raionMaps"></div>
+</div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!--	/contacts-->
+        <!-- gallery-->
+        <div class="gallery">
+          <div class="wrapper">
+            <h2 class="title"><a href="#">Подписывайтесь</a> на наш инстаграмм</h2>
+          </div>
+          <div class="row">
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_1.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_2.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_3.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_4.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_5.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_6.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_7.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_8.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_9.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_10.jpg" alt=""></a></div>
+          </div>
+        </div>
+        <!--	/gallery-->
+        <!--	/cartWrap-->
       </div>
       <!-- footer-->
       <footer class="footer">
@@ -130,6 +204,7 @@
       <!-- /footer-->
     </div>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
