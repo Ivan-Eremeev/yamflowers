@@ -4,6 +4,7 @@
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid $bd;
+  position: relative;
   &_img {
     max-width: 84px;
     img {
@@ -75,6 +76,26 @@
     }
     &:before {
       transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  @media (max-width: $break_sm) {
+    flex-direction: column;
+    &_img {
+      margin-bottom: 10px;
+    }
+    &_name {
+      margin-bottom: 10px;
+    }
+    &_count {
+      margin-bottom: 10px;
+    }
+    &_price {
+      margin-bottom: 10px;
+    }
+    &_remove {
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
   }
 }

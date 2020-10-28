@@ -17,4 +17,23 @@
       padding-left: 20px;
     }
   }
+  @media (max-width: $break_lg) {
+    &_row {
+      flex-wrap: wrap;
+    }
+    &_col {
+      &--steps {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      &--cart {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+  }
 }

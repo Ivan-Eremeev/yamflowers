@@ -8,7 +8,7 @@
     align-items: center;
     flex-grow: 1;
     height: 55px;
-    padding-left: 70px;
+    padding: 2px 5px 2px 60px;
     background-color: #F8F8F8;
     color: #000;
     position: relative;
@@ -25,7 +25,6 @@
       z-index: 1;
     }
     &.active {
-      padding-left: 55px;
       background-color: $red;
       color: #fff;
       &:after {
@@ -34,7 +33,6 @@
       .cartSteps_num {
         background-color: #fff;
         color: #000;
-        left: 15px;
       }
     }
     &:after {
@@ -61,7 +59,7 @@
     width: 25px;
     height: 25px;
     top: 50%;
-    left: 30px;
+    left: 20px;
     background-color: $red;
     font-size: 12px;
     font-weight: 500;
@@ -252,5 +250,62 @@
     max-width: 170px;
     padding: 14px 30px;
     text-align: center;
+  }
+  @media (max-width: $break_sm) {
+    &_menu {
+      flex-wrap: wrap;
+    }
+    &_item {
+      width: 100%;
+      &:after {
+        display: none;
+      }
+    }
+    &_title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    &_input {
+      input {
+        padding: 0 15px;
+        height: 50px;
+        font-size: 13px;
+      }
+    }
+    &_row {
+      margin-bottom: 20px;
+      &--mb20 {
+        margin-bottom: 10px;
+      }
+    }
+    &_btns {
+      margin-top: 30px;
+    }
+    &_checkbox {
+      label {
+        width: 24px;
+        height: 24px;
+        &:after {
+          width: 8px;
+          top: 14px;
+          left: 5px;
+        }
+        &:before {
+          width: 14px;
+          top: 11px;
+          left: 7px;
+        }
+      }
+    }
+    &_radio {
+      label {
+        width: 24px;
+        height: 24px;
+        &:after {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
   }
 }
