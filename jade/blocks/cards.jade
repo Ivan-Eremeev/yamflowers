@@ -1,7 +1,8 @@
 mixin cards(titleName,menu=false,classMenu)
   // cards
   .cards
-    h2.title= titleName
+    if titleName
+      h2.title= titleName
 
     if menu == true
 

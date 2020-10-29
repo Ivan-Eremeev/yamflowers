@@ -23,6 +23,7 @@
       span, a {
         color: #000;
         @include line-slide-center();
+        user-select: none;
         &:after {
           transition: $trans;
           background-color: #000;

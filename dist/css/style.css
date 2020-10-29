@@ -786,6 +786,12 @@ body {
 	align-items: center;
 }
 @media (max-width: 1024px) {
+	.banner {
+		min-height: auto;
+	}
+	.banner_content {
+		padding: 100px 0 20px;
+	}
 	.banner_title {
 		font-size: 30px;
 		margin-bottom: 25px;
@@ -795,12 +801,13 @@ body {
 		margin-bottom: 40px;
 	}
 	.banner_arrows {
-		bottom: 100px;
+		bottom: 50px;
 	}
 }
 @media (max-width: 769px) {
 	.banner {
 		margin-bottom: 50px;
+		padding-bottom: 70px;
 	}
 	.banner_block {
 		flex-wrap: wrap;
@@ -808,6 +815,7 @@ body {
 	.banner_content {
 		max-width: none;
 		text-align: center;
+		padding: 50px 0 20px;
 	}
 	.banner_arrow {
 		width: 30px;
@@ -828,7 +836,7 @@ body {
 }
 @media (max-width: 500px) {
 	.banner_arrows {
-		bottom: 60px;
+		bottom: 20px;
 	}
 	.banner_dots {
 		bottom: 5px;
@@ -863,6 +871,8 @@ body {
 .tabs_menu li span, .tabs_menu li a {
 	color: #000;
 	position: relative;
+	-webkit-user-select: none;
+	        user-select: none;
 }
 .tabs_menu li span:after, .tabs_menu li a:after {
 	content: "";

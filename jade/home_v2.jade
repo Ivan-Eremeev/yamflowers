@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Каталог
+	title Главная версия 2
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
@@ -12,21 +12,43 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
 	link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
-	link(rel="stylesheet", href="css/libs/jqueryui.css")
 
 block content
 
 	.page
 
-		include blocks/header.jade
+		include blocks/header_v2.jade
 
 		.content
-
-			include blocks/breadcrumbs.jade
-			+breadcrumbs('каталог')
-
+    
 			include blocks/cards.jade
-			+cards('Каталог',menu=true,'js-tabs-3 tabs_menu tabs_menu--mb')
+			+cards('Популярное',menu=false)
+
+			include blocks/banner.jade
+
+			+cards('Клубничные букеты',menu=false)
+
+			include blocks/video.jade
+
+			+cards('Хит букеты',menu=false)
+
+			include blocks/slider.jade
+
+			+cards('Воздушные боксы',menu=false)
+
+			include blocks/steps.jade
+
+			+cards('Клубничные боксы',menu=false)
+
+			+cards('Цветочные букеты',menu=false)
+
+			+cards('Premium букеты',menu=false)
+
+			+cards('Детские букеты',menu=false)
+
+			+cards('Мужские букеты',menu=false)
+
+			+cards('Гелиевые шары',menu=false)
 
 			include blocks/gallery.jade
 
@@ -50,5 +72,3 @@ block js-libs
 	//- script(src="js/libs/jquery.scrollbar.min.js")
 	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
 	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
-	script(src="js/libs/jqueryui.js")
-	script(src="js/libs/jquery_ui_touch _punch.js")

@@ -57,6 +57,11 @@ $(document).ready(function () {
 		$('.phone-mask').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
 	}
 
+	// Маска для поля ввода времени в корзине
+	if ($('.time-mask').length) {
+		$('.time-mask').inputmask("99.99",{ showMaskOnHover: false });
+	}
+
 	// Выводить лишние пункты меню табов в выпающий список
 	tabsMenu($('.js-tabs-1'));
 	tabsMenu($('.js-tabs-2'));
@@ -960,45 +965,47 @@ function videoPlay(videoImg) {
 
 // Выводить лишние пункты меню табов в выпающий список
 function tabsMenu(tabs) {
-	var numItem = 5, // сколько пунктов выводить
-			tabsMenu = tabs.find('#tabs_triggers'), // меню
-			tabsDropBtn = tabs.find('.tabsDrop'), // кнопка выпадайки
-			tabsDropList = tabs.find('#tabsDrop_list'), // выпадайка
-			items = tabs.find('.js-tabs-trigger'), // все пункты
-			countItems = items.length; // общее колличество пунктов
-	windowResizeInitFunc();
-	itemsSlice();
-	dropMenu();
-	$(window).resize(function () {
+	tabs.each(function () {
+		var numItem = 5, // сколько пунктов выводить
+				tabsMenu = $(this).find('#tabs_triggers'), // меню
+				tabsDropBtn = $(this).find('.tabsDrop'), // кнопка выпадайки
+				tabsDropList = $(this).find('#tabsDrop_list'), // выпадайка
+				items = $(this).find('.js-tabs-trigger'), // все пункты
+				countItems = items.length; // общее колличество пунктов
 		windowResizeInitFunc();
 		itemsSlice();
 		dropMenu();
-	})
-	function dropMenu() { // появление выпадайки при клике на кнопку
-		tabsDropBtn.on('click', function () {
-			tabsDropList.stop().slideToggle(300);
+		$(window).resize(function () {
+			windowResizeInitFunc();
+			itemsSlice();
+			dropMenu();
 		})
-	}
-	function itemsSlice() { // распределение пунктов по менюшкам
-		if (countItems > numItem) {
-			tabsMenu.html(items.slice(0,numItem)).append(tabsDropBtn);
-			tabsDropBtn.css('display','block');
-			tabsDropList.html(items.slice(numItem));
-		}else {
-			tabsMenu.html(items.slice(0,numItem)).append(tabsDropBtn);
-			tabsDropBtn.css('display','none');
-			tabsDropList.html(items.slice(numItem));
+		function dropMenu() { // появление выпадайки при клике на кнопку
+			tabsDropBtn.on('click', function () {
+				tabsDropList.stop().slideToggle(300);
+			})
 		}
-	}
-	function windowResizeInitFunc() { // условия для разных размеров экрана
-		if ($(window).width() > breakMd) {
-			numItem = 5;
-		}else if ($(window).width() <= breakMd && $(window).width() > breakSm) {
-			numItem = 3;
-		}else if ($(window).width() <= breakSm) {
-			numItem = 0;
+		function itemsSlice() { // распределение пунктов по менюшкам
+			if (countItems > numItem) {
+				tabsMenu.html(items.slice(0,numItem)).append(tabsDropBtn);
+				tabsDropBtn.css('display','block');
+				tabsDropList.html(items.slice(numItem));
+			}else {
+				tabsMenu.html(items.slice(0,numItem)).append(tabsDropBtn);
+				tabsDropBtn.css('display','none');
+				tabsDropList.html(items.slice(numItem));
+			}
 		}
-	}
+		function windowResizeInitFunc() { // условия для разных размеров экрана
+			if ($(window).width() > breakMd) {
+				numItem = 5;
+			}else if ($(window).width() <= breakMd && $(window).width() > breakSm) {
+				numItem = 3;
+			}else if ($(window).width() <= breakSm) {
+				numItem = 0;
+			}
+		}
+	})
 }
 
 // разбивка суммы на тысячные
