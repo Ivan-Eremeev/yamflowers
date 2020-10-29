@@ -973,6 +973,9 @@ body {
 .tabsDrop_list li:last-child {
 	border-bottom: none;
 }
+.tabsDrop--vertical .card_img:after {
+	padding-top: 124%;
+}
 @media (max-width: 769px) {
 	.tabsDrop {
 		width: 100%;
@@ -999,9 +1002,6 @@ body {
 }
 .card_img:after {
 	padding-top: 89%;
-}
-.card_img--vertical:after {
-	padding-top: 124%;
 }
 .card_content {
 	padding: 18px 0 10px;
@@ -2343,6 +2343,9 @@ body {
 }
 .cards .row {
 	margin-bottom: 40px;
+}
+.cards--vertical .card_img:after {
+	padding-top: 124%;
 }
 @media (max-width: 769px) {
 	.cards {

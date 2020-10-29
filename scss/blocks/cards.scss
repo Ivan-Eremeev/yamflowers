@@ -6,6 +6,13 @@
   .row {
     margin-bottom: 40px;
   }
+  &--vertical {
+    .card_img {
+      &:after {
+        padding-top: 124%;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     margin-bottom: 50px;
     &_title {

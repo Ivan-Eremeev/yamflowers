@@ -1,6 +1,6 @@
 mixin cards(titleName,menu=false,classMenu)
   // cards
-  .cards
+  .cards.cards--vertical
     if titleName
       h2.title= titleName
 
@@ -36,9 +36,9 @@ mixin cards(titleName,menu=false,classMenu)
           .card
             .card_slider
               .js-card-slider
-                a(href="#").card_img.card_img--vertical.img-responsive
+                a(href="#").card_img.img-responsive
                   img(data-lazy="img/flower_9.jpg", alt="")
-                a(href="#").card_img.card_img--vertical.img-responsive
+                a(href="#").card_img.img-responsive
                   img(data-lazy="img/flower_9.jpg", alt="")
               .card_arrow.card_arrow--prev
                 img(src="img/arrow.svg", alt="")

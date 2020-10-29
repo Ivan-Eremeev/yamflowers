@@ -102,6 +102,13 @@
       }
     }
   }
+  &--vertical {
+    .card_img {
+      &:after {
+        padding-top: 124%;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     width: 100%;
     &_list {
