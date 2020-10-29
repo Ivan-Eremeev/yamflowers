@@ -2,15 +2,26 @@
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 25px 10px 15px;
+  // padding: 25px 10px 15px;
+  padding: 25px;
   text-align: center;
   border: 1px solid transparent;
   transition: $trans;
   position: relative;
   &_img {
-    max-width: 250px;
+    // max-width: 250px;
+    img {
+      width: auto;
+      left: 50%;
+      transform: translate(-50%,0);
+    }
     &:after {
-      padding-top: 107%;
+      padding-top: 89%;
+    }
+    &--vertical {
+      &:after {
+        padding-top: 124%;
+      }
     }
   }
   &_content {

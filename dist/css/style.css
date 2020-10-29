@@ -986,17 +986,22 @@ body {
 	max-width: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 25px 10px 15px;
+	padding: 25px;
 	text-align: center;
 	border: 1px solid transparent;
 	transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 	position: relative;
 }
-.card_img {
-	max-width: 250px;
+.card_img img {
+	width: auto;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 .card_img:after {
-	padding-top: 107%;
+	padding-top: 89%;
+}
+.card_img--vertical:after {
+	padding-top: 124%;
 }
 .card_content {
 	padding: 18px 0 10px;
