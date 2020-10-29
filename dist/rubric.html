@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Навигация</title>
+    <title>Статьи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -73,21 +73,74 @@
       </div>
       <!-- /menuCity-->
       <div class="content">
-        <div class="wrapper">
-          <div class="title">Навигация</div>
-          <ul class="nav-pages">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="catalog_v2.html">Каталог без табов</a></li>
-            <li><a href="product.html">Карточка товара</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="cart.html">Корзина</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="rubric.html">Статьи</a></li>
-            <li><a href="post.html">Статья</a></li>
-            <li><a href="comments.html">Отзывы</a></li>
-          </ul>
+                <!-- breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="wrapper">
+                    <ul class="breadcrumbs_list">
+                      <li><a href="#">Главная</a></li>
+                      <li><span>Статьи</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--	/breadcrumbs-->
+        <!-- rubric-->
+        <div class="rubric">
+          <div class="wrapper">
+            <div class="title">Статьи</div>
+            <div class="row">
+              <div class="rubric_col">
+                <article class="rubric_article"><a class="rubric_img img-responsive" href="#"><img src="img/post_thumb_1.jpg" alt=""></a>
+                  <div class="rubric_content">
+                    <time class="rubric_date">19.01.2020</time>
+                    <h1 class="rubric_title"><a href="#">Какие цветы дарить на новый год</a></h1>
+                    <p>Вы знаете, что уже больше века 1 января в США проводят Парад роз — фестиваль цветов, музыки и спорта? </p>
+                  </div>
+                </article>
+              </div>
+              <div class="rubric_col">
+                <article class="rubric_article"><a class="rubric_img img-responsive" href="#"><img src="img/post_thumb_2.jpg" alt=""></a>
+                  <div class="rubric_content">
+                    <time class="rubric_date">19.01.2020</time>
+                    <h1 class="rubric_title"><a href="#">Какие цветы дарить жене</a></h1>
+                    <p>Есть как минимум два повода, когда любимой супруге надо преподносить красивые букеты — день рождения и 14 Февраля. На праздник влюбленных обычно выбирают красные...</p>
+                  </div>
+                </article>
+              </div>
+              <div class="rubric_col">
+                <article class="rubric_article"><a class="rubric_img img-responsive" href="#"><img src="img/post_thumb_3.jpg" alt=""></a>
+                  <div class="rubric_content">
+                    <time class="rubric_date">19.01.2020</time>
+                    <h1 class="rubric_title"><a href="#">Какие цветы подходят стрельцам</a></h1>
+                    <p>В астрологию можно верить или нет, но большая часть населения Земли периодически обращает внимание на гороскопы, читает о совместимости и характерах знаков зодиака.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="rubric_btn">
+              <div class="btn-red">Показать еще</div>
+            </div>
+          </div>
         </div>
+        <!--	/rubric-->
+        <!-- gallery-->
+        <div class="gallery">
+          <div class="wrapper">
+            <h2 class="title"><a href="#">Подписывайтесь</a> на наш инстаграмм</h2>
+          </div>
+          <div class="row">
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_1.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_2.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_3.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_4.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_5.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_6.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_7.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_8.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_9.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_10.jpg" alt=""></a></div>
+          </div>
+        </div>
+        <!--	/gallery-->
       </div>
       <!-- footer-->
       <footer class="footer">
@@ -133,6 +186,7 @@
       <!-- /footer-->
     </div>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

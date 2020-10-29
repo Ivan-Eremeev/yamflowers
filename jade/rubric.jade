@@ -1,0 +1,88 @@
+extends blocks/base.jade
+
+block title 
+	title Статьи
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/animate.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/jqueryui.css")
+
+block content
+
+	.page
+
+		include blocks/header.jade
+
+		.content
+
+			include blocks/breadcrumbs.jade
+			+breadcrumbs('Статьи')
+
+			// rubric
+			.rubric
+				.wrapper
+					.title Статьи
+					.row
+
+						.rubric_col
+							article.rubric_article
+								a(href="#").rubric_img.img-responsive
+									img(src="img/post_thumb_1.jpg", alt="")
+								.rubric_content
+									time.rubric_date 19.01.2020
+									h1.rubric_title
+										a(href="#") Какие цветы дарить на новый год
+									p Вы знаете, что уже больше века 1 января в США проводят Парад роз — фестиваль цветов, музыки и спорта? 
+
+						.rubric_col
+							article.rubric_article
+								a(href="#").rubric_img.img-responsive
+									img(src="img/post_thumb_2.jpg", alt="")
+								.rubric_content
+									time.rubric_date 19.01.2020
+									h1.rubric_title
+										a(href="#") Какие цветы дарить жене
+									p Есть как минимум два повода, когда любимой супруге надо преподносить красивые букеты — день рождения и 14 Февраля. На праздник влюбленных обычно выбирают красные...
+
+						.rubric_col
+							article.rubric_article
+								a(href="#").rubric_img.img-responsive
+									img(src="img/post_thumb_3.jpg", alt="")
+								.rubric_content
+									time.rubric_date 19.01.2020
+									h1.rubric_title
+										a(href="#") Какие цветы подходят стрельцам
+									p В астрологию можно верить или нет, но большая часть населения Земли периодически обращает внимание на гороскопы, читает о совместимости и характерах знаков зодиака.
+
+					.rubric_btn
+						.btn-red Показать еще
+			//	/rubric
+
+			include blocks/gallery.jade
+			
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
+	//- script(src="js/libs/jqueryui.js")
+	//- script(src="js/libs/jquery_ui_touch _punch.js")

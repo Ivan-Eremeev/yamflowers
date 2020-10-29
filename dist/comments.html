@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Навигация</title>
+    <title>Отзывы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -73,21 +73,77 @@
       </div>
       <!-- /menuCity-->
       <div class="content">
-        <div class="wrapper">
-          <div class="title">Навигация</div>
-          <ul class="nav-pages">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="catalog_v2.html">Каталог без табов</a></li>
-            <li><a href="product.html">Карточка товара</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="cart.html">Корзина</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="rubric.html">Статьи</a></li>
-            <li><a href="post.html">Статья</a></li>
-            <li><a href="comments.html">Отзывы</a></li>
-          </ul>
+                <!-- breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="wrapper">
+                    <ul class="breadcrumbs_list">
+                      <li><a href="#">Главная</a></li>
+                      <li><span>Отзывы</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--	/breadcrumbs-->
+        <!-- comments-->
+        <div class="comments">
+          <div class="wrapper">
+            <div class="title">отзывы</div>
+            <div class="row">
+              <div class="comments_col">
+                <div class="comments_item">
+                  <div class="comments_head">
+                    <div class="comments_b">
+                      <div class="comments_name">Сергей Марков</div>
+                      <div class="comments_img mobile-visible"><img src="img/avatar.jpg" alt=""></div>
+                      <div class="comments_title">Рапунцель М</div>
+                    </div>
+                    <div class="comments_img mobile-hide"><img src="img/avatar.jpg" alt=""></div>
+                  </div>
+                  <div class="comments_text">Спасибо за быструю доставку. Орхидея чудесная! Не ожидала, что в Украине бывает такой хороший сервис!</div><a class="comments_link comments_link--vk" href="#"><span>Читать отзыв в VK</span></a>
+                </div>
+              </div>
+              <div class="comments_col">
+                <div class="comments_item comments_item--quot">
+                  <div class="comments_quot">Я очень довольна выполнением заказа, он был комплексным, а также нуждался в индивидуальном подходе. Спасибо, Лилия! :)</div>
+                  <div class="comments_quot-name">Лилия Никитина</div>
+                </div>
+              </div>
+              <div class="comments_col">
+                <div class="comments_item">
+                  <div class="comments_head">
+                    <div class="comments_b">
+                      <div class="comments_name">Дарья Ковтун</div>
+                      <div class="comments_ava mobile-visible">Д</div>
+                      <div class="comments_title">Шанель XS</div>
+                    </div>
+                    <div class="comments_ava mobile-hide">Д</div>
+                  </div>
+                  <div class="comments_text">Быстро доставили розы любимой. Цветы красивые, яркие, моей девушке понравились, Буду заказывать у вас еще!</div><a class="comments_link" href="#"><span>Читать полностью</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="comments_btn"><a class="btn-red" href="#">оставить отзыв</a></div>
+          </div>
         </div>
+        <!--	/comments-->
+        <!-- gallery-->
+        <div class="gallery">
+          <div class="wrapper">
+            <h2 class="title"><a href="#">Подписывайтесь</a> на наш инстаграмм</h2>
+          </div>
+          <div class="row">
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_1.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_2.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_3.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_4.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_5.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_6.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_7.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_8.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_9.jpg" alt=""></a></div>
+            <div class="gallery_col"><a class="gallery_img img-responsive" href="#"><img class="lazy" src="img/gallery_10.jpg" alt=""></a></div>
+          </div>
+        </div>
+        <!--	/gallery-->
       </div>
       <!-- footer-->
       <footer class="footer">
@@ -133,6 +189,7 @@
       <!-- /footer-->
     </div>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

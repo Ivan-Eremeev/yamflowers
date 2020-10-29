@@ -1,0 +1,89 @@
+extends blocks/base.jade
+
+block title 
+	title Отзывы
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/animate.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/jqueryui.css")
+
+block content
+
+	.page
+
+		include blocks/header.jade
+
+		.content
+
+			include blocks/breadcrumbs.jade
+			+breadcrumbs('Отзывы')
+
+			// comments
+			.comments
+				.wrapper
+					.title отзывы
+					.row
+
+						.comments_col
+							.comments_item
+								.comments_head
+									.comments_b
+										.comments_name Сергей Марков
+										.comments_img.mobile-visible
+											img(src="img/avatar.jpg", alt="")
+										.comments_title Рапунцель М
+									.comments_img.mobile-hide
+										img(src="img/avatar.jpg", alt="")
+								.comments_text Спасибо за быструю доставку. Орхидея чудесная! Не ожидала, что в Украине бывает такой хороший сервис!
+								a(href="#").comments_link.comments_link--vk
+									span Читать отзыв в VK
+						
+						.comments_col
+							.comments_item.comments_item--quot
+								.comments_quot Я очень довольна выполнением заказа, он был комплексным, а также нуждался в индивидуальном подходе. Спасибо, Лилия! :)
+								.comments_quot-name Лилия Никитина
+
+						.comments_col
+							.comments_item
+								.comments_head
+									.comments_b
+										.comments_name Дарья Ковтун
+										.comments_ava.mobile-visible Д
+										.comments_title Шанель XS
+									.comments_ava.mobile-hide Д
+								.comments_text Быстро доставили розы любимой. Цветы красивые, яркие, моей девушке понравились, Буду заказывать у вас еще!
+								a(href="#").comments_link
+									span Читать полностью
+					
+					.comments_btn
+						a(href="#").btn-red оставить отзыв
+			//	/comments
+
+			include blocks/gallery.jade
+			
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
+	//- script(src="js/libs/jqueryui.js")
+	//- script(src="js/libs/jquery_ui_touch _punch.js")

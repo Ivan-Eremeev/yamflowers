@@ -1,0 +1,96 @@
+.post {
+  padding-top: 10px;
+  margin-bottom: 55px;
+  .aboutWelcome {
+    margin-bottom: 45px;
+  }
+  &_text {
+    max-width: 1050px;
+    font-weight: 300;
+    h2 {
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      letter-spacing: 0.2em;
+    }
+    p {
+      margin-bottom: 40px;
+      line-height: 36px;
+    }
+  }
+  &_list {
+    max-width: 1050px;
+    font-weight: 300;
+    line-height: 32px;
+    li {
+      padding-left: 15px;
+      position: relative;
+      margin-bottom: 40px;
+      &:after {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 14px;
+        left: 0;
+      }
+    }
+  }
+  &_blockquote {
+    padding: 70px 100px;
+    background-color: $gray;
+    position: relative;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 50px;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 23px;
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg width='34' height='23' viewBox='0 0 34 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M8.73857 14.5468C8.41184 14.9762 8.05292 15.3805 7.66485 15.7561C5.62657 17.7307 2.91628 18.8183 0.033707 18.8183L0.0337067 23C8.37828 23 15.1429 16.447 15.1429 8.36377L15.1091 7.31826C15.1091 3.27651 11.7269 1.86752e-06 7.55457 1.50276e-06C3.38228 1.13801e-06 -2.09044e-06 3.27679 -2.44376e-06 7.31826C-2.79707e-06 11.3597 3.38228 14.6362 7.55457 14.6362C7.95743 14.6362 8.35285 14.6056 8.73857 14.5468ZM27.5957 14.5468C27.269 14.9762 26.91 15.3805 26.522 15.7561C24.4837 17.7307 21.7734 18.8183 18.8909 18.8183L18.8909 23C27.2354 23 34 16.447 34 8.36377L33.9663 7.31826C33.9663 3.27651 30.584 3.51606e-06 26.4117 3.15131e-06C22.2394 2.78656e-06 18.8571 3.27679 18.8571 7.31826C18.8571 11.3597 22.2394 14.6362 26.4117 14.6362C26.8146 14.6362 27.21 14.6056 27.5957 14.5468Z' fill='%23E0E0E0'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='34' height='23' fill='white' transform='translate(34 23) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+    &:before {
+      top: 30px;
+      left: 30px;
+      transform: rotate(180deg);
+    }
+    &:after {
+      content: '';
+      display: block;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+    &_text {
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    &_list {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+    &_blockquote {
+      margin-bottom: 25px;
+      padding: 70px;
+      font-size: 15px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &_blockquote {
+      padding: 70px 20px;
+    }
+  }
+}

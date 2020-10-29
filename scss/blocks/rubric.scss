@@ -1,0 +1,80 @@
+.rubric {
+  margin-bottom: 100px;
+  .title {
+    margin-bottom: 63px;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  &_col {
+    @include col(4);
+    @include col-md(6);
+    @include col-xs(12);
+    margin-bottom: $gutter;
+  }
+  &_article {
+    height: 100%;
+    padding: 30px;
+    background-color: $gray;
+    border-radius: 4px;
+    transition: .5s;
+    &:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    }
+  }
+  &_img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    img {
+
+    }
+    &:after {
+      padding-top: 60%;
+    }
+  }
+  &_content {
+    padding: 20px;
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+  }
+  &_date {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 27px;
+  }
+  &_title {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    a {
+      border-bottom: 1px solid #000;
+      color: #000;
+    }
+  }
+  &_btn {
+    text-align: center;
+  }
+  .btn-red {
+    padding: 15px 45px;
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+    .title {
+      margin-bottom: 30px;
+    }
+    &_article {
+      padding: 15px;
+    }
+    &_content {
+      padding: 10px;
+      p {
+        font-size: 14px;
+      }
+    }
+    &_title {
+      font-size: 16px;
+    }
+  }
+}

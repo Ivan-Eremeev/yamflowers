@@ -1,0 +1,66 @@
+extends blocks/base.jade
+
+block title 
+	title Статья
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/animate.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/jqueryui.css")
+
+block content
+
+	.page
+
+		include blocks/header.jade
+
+		.content
+
+			include blocks/breadcrumbs.jade
+			+breadcrumbs('Статья')
+
+			// post
+			.post
+				include blocks/aboutWelcome.jade
+				+aboutWelcome('background-image: url(img/post_bg.jpg);','Что делать что бы цветы стояли в вазе долго')
+				.wrapper
+					.post_text
+						p Большинство считает, что срезанные цветы стоят в вазе всего несколько дней. Поэтому думают, что цветочная композиция — бесполезный и недолговечный подарок. Наш ответ скептикам: возможно, вы не знаете, как правильно ухаживать за букетом, или не знакомы со всеми нюансами ухода? Продлить жизнь растениям помогут наши рекомендации.
+						h2 КАК УХАЖИВАТЬ ЗА СРЕЗАННЫМИ ЦВЕТАМИ
+						p Флористы Семицветик поделились секретами и тонкостями ухода за срезкой. Выполняйте простые правила, и у вас не возникнет разочарования и сожалений из-за быстро увядающих бутонов.
+					ul.post_list
+						li Цветы сохраняют свежесть без воды не больше получаса, потом начинается обезвоживание тканей. В течение 30 минут поспешите поставить их в вазу. Если такой возможности нет, закажите доставку или выбирайте букеты в шляпных коробках или корзинах. Композиция уже помещена в миниатюрную вазочку.
+						li Срежьте стебли на 2 см под углом 45 градусов. Делайте это не ножницами, а острым ножом и под струей воды. Если стебли плотные, проведите несколько продольных надрезов. Это увеличит площадь .
+						li Не подливайте, а меняйте воду. Она должна отстояться минимум час, чтобы содержащейся в ней хлор.
+					blockquote.post_blockquote Заранее подготовьте воду, если планируете торжество и ожидаете гостей. Так вы будете уверены в том, что букет простоит долго.
+					.post_text
+						p Не ставьте вазу на подоконниках, сквозняках, под прямыми солнечными лучами, вблизи батарей и в доступных для животных местах. Совмещение температурных потоков от окна и радиатора, чрезмерная жара или холод, острые кошачьи зубы травмируют хрупкие ткани цветков. Регулярно обмывайте и подрезайте стебли на 0,5-1 см. Это предотвратит процесс гниения. Опрыскивайте растения. Воздух в квартире всегда суше уличного, поэтому.
+			//	/post
+
+			include blocks/gallery.jade
+			
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
+	//- script(src="js/libs/jqueryui.js")
+	//- script(src="js/libs/jquery_ui_touch _punch.js")

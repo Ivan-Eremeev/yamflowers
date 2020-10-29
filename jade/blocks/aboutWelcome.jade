@@ -1,8 +1,9 @@
-// aboutWelcome
-.aboutWelcome
-  .wrapper
-    .title о нас
-  .aboutWelcome_block
+mixin aboutWelcome(img,text,title)
+  // aboutWelcome
+  .aboutWelcome
     .wrapper
-      h1.aboutWelcome_title Доставляем клубничные букеты с 2017 года
-//	/aboutWelcome
+      .title= title
+    .aboutWelcome_block(style= img)
+      .wrapper
+        h1.aboutWelcome_title= text
+  //	/aboutWelcome
