@@ -2531,6 +2531,7 @@ body {
 	transform: translate(0, -50%);
 }
 .cartSteps_form {
+	display: none;
 	max-width: 480px;
 	padding-top: 51px;
 }
