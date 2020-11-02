@@ -28,14 +28,14 @@
                   <div class="hamburger-inner"></div>
                 </div>
               </div>
-              <div class="js-CityMenuBtn js-menuBtn city mobile-hide"><span>Санкт Петербург</span>
+              <div class="js-CityMenuBtn js-menuBtn city md-hide"><span>Санкт Петербург</span>
                 <div class="city_icon img-responsive"><img src="img/arrow.svg" alt="arrow"></div>
               </div>
             </div>
             <div class="header_item">
               <div class="logo"><a href="home.html"><img src="img/logo.png" alt="logo"></a></div>
             </div>
-            <div class="header_item header_item--right"><a class="tel mobile-hide" href="tel:+79173261262">+7 (917) 326-12-62</a>
+            <div class="header_item header_item--right"><a class="tel md-hide" href="tel:+79173261262">+7 (917) 326-12-62</a>
               <div class="social social--md-hide"><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/messenger.svg" alt="messenger"></span></a><a class="social_link img-responsive" href="#"><span class="social_img img-responsive"><img src="img/insta.svg" alt="instagram"></span></a></div>
               <div class="cart">
                 <div class="cart_price">5 329₽</div>
@@ -102,12 +102,12 @@
                   <div class="cartSteps_title">Укажите контакты для связи с вами</div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input type="text" name="name" placeholder="Ваше имя:">
+                      <input id="nameUp" type="text" name="name" placeholder="Ваше имя:">
                     </div>
                   </div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input class="phone-mask" type="tel" name="tel" placeholder="Телефон:">
+                      <input class="phone-mask" id="telUp" type="tel" name="tel" placeholder="Телефон:">
                     </div>
                   </div>
                   <div class="cartSteps_row">
@@ -128,10 +128,10 @@
                   </div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input type="text" name="name" placeholder="Ваше имя:">
+                      <input id="nameTo" type="text" name="name" placeholder="Ваше имя:">
                     </div>
                   </div>
-                  <div class="cartSteps_row cartSteps_row--mb20">
+                  <div class="cartSteps_row cartSteps_row--mb20" id="checkboxNotRow">
                     <div class="cartSteps_checkbox">
                       <input id="checkbox_1" type="checkbox">
                       <label for="checkbox_1"></label>
@@ -140,7 +140,7 @@
                   </div>
                   <div class="cartSteps_row">
                     <div class="cartSteps_input">
-                      <input class="phone-mask" type="tel" name="tel" placeholder="Телефон:">
+                      <input class="phone-mask" id="telTo" type="tel" name="tel" placeholder="Телефон:">
                     </div>
                   </div>
                   <div class="cartSteps_row">
@@ -158,7 +158,7 @@
                   <div class="cartSteps_row cartSteps_row--radio cartSteps_row--mb20">
                     <div class="cartSteps_radioBlock">
                       <div class="cartSteps_radio">
-                        <input id="delivery_0" type="radio" name="delivery">
+                        <input id="delivery_0" type="radio" name="delivery" checked>
                         <label for="delivery_0"></label>
                       </div>
                       <label for="delivery_0">Доставка</label>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="cartSteps_col">
                       <div class="cartSteps_input">
-                        <input class="time-mask" type="text" name="address" placeholder="Время:">
+                        <input class="time-mask" type="text" placeholder="Время:">
                       </div>
                     </div>
                   </div>
@@ -243,12 +243,10 @@
               <!-- cartResult-->
               <div class="cartResult">
                 <div class="cartResult_title">Ваш заказ: <span class="cartResult_countProduct">3 товара - </span><span class="cartResult_priceProduct">5 429₽</span></div>
-                <div class="cartResult_storefront_wrap">
+                <div class="cartResult_storefront-wrap">
                   <div class="cartResult_storefront scrollbar-inner js-scrollbar">
                     <div class="cartResult_storefront-in">
-                      <div class="cartItem">
-                        <div class="cartItem_img"><img src="img/flower_1.jpg" alt=""></div>
-                        <div class="cartItem_name">Рапунцель S</div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_1.jpg" alt=""></a><a class="cartItem_name" href="#">Рапунцель S</a>
                         <div class="cartItem_count">
                           <div class="cartItem_arrow cartItem_arrow--minus"></div>
                           <div class="cartItem_result">
@@ -259,9 +257,7 @@
                         <div class="cartItem_price">2 129₽</div>
                         <div class="cartItem_remove"></div>
                       </div>
-                      <div class="cartItem">
-                        <div class="cartItem_img"><img src="img/flower_2.jpg" alt=""></div>
-                        <div class="cartItem_name">Тиффани M</div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_2.jpg" alt=""></a><a class="cartItem_name" href="#">Тиффани M</a>
                         <div class="cartItem_count">
                           <div class="cartItem_arrow cartItem_arrow--minus"></div>
                           <div class="cartItem_result">
@@ -272,9 +268,40 @@
                         <div class="cartItem_price">2 129₽</div>
                         <div class="cartItem_remove"></div>
                       </div>
-                      <div class="cartItem">
-                        <div class="cartItem_img"><img src="img/flower_3.jpg" alt=""></div>
-                        <div class="cartItem_name">Тиффани M</div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_3.jpg" alt=""></a><a class="cartItem_name" href="#">Тиффани M</a>
+                        <div class="cartItem_count">
+                          <div class="cartItem_arrow cartItem_arrow--minus"></div>
+                          <div class="cartItem_result">
+                            <input type="text" readonly value="0">
+                          </div>
+                          <div class="cartItem_arrow cartItem_arrow--plus"></div>
+                        </div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_4.jpg" alt=""></a><a class="cartItem_name" href="#">Тиффани M</a>
+                        <div class="cartItem_count">
+                          <div class="cartItem_arrow cartItem_arrow--minus"></div>
+                          <div class="cartItem_result">
+                            <input type="text" readonly value="0">
+                          </div>
+                          <div class="cartItem_arrow cartItem_arrow--plus"></div>
+                        </div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_5.jpg" alt=""></a><a class="cartItem_name" href="#">Тиффани M</a>
+                        <div class="cartItem_count">
+                          <div class="cartItem_arrow cartItem_arrow--minus"></div>
+                          <div class="cartItem_result">
+                            <input type="text" readonly value="0">
+                          </div>
+                          <div class="cartItem_arrow cartItem_arrow--plus"></div>
+                        </div>
+                        <div class="cartItem_price">2 129₽</div>
+                        <div class="cartItem_remove"></div>
+                      </div>
+                      <div class="cartItem"><a class="cartItem_img" href="#"><img src="img/flower_6.jpg" alt=""></a><a class="cartItem_name" href="#">Тиффани M</a>
                         <div class="cartItem_count">
                           <div class="cartItem_arrow cartItem_arrow--minus"></div>
                           <div class="cartItem_result">
@@ -331,7 +358,7 @@
                 </ul>
               </div>
             </div>
-            <div class="footer_up" id="toUp"><a class="btn-transparent" href="#header">наверх</a></div>
+            <div class="footer_up" id="toUp"><a class="btn-transparent" href="#header">наверх</a><img src="img/arrow-bold.svg" alt=""></div>
           </div>
         </div>
         <div class="footer_bottom">

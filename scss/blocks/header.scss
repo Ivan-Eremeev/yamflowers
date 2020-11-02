@@ -3,12 +3,12 @@
   padding: 10px 0;
   background-color: #fff;
   position: relative;
-  z-index: 10;
+  z-index: 12;
   &_top {
     display: none;
     padding: 10px 0;
     .city {
-      margin-left: 15px;
+      margin-left: 0;
       font-size: 12px;
     }
     .tel {
@@ -27,7 +27,7 @@
     align-items: center;
     &--left {
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
     }
     &--right {
       width: 100%;
@@ -35,10 +35,10 @@
       justify-content: flex-end;
     }
   }
-  &.styky {
+  &.stiky {
     position: fixed;
   }
-  @media (max-width: $break_sm) {
+  @media (max-width: $break_md) {
     &_top {
       display: flex;
       justify-content: space-between;
@@ -67,8 +67,11 @@
   margin-left: 10px;
   margin-right: 10px;
   flex-shrink: 0;
-  @media (max-width: $break_md) {
+  @media (max-width: $break_xl) {
     width: 150px;
+  }
+  @media (max-width: $break_md) {
+    margin-top: -25px;
   }
   @media (max-width: $break_xs) {
     width: 100px;
@@ -232,5 +235,10 @@
   }
   @media (max-width: $break_sm) {
     margin-left: 0;
+  }
+  @media (max-width: $break_xs) {
+    &_price {
+      display: none;
+    }
   }
 }

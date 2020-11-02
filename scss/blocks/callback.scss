@@ -2,7 +2,8 @@
   background-image: url(../img/callback.jpg);
   background-size: cover;
   background-position: right bottom;
-  margin-bottom: 162px;
+  // margin-bottom: 162px;
+  margin-bottom: 70px;
   .wrapper {
     padding: 170px $gutter 140px 120px;
     width: 100%;
@@ -37,7 +38,7 @@
   }
   @media (max-width: $break_md) {
     .wrapper {
-      padding: 170px $gutter 140px $gutter;
+      padding: 80px $gutter 80px $gutter;
       background-size: 60%;
     }
   }

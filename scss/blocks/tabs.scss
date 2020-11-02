@@ -1,5 +1,6 @@
 .tabs {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 70px;
   .title {
     margin-bottom: 20px;
   }
@@ -30,7 +31,7 @@
         }
       }
       &.active {
-        text-shadow: 1px 1px 0 #000;
+        font-weight: 600;
         span {
           &:after {
             width: 100%;
@@ -59,7 +60,7 @@
   &_col {
     @include col(3);
     @include col-lg(4);
-    @include col-md(6);
+    @include col-sm(6);
     @include col-xs(12);
   }
   &_btn {
@@ -109,7 +110,7 @@
       }
     }
   }
-  @media (max-width: $break_sm) {
+  @media (max-width: $break_xs) {
     width: 100%;
     &_list {
       left: 0;

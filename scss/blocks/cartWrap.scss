@@ -24,12 +24,14 @@
     &_col {
       &--steps {
         width: 100%;
-        margin-bottom: 50px;
+        order: 2;
       }
 
       &--cart {
         width: 100%;
         padding-left: 0;
+        margin-bottom: 50px;
+        max-width: none;
       }
     }
   }

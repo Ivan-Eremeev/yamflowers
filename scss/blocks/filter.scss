@@ -1,5 +1,6 @@
 .filter {
-  margin-bottom: 85px;
+  // margin-bottom: 85px;
+  margin-bottom: 70px;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -21,8 +22,10 @@
     font-size: 15px;
   }
   &_title {
+    width: 140px;
     font-weight: 500;
     margin-right: 20px;
+    flex-shrink: 0;
     &--option {
       &:after {
         content: ':';        
@@ -34,13 +37,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-grow: 1;
-    margin: 0 30px;
+    margin-left: -10px;
+    margin-right: 20px;
   }
   &_radio {
     display: none;
     &:checked {
       +.filter_label {
-        text-shadow: 1px 1px 0 #000;
+        font-weight: 600;
         &:after {
           width: 100%;
         }
@@ -74,6 +78,9 @@
       border: 1px solid $bd;
       text-align: center;
       font-weight: 500;
+    }
+    .bdrn {
+      border-right: none;
     }
   }
   &_range {
@@ -163,7 +170,6 @@
     }
     &_list {
       width: 100%;
-      margin: 0;
     }
     &_field {
       width: 100%;
@@ -182,6 +188,7 @@
       margin-bottom: 20px;
     }
     &_list {
+      margin: 0;
     }
     &_title {
       // width: 100%;

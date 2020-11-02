@@ -40,6 +40,16 @@ body {
 		display: none !important;
 	}
 }
+.md-hide {
+	@media (max-width: $break_md) {
+		display: none !important;
+	}
+}
+.md-visible {
+	@media (min-width: $break_md + 1) {
+		display: none !important;
+	}
+}
 .img-responsive {
 	display: block;
 	position: relative;
@@ -76,6 +86,9 @@ body {
 	&:hover {
 		box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
 	}
+	@media (max-width: $break_md) {
+		padding: 12px 20px;
+	}
 	@media (max-width: $break_sm) {
 		font-size: 12px;
 	}
@@ -98,6 +111,9 @@ body {
 		color: #fff;
 		box-shadow: 0px 7px 20px rgba(246, 97, 130, 0.3);
 	}
+	@media (max-width: $break_md) {
+		padding: 12px 20px;
+	}
 	@media (max-width: $break_sm) {
 		font-size: 12px;
 	}
@@ -119,8 +135,14 @@ body {
 		font-weight: 500;
 		border-bottom: 1px solid #000;
 	}
-	@media (max-width: $break_sm) {
+	@media (max-width: $break_md) {
+		font-size: 28px;
+		line-height: 40px;
+		margin-bottom: 48px !important;
+	}
+	@media (max-width: $break_xs) {
 		font-size: 20px;
+		line-height: 30px;
 	}
 }
 .content {
@@ -144,4 +166,8 @@ body {
 		font-size: 16px;
 	}
 }
+input:-webkit-autofill {
+	-webkit-box-shadow: inset 0 0 0 50px #fff !important;
+}
+
 // /settings

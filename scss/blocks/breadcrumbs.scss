@@ -21,6 +21,9 @@
     a {
       color: #000;
       margin: 0 10px;
+      &:hover {
+        color: $red;
+      }
     }
   }
 }

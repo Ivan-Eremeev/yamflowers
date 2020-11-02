@@ -142,17 +142,21 @@
     a {
       border-bottom: 1px solid #595959;
       color: #595959;
+      &:hover {
+        color: $red;
+        border-color: $red;
+      }
     }
   }
   &_chips {
     position: absolute;
     top: 26px;
-    right: 44px;
+    right: 26px;
   }
   &_chip {
     width: 57px;
     height: 57px;
-    margin: 5px 0;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,11 +206,22 @@
   }
   &:hover {
     border-color: #E2E2E2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     .card_arrow {
       opacity: 1;
     }
   }
+  @media (max-width: $break_md) {
+    &_chip {
+      width: 50px;
+      height: 50px;
+    }
+    &_label {
+      width: 30px;
+    }
+  }
   @media (max-width: $break_sm) {
+    padding: 10px;
     &_arrow {
       width: 40px;
       height: 100px;
@@ -221,11 +236,18 @@
     &_prices {
       font-size: 18px;
     }
-    &_label {
-      width: 30px;
-    }
     &_discount-price {
       padding: 2px 10px;
+    }
+    &_chip {
+      width: 40px;
+      height: 40px;
+      &--best {
+        font-size: 11px;
+      }
+      &--discount {
+        font-size: 18px;
+      }
     }
   }
 }

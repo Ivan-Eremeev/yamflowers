@@ -12,7 +12,7 @@
     }
   }
   &_name {
-    
+    color: #000;
   }
   &_count {
     display: flex;
@@ -79,23 +79,24 @@
     }
   }
   @media (max-width: $break_sm) {
-    flex-direction: column;
     &_img {
-      margin-bottom: 10px;
     }
     &_name {
-      margin-bottom: 10px;
     }
     &_count {
-      margin-bottom: 10px;
     }
     &_price {
-      margin-bottom: 10px;
     }
     &_remove {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    font-size: 10px;
+    &_name {
+      display: none;
+    }
+    &_arrow {
+      width: 20px;
     }
   }
 }

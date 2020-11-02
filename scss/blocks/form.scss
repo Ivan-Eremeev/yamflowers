@@ -81,15 +81,16 @@
     margin-right: 10px;
     background: transparent;
     position: relative;
+    cursor: pointer;
     &:after {
       content: '';
       display: none;
       position: absolute;
-      height: 3px;
+      height: 2px;
       width: 8px;
-      top: 13px;
+      top: 14px;
       left: 3px;
-      background-color: green;
+      background-color: #000;
       transform: rotate(45deg);
       border-radius: 3px;
     }
@@ -97,11 +98,11 @@
       content: '';
       display: none;
       position: absolute;
-      height: 3px;
+      height: 2px;
       width: 17px;
-      top: 9px;
+      top: 10px;
       left: 5px;
-      background-color: green;
+      background-color: #000;
       transform: rotate(-57deg);
       border-radius: 3px;
     }
@@ -111,6 +112,7 @@
     font-weight: 500;
     color: #343345;
     user-select: none;
+    cursor: pointer;
   }
   @media (max-width: $break_sm) {
     &_name {

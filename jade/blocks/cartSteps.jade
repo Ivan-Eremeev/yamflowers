@@ -15,10 +15,10 @@
     .cartSteps_title Укажите контакты для связи с вами
     .cartSteps_row
       .cartSteps_input
-        input(type="text" name="name" placeholder="Ваше имя:")
+        input#nameUp(type="text" name="name" placeholder="Ваше имя:")
     .cartSteps_row
       .cartSteps_input
-        input(type="tel" name="tel" placeholder="Телефон:").phone-mask
+        input#telUp(type="tel" name="tel" placeholder="Телефон:").phone-mask
     .cartSteps_row
       .cartSteps_text Текст открытки можно написать далее
     .cartSteps_btns
@@ -33,15 +33,15 @@
       label(for="checkbox_0") Я получатель
     .cartSteps_row
       .cartSteps_input
-        input(type="text" name="name" placeholder="Ваше имя:")
-    .cartSteps_row.cartSteps_row--mb20
+        input#nameTo(type="text" name="name" placeholder="Ваше имя:")
+    .cartSteps_row.cartSteps_row--mb20#checkboxNotRow
       .cartSteps_checkbox
         input#checkbox_1(type="checkbox")
         label(for="checkbox_1")
       label(for="checkbox_1") Я не знаю номера телефона
     .cartSteps_row
       .cartSteps_input
-        input(type="tel" name="tel" placeholder="Телефон:").phone-mask
+        input#telTo(type="tel" name="tel" placeholder="Телефон:").phone-mask
     .cartSteps_row
       .cartSteps_textarea
         textarea(placeholder="Текст открытки:")
@@ -54,7 +54,7 @@
     .cartSteps_row.cartSteps_row--radio.cartSteps_row--mb20
       .cartSteps_radioBlock
         .cartSteps_radio
-          input#delivery_0(type="radio", name="delivery")
+          input#delivery_0(type="radio", name="delivery" checked)
           label(for="delivery_0")
         label(for="delivery_0") Доставка
       .cartSteps_radioBlock
@@ -85,7 +85,7 @@
           input(type="text" placeholder="Дата:")#datepicker
       .cartSteps_col
         .cartSteps_input
-          input(type="text" name="address" placeholder="Время:").time-mask
+          input(type="text" placeholder="Время:").time-mask
     .cartSteps_btns
       button(type="submit").btn-red Заказать
 //	/cartSteps

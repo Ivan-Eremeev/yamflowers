@@ -1,19 +1,19 @@
 .productDesc {
-  margin-bottom: 87px;
+  // margin-bottom: 87px;
+  margin-bottom: 70px;
   &_menu {
     margin-bottom: 78px;
     overflow: hidden;
   }
   &_list {
     display: flex;
+    flex-wrap: wrap;
     font-weight: 300;
-    overflow-x: scroll;
     margin-bottom: -20px;
     li {
       white-space: nowrap;
       &.active {
-        text-shadow: 1px 1px 0 #000;
-
+        font-weight: 600;
         span {
           &:after {
             width: 100%;
@@ -58,6 +58,11 @@
     &_content {
       p {
         line-height: 2;
+      }
+    }
+    &_list {
+      li {
+        width: 100%;
       }
     }
   }

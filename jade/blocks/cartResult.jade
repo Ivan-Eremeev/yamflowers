@@ -3,14 +3,14 @@
   .cartResult_title Ваш заказ: 
     span.cartResult_countProduct 3 товара - 
     span.cartResult_priceProduct 5 429₽
-  .cartResult_storefront_wrap
+  .cartResult_storefront-wrap
     .cartResult_storefront.scrollbar-inner.js-scrollbar
       .cartResult_storefront-in
 
         .cartItem
-          .cartItem_img
+          a(href="#").cartItem_img
             img(src="img/flower_1.jpg", alt="")
-          .cartItem_name Рапунцель S
+          a(href="#").cartItem_name Рапунцель S
           .cartItem_count
             .cartItem_arrow.cartItem_arrow--minus
             .cartItem_result
@@ -20,9 +20,9 @@
           .cartItem_remove
 
         .cartItem
-          .cartItem_img
+          a(href="#").cartItem_img
             img(src="img/flower_2.jpg", alt="")
-          .cartItem_name Тиффани M
+          a(href="#").cartItem_name Тиффани M
           .cartItem_count
             .cartItem_arrow.cartItem_arrow--minus
             .cartItem_result
@@ -32,9 +32,45 @@
           .cartItem_remove
           
         .cartItem
-          .cartItem_img
+          a(href="#").cartItem_img
             img(src="img/flower_3.jpg", alt="")
-          .cartItem_name Тиффани M
+          a(href="#").cartItem_name Тиффани M
+          .cartItem_count
+            .cartItem_arrow.cartItem_arrow--minus
+            .cartItem_result
+              input(type="text" readonly value="0")
+            .cartItem_arrow.cartItem_arrow--plus
+          .cartItem_price 2 129₽
+          .cartItem_remove
+        
+        .cartItem
+          a(href="#").cartItem_img
+            img(src="img/flower_4.jpg", alt="")
+          a(href="#").cartItem_name Тиффани M
+          .cartItem_count
+            .cartItem_arrow.cartItem_arrow--minus
+            .cartItem_result
+              input(type="text" readonly value="0")
+            .cartItem_arrow.cartItem_arrow--plus
+          .cartItem_price 2 129₽
+          .cartItem_remove
+
+        .cartItem
+          a(href="#").cartItem_img
+            img(src="img/flower_5.jpg", alt="")
+          a(href="#").cartItem_name Тиффани M
+          .cartItem_count
+            .cartItem_arrow.cartItem_arrow--minus
+            .cartItem_result
+              input(type="text" readonly value="0")
+            .cartItem_arrow.cartItem_arrow--plus
+          .cartItem_price 2 129₽
+          .cartItem_remove
+
+        .cartItem
+          a(href="#").cartItem_img
+            img(src="img/flower_6.jpg", alt="")
+          a(href="#").cartItem_name Тиффани M
           .cartItem_count
             .cartItem_arrow.cartItem_arrow--minus
             .cartItem_result

@@ -1,6 +1,7 @@
 .post {
   padding-top: 10px;
-  margin-bottom: 55px;
+  // margin-bottom: 55px;
+  margin-bottom: 70px;
   .aboutWelcome {
     margin-bottom: 45px;
   }
@@ -16,11 +17,14 @@
     p {
       margin-bottom: 40px;
       line-height: 36px;
+      font-size: 18px;
+      line-height: 32px;
     }
   }
   &_list {
     max-width: 1050px;
     font-weight: 300;
+    font-size: 18px;
     line-height: 32px;
     li {
       padding-left: 15px;
@@ -75,9 +79,13 @@
       }
       p {
         margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 20px;
       }
     }
     &_list {
+      font-size: 14px;
+      line-height: 20px;
       li {
         margin-bottom: 20px;
       }
@@ -85,7 +93,7 @@
     &_blockquote {
       margin-bottom: 25px;
       padding: 70px;
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   @media (max-width: $break_xs) {

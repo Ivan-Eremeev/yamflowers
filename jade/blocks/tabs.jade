@@ -48,10 +48,10 @@ mixin tabs(className, titleName, filter=false, classMenu='tabs_menu')
             .filter_title Фильтр по цене:
             .filter_slider
               .filter_values
-                .js-inputWidth.filter_input
-                  input(type="text" value="0")#rangeMin
-                .js-inputWidth.filter_input
-                  input(type="text" value="10000")#rangeMax
+                .filter_input
+                  input(type="text" value="0 ₽")#rangeMin.bdrn
+                .filter_input
+                  input(type="text" value="10000 ₽")#rangeMax
               .filter_range
       // /filter
               

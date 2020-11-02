@@ -1,5 +1,6 @@
 .rubric {
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
+  margin-bottom: 70px;
   .title {
     margin-bottom: 63px;
   }
@@ -9,7 +10,6 @@
   &_col {
     @include col(4);
     @include col-md(6);
-    @include col-xs(12);
     margin-bottom: $gutter;
   }
   &_article {
@@ -20,13 +20,18 @@
     transition: .5s;
     &:hover {
       box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+      .rubric_img {
+        img {
+          transform: scale(1.01);
+        }
+      }
     }
   }
   &_img {
     border-radius: 4px;
     margin-bottom: 15px;
     img {
-
+      transition: .5s;
     }
     &:after {
       padding-top: 60%;
@@ -51,6 +56,11 @@
     a {
       border-bottom: 1px solid #000;
       color: #000;
+      transition: $trans;
+      &:hover {
+        color: $red;
+        border-color: $red;
+      }
     }
   }
   &_btn {
@@ -75,6 +85,11 @@
     }
     &_title {
       font-size: 16px;
+    }
+  }
+  @media (max-width: 640px) {
+    &_col {
+      width: 100%;
     }
   }
 }
