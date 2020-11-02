@@ -4541,7 +4541,7 @@ html .ui-button.ui-state-disabled:active {
 	position: absolute;
 	right: 9px;
 	top: 9px;
-	background: url("path-to-image") no-repeat right center/cover;
+	background: no-repeat right center/cover;
 	opacity: 0.6;
 	-webkit-transition: all 0.27s ease-in-out;
 	-o-transition: all 0.27s ease-in-out;
