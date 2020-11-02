@@ -351,7 +351,6 @@ $(document).ready(function () {
 // Меню
 function myMenu(menu, menuBtn) {
 	var	header = $('#header'),
-			headerHeight = header.outerHeight(),
 			content = $('.content'),
 			allMenu = $('.js-menu'),
 			allMenuBtn = $('.js-menuBtn'),
@@ -377,10 +376,10 @@ function myMenu(menu, menuBtn) {
 			menuClose();
 		}
 	})
-	menu.css('padding-top',headerHeight + 10 + 'px');
 	function menuOpen() {
+		headerHeight = header.outerHeight();
 		menuBtn.addClass('is-active');
-		menu.fadeIn().addClass('open');
+		menu.fadeIn().addClass('open').css('padding-top',headerHeight + 10 + 'px');
 		// html.addClass('lock').css('padding-right',scrollbarWidth);
 		header.addClass('stiky');
 		content.css('margin-top',headerHeight);
